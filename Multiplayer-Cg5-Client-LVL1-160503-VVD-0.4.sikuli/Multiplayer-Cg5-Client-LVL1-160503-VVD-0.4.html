@@ -221,17 +221,16 @@ logging.info(<span class="str">"[info] Play Level 1..."</span>)
     <span class="kw">if</span> exists(<img src="Multiplayer-CG5-MAC-Municipality-LVL1-IntroPanel-160428-VVD-0.1.png" />, <span class="dig">10</span>):
         <span class="kw">print</span><span class="str">"[info] Municipality selected on OSX as stakeholder"</span>
         logging.info(<span class="str">"[info] Municipality selected on OSX as stakeholder"</span>)
-        <span class="skw">find</span>(<img src="Multiplayer-CG5-MAC-Municipality-LVL1-IntroMainView-160428-VVD-0.1.png" />)
-        <span class="skw">click</span>()
-        <span class="skw">click</span>()
-        <span class="skw">type</span>(Key.SPACE)
-        <span class="cmt">#exit(1) #########&gt;WIP&lt;#########</span>
 
+        loc = SCREEN.getCenter()
+        <span class="skw">click</span>(loc)
+        <span class="skw">click</span>(loc)
+        <span class="skw">type</span>(Key.SPACE)
 
         <span class="cmt"># Upgrade housing units</span>
 
         <span class="skw">click</span>(<img src="1461849752329.png" />)
-        <span class="skw">click</span>(Pattern(<img src="1461850525142.png" />).similar(<span class="dig">0.86</span>))
+        <span class="skw">click</span>(Pattern(<img src="1462284355528.png" />).similar(<span class="dig">0.80</span>))
         <span class="skw">click</span>(<img src="1461849333213.png" />)
         <span class="skw">click</span>(<img src="1461849365950.png" />)
         <span class="skw">click</span>(<img src="1461849396105.png" />)

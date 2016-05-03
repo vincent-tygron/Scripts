@@ -149,17 +149,16 @@ elif Settings.isMac():
     if exists("Multiplayer-CG5-MAC-Municipality-LVL1-IntroPanel-160428-VVD-0.1.png", 10):
         print"[info] Municipality selected on OSX as stakeholder" 
         logging.info("[info] Municipality selected on OSX as stakeholder")
-        find("Multiplayer-CG5-MAC-Municipality-LVL1-IntroMainView-160428-VVD-0.1.png")
-        click()
-        click()
-        type(Key.SPACE)
-        #exit(1) #########>WIP<#########
 
+        loc = SCREEN.getCenter()
+        click(loc)
+        click(loc)
+        type(Key.SPACE)
         
         # Upgrade housing units
         
         click("1461849752329.png")
-        click(Pattern("1461850525142.png").similar(0.86))
+        click(Pattern("1462284355528.png").similar(0.80))
         click("1461849333213.png")
         click("1461849365950.png")
         click("1461849396105.png")
