@@ -53,19 +53,19 @@ if Settings.isLinux() or Settings.isWindows():
     if exists("Multiplayer-CG5-Waterboard-LVL1-IntroPanel-160426-VVD-0.1.png"):
         print"[info] Waterboard selected as stakeholder" 
         logging.info("[info] Waterboard selected as stakeholder")
-        find("Multiplayer-CG5-WaterBoard-LVL1-IntroMainView-160426-VVD-0.1.png")
-        click()
-        click()
+        loc = SCREEN.getCenter()
+        click(loc)
+        click(loc)
         type(Key.SPACE)
-#        wait("Multiplayer-CG5-Waterbaord-LVL1-MiniMap1-160426-VVD-0.2.png", 3)
-        wait("1462275915840.png")
+        wait(Pattern("1462275915840.png").similar(0.80))
         click()
             
         # Building something
     
-        click("Multiplayer-CG5-Waterboard-LVL1-WaterActionMenuBtn-160426-VVD-0.1.png")
+
         loc = SCREEN.getCenter()
         wheel(loc,WHEEL_DOWN,1)
+        click("Multiplayer-CG5-Waterboard-LVL1-WaterActionMenuBtn-160426-VVD-0.1.png")
         exists("Multiplayer-CG5-Waterboard-LVL1-OpenWaterLocation-160426-VVD-0.1.png", 5)
         dragDrop(Pattern("1461676305234.png").targetOffset(589,-287), Pattern("1461676305234.png").targetOffset(-665,301))
         click("Multiplayer-CG5-Waterboard-LVL1-WaterActionMenuYesBtn-160426-VVD-0.1.png")
