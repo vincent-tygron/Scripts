@@ -17,8 +17,8 @@ if Settings.isLinux() or Settings.isWindows():
 
 if Settings.isMac():
     wait("Multiplayer-Client-MAC-InviteMessage-160425-VVD-0.1.png", FOREVER)
-    click("Multiplayer-Client-MAC-InviteMessage-YesBtn-160422-VVD-0.1.png")
-    if exists("Multiplayer-Client-MAC-Cg5-SplashScreen-160422-VVD-0.1.png", 60):
+    click("Multiplayer-Client-MAC-InviteMessage-YesBtn-160425-VVD-0.1.png")
+    if exists("Multiplayer-Client-MAC-Cg5-SplashScreen-160425-VVD-0.1.png", 60):
         print"[success] Client is connected to session!"
         logging.info("[success] Client is connected to session!")
     else:
