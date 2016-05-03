@@ -190,9 +190,9 @@ logging.info(<span class="str">"[info] Play Level 1..."</span>)
     <span class="cmt">#elif exists("Multiplayer-CG5-UNI-LVL1-IntroPanel-160426-VVD-0.1.png"):</span>
         <span class="kw">print</span><span class="str">"[info] Uni Real Estate selected as stakeholder"</span>
         logging.info(<span class="str">"[info] Uni Real Estate selected as stakeholder"</span>)
-        <span class="skw">find</span>(<img src="Multiplayer-CG5-UNI-LVL1-IntroMainViewl-160426-VVD-0.1.png" />)
-        <span class="skw">click</span>()
-        <span class="skw">click</span>()
+        loc = SCREEN.getCenter()
+        <span class="skw">click</span>(loc)
+        <span class="skw">click</span>(loc)
         <span class="skw">type</span>(Key.SPACE)
         <span class="skw">click</span>(<img src="Multiplayer-CG5-UNI-LVL1-MiniMap1l-160426-VVD-0.1.png" />)
 
@@ -211,7 +211,7 @@ logging.info(<span class="str">"[info] Play Level 1..."</span>)
         <span class="skw">wait</span>(<img src="1461671232017.png" />, FOREVER)
         <span class="skw">click</span>()
         <span class="skw">wait</span>(<img src="1461671253872.png" />)
-        <span class="skw">click</span>(<img src="1461671279745.png" />)
+        <span class="skw">click</span>(<img src="1462285025864.png" />)
 
 <span class="kw">elif</span> Settings.isMac():
 

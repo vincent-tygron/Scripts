@@ -118,9 +118,9 @@ if Settings.isLinux() or Settings.isWindows():
     #elif exists("Multiplayer-CG5-UNI-LVL1-IntroPanel-160426-VVD-0.1.png"):
         print"[info] Uni Real Estate selected as stakeholder" 
         logging.info("[info] Uni Real Estate selected as stakeholder")
-        find("Multiplayer-CG5-UNI-LVL1-IntroMainViewl-160426-VVD-0.1.png")
-        click()
-        click()
+        loc = SCREEN.getCenter()
+        click(loc)
+        click(loc)
         type(Key.SPACE)
         click("Multiplayer-CG5-UNI-LVL1-MiniMap1l-160426-VVD-0.1.png")
             
@@ -139,7 +139,7 @@ if Settings.isLinux() or Settings.isWindows():
         wait("1461671232017.png", FOREVER)
         click()
         wait("1461671253872.png")
-        click("1461671279745.png")    
+        click("1462285025864.png")    
 
 elif Settings.isMac():
 
