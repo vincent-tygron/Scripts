@@ -1,0 +1,364 @@
+
+<html>
+   <head>
+      <style type="text/css">
+         .sikuli-code {
+            font-size: 20px;
+            font-family: "Osaka-mono", Monospace;
+            line-height: 1.5em;
+            display:table-cell;
+            white-space: pre-wrap;       /* css-3 */
+            white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* Internet Explorer 5.5+ */
+            width: 99%;   /* remove horizontal scroll-bar when viewing in IE7 */
+         }
+         .sikuli-code img {
+            vertical-align: middle;
+            margin: 2px;
+            border: 1px solid #ccc;
+            padding: 2px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-box-shadow: 1px 1px 1px gray;
+            -webkit-box-shadow: 1px 1px 2px gray;
+         }
+         .kw {
+            color: blue;
+         }
+         .skw {
+            color: rgb(63, 127, 127);
+         }
+
+         .str {
+            color: rgb(128, 0, 0);
+         }
+
+         .dig {
+            color: rgb(128, 64, 0);
+         }
+
+         .cmt {
+            color: rgb(200, 0, 200);
+         }
+
+         h2 {
+            display: inline;
+            font-weight: normal;
+         }
+
+         .info {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            display: none;
+         }
+
+         a {
+            color: #9D2900;
+         }
+
+         body {
+            font-family: "Trebuchet MS", Arial, Sans-Serif;
+         }
+
+      </style>
+   </head>
+<body>
+<div class="info">
+<h2>Multiplayer-Cg5-Client-LVL1-160503-VVD-0.4.sikuli</h2> <a href="Multiplayer-Cg5-Client-LVL1-160503-VVD-0.4.zip">(Download this script)</a>
+</div>
+<pre class="sikuli-code">
+<span class="kw">import</span> logging; reload(logging)
+FORMAT=(<span class="str">"%(asctime) -8s %(message) s"</span>)
+logging.basicConfig(format=FORMAT, filename=<span class="str">"TestLog.txt"</span>, level=logging.DEBUG)
+
+logging.info(<span class="str">"[info] Play Level 1..."</span>)
+
+<span class="kw">if</span> Settings.isLinux() <span class="kw">or</span> Settings.isWindows():
+
+    <span class="cmt">################</span>
+    <span class="cmt"># Municipality #</span>
+    <span class="cmt">################</span>
+
+    <span class="kw">if</span> exists(<img src="1462268628697.png" />):
+        <span class="kw">print</span><span class="str">"[info] Municipality selected as stakeholder"</span>
+        logging.info(<span class="str">"[info] Municipality selected as stakeholder"</span>)
+        <span class="skw">find</span>(<img src="1462268680483.png" />)
+        <span class="skw">click</span>()
+        <span class="skw">click</span>()
+        <span class="skw">type</span>(Key.SPACE)
+
+        <span class="cmt"># Renovating houses</span>
+
+        <span class="skw">click</span>(<img src="1462268826840.png" />)
+        <span class="skw">click</span>(Pattern(<img src="1462268858543.png" />).similar(<span class="dig">0.83</span>))
+        <span class="skw">wait</span>(<img src="1462268895815.png" />)
+        <span class="skw">click</span>()
+        <span class="skw">wait</span>(<img src="1462268916231.png" />)
+        <span class="skw">click</span>()
+        <span class="skw">click</span>(<img src="1462273364939.png" />)
+
+        <span class="skw">wait</span>(<img src="1461669772050.png" />, <span class="dig">5</span>)
+        <span class="skw">click</span>()
+        <span class="skw">wait</span>(<img src="1461669817711.png" />)
+        <span class="skw">dragDrop</span>(Pattern(<img src="1461669817711.png" />).targetOffset(-<span class="dig">11</span>,-<span class="dig">84</span>), Pattern(<img src="1461669817711.png" />).targetOffset(-<span class="dig">181</span>,-<span class="dig">86</span>))
+        paste(<span class="str">"4/2/2010"</span>)
+        <span class="skw">click</span>(<img src="1462277505883.png" />)
+        <span class="skw">wait</span>(<img src="1461671232017.png" />, FOREVER)
+        <span class="skw">click</span>()
+        <span class="skw">wait</span>(<img src="1461669963955.png" />)
+        <span class="skw">click</span>()
+
+        <span class="kw">for</span> x <span class="kw">in</span> range(<span class="dig">0</span>, <span class="dig">300</span>):
+            <span class="kw">while</span> exists(<img src="1462273944361.png" />, x):
+                <span class="skw">click</span>()
+                exists(<img src="1461669963955.png" />)
+                <span class="skw">click</span>()
+                <span class="kw">break</span>
+
+    <span class="cmt">##############</span>
+    <span class="cmt"># Waterboard #</span>
+    <span class="cmt">##############</span>
+
+    <span class="kw">if</span> exists(<img src="Multiplayer-CG5-Waterboard-LVL1-IntroPanel-160426-VVD-0.1.png" />):
+        <span class="kw">print</span><span class="str">"[info] Waterboard selected as stakeholder"</span>
+        logging.info(<span class="str">"[info] Waterboard selected as stakeholder"</span>)
+        <span class="skw">find</span>(<img src="Multiplayer-CG5-WaterBoard-LVL1-IntroMainView-160426-VVD-0.1.png" />)
+        <span class="skw">click</span>()
+        <span class="skw">click</span>()
+        <span class="skw">type</span>(Key.SPACE)
+<span class="cmt">#        wait("Multiplayer-CG5-Waterbaord-LVL1-MiniMap1-160426-VVD-0.2.png", 3)</span>
+        <span class="skw">wait</span>(<img src="1462275915840.png" />)
+        <span class="skw">click</span>()
+
+        <span class="cmt"># Building something</span>
+
+        <span class="skw">click</span>(<img src="Multiplayer-CG5-Waterboard-LVL1-WaterActionMenuBtn-160426-VVD-0.1.png" />)
+        loc = SCREEN.getCenter()
+        wheel(loc,WHEEL_DOWN,<span class="dig">1</span>)
+        exists(<img src="Multiplayer-CG5-Waterboard-LVL1-OpenWaterLocation-160426-VVD-0.1.png" />, <span class="dig">5</span>)
+        <span class="skw">dragDrop</span>(Pattern(<img src="1461676305234.png" />).targetOffset(<span class="dig">589</span>,-<span class="dig">287</span>), Pattern(<img src="1461676305234.png" />).targetOffset(-<span class="dig">665</span>,<span class="dig">301</span>))
+        <span class="skw">click</span>(<img src="Multiplayer-CG5-Waterboard-LVL1-WaterActionMenuYesBtn-160426-VVD-0.1.png" />)
+        <span class="skw">wait</span>(<img src="1461669772050.png" />, <span class="dig">10</span>)
+        <span class="skw">click</span>()
+        <span class="skw">wait</span>(<img src="Multiplayer-CG5-Waterboard-LVL1-OpenWater-ConfPanelImage-160426-VVD-0.1.png" />)
+        <span class="skw">dragDrop</span>(Pattern(<img src="Multiplayer-CG5-Waterboard-LVL1-OpenWater-ConfPanelDate-160426-VVD-0.1.png" />).targetOffset(<span class="dig">67</span>,<span class="dig">0</span>), Pattern(<img src="Multiplayer-CG5-Waterboard-LVL1-OpenWater-ConfPanelDate-160426-VVD-0.1.png" />).targetOffset(-<span class="dig">105</span>,-<span class="dig">3</span>))
+        paste(<span class="str">"4/2/2010"</span>)
+        <span class="skw">click</span>(<img src="Multiplayer-CG5-Waterboard-LVL1-OpenWater-ConfirmBtn-160426-VVD-0.1.png" />)
+        <span class="skw">wait</span>(<img src="1461671232017.png" />, FOREVER)
+        <span class="skw">click</span>()
+        <span class="skw">wait</span>(<img src="Multiplayer-CG5-Waterboard-LVL1-OpenWater-ApprovalPanel-160426-VVD-0.1.png" />, <span class="dig">3</span>)
+        <span class="skw">click</span>(Pattern(<img src="Multiplayer-CG5-Waterboard-LVL1-OpenWater-ApprovalPanel-160426-VVD-0.1.png" />).targetOffset(<span class="dig">394</span>,<span class="dig">144</span>))
+
+    <span class="cmt">#######</span>
+    <span class="cmt"># SSH #</span>
+    <span class="cmt">#######</span>
+
+    <span class="kw">elif</span> exists(Pattern(<img src="1461669319306.png" />).similar(<span class="dig">0.90</span>)):
+        <span class="kw">print</span><span class="str">"[info] SSH selected as stakeholder"</span>
+        logging.info(<span class="str">"[info] SSH selected as stakeholder"</span>)
+        <span class="skw">find</span>(<img src="1461669423619.png" />)
+        <span class="skw">click</span>()
+        <span class="skw">click</span>()
+        <span class="skw">type</span>(Key.SPACE)
+        <span class="skw">click</span>(<img src="1461669563841.png" />)
+
+        <span class="cmt"># Building cheap student housing</span>
+
+        <span class="skw">click</span>(<img src="1461669579386.png" />)
+        <span class="skw">click</span>(<img src="1461669604651.png" />)
+        <span class="skw">dragDrop</span>(Pattern(<img src="1461670183163.png" />).targetOffset(-<span class="dig">242</span>,-<span class="dig">46</span>), Pattern(<img src="1461670183163.png" />).targetOffset(<span class="dig">174</span>,-<span class="dig">5</span>))
+        <span class="skw">click</span>(<img src="1461669742268.png" />)
+        <span class="skw">wait</span>(<img src="1461669772050.png" />, <span class="dig">5</span>)
+        <span class="skw">click</span>()
+        <span class="skw">wait</span>(<img src="1461669817711.png" />)
+        <span class="skw">dragDrop</span>(Pattern(<img src="1461669817711.png" />).targetOffset(-<span class="dig">11</span>,-<span class="dig">84</span>), Pattern(<img src="1461669817711.png" />).targetOffset(-<span class="dig">181</span>,-<span class="dig">86</span>))
+        paste(<span class="str">"4/2/2010"</span>)
+        <span class="skw">click</span>(<img src="1461669963955.png" />)
+        <span class="skw">wait</span>(<img src="1461671232017.png" />, FOREVER)
+        <span class="skw">click</span>()
+        <span class="skw">wait</span>(<img src="1461671253872.png" />)
+        <span class="skw">click</span>(<img src="1461671279745.png" />)
+
+    <span class="cmt">###################</span>
+    <span class="cmt"># UNI Real Estate #</span>
+    <span class="cmt">###################</span>
+
+    <span class="kw">else</span>:
+    <span class="cmt">#elif exists("Multiplayer-CG5-UNI-LVL1-IntroPanel-160426-VVD-0.1.png"):</span>
+        <span class="kw">print</span><span class="str">"[info] Uni Real Estate selected as stakeholder"</span>
+        logging.info(<span class="str">"[info] Uni Real Estate selected as stakeholder"</span>)
+        <span class="skw">find</span>(<img src="Multiplayer-CG5-UNI-LVL1-IntroMainViewl-160426-VVD-0.1.png" />)
+        <span class="skw">click</span>()
+        <span class="skw">click</span>()
+        <span class="skw">type</span>(Key.SPACE)
+        <span class="skw">click</span>(<img src="Multiplayer-CG5-UNI-LVL1-MiniMap1l-160426-VVD-0.1.png" />)
+
+    <span class="cmt"># Building educational building</span>
+
+        <span class="skw">click</span>(<img src="Multiplayer-CG5-UNI-LVL1-BuildActionMenuBtn-160426-VVD-0.1.png" />)
+        <span class="skw">click</span>(<img src="Multiplayer-CG5-UNI-LVL1-EduLuxuryBtn-160426-VVD-0.1.png" />)
+        <span class="skw">dragDrop</span>(Pattern(<img src="Multiplayer-CG5-UNI-LVL1-EduLuxeLocation-160426-VVD-0.1.png" />).targetOffset(-<span class="dig">85</span>,-<span class="dig">90</span>), Pattern(<img src="Multiplayer-CG5-UNI-LVL1-EduLuxeLocation-160426-VVD-0.1.png" />).targetOffset(<span class="dig">67</span>,<span class="dig">78</span>))
+        <span class="skw">click</span>(<img src="1461669742268.png" />)
+        <span class="skw">wait</span>(<img src="1461669772050.png" />, <span class="dig">5</span>)
+        <span class="skw">click</span>()
+        <span class="skw">wait</span>(<img src="1461669817711.png" />)
+        <span class="skw">dragDrop</span>(Pattern(<img src="1461669817711.png" />).targetOffset(-<span class="dig">11</span>,-<span class="dig">84</span>), Pattern(<img src="1461669817711.png" />).targetOffset(-<span class="dig">181</span>,-<span class="dig">86</span>))
+        paste(<span class="str">"4/2/2010"</span>)
+        <span class="skw">click</span>(<img src="1461669963955.png" />)
+        <span class="skw">wait</span>(<img src="1461671232017.png" />, FOREVER)
+        <span class="skw">click</span>()
+        <span class="skw">wait</span>(<img src="1461671253872.png" />)
+        <span class="skw">click</span>(<img src="1461671279745.png" />)
+
+<span class="kw">elif</span> Settings.isMac():
+
+    <span class="cmt">################</span>
+    <span class="cmt"># Municipality #</span>
+    <span class="cmt">################</span>
+    <span class="kw">if</span> exists(<img src="Multiplayer-CG5-MAC-Municipality-LVL1-IntroPanel-160428-VVD-0.1.png" />, <span class="dig">10</span>):
+        <span class="kw">print</span><span class="str">"[info] Municipality selected on OSX as stakeholder"</span>
+        logging.info(<span class="str">"[info] Municipality selected on OSX as stakeholder"</span>)
+        <span class="skw">find</span>(<img src="Multiplayer-CG5-MAC-Municipality-LVL1-IntroMainView-160428-VVD-0.1.png" />)
+        <span class="skw">click</span>()
+        <span class="skw">click</span>()
+        <span class="skw">type</span>(Key.SPACE)
+        <span class="cmt">#exit(1) #########&gt;WIP&lt;#########</span>
+
+
+        <span class="cmt"># Upgrade housing units</span>
+
+        <span class="skw">click</span>(<img src="1461849752329.png" />)
+        <span class="skw">click</span>(Pattern(<img src="1461850525142.png" />).similar(<span class="dig">0.86</span>))
+        <span class="skw">click</span>(<img src="1461849333213.png" />)
+        <span class="skw">click</span>(<img src="1461849365950.png" />)
+        <span class="skw">click</span>(<img src="1461849396105.png" />)
+        <span class="skw">click</span>(Pattern(<img src="Multiplayer-CG5-MAC-Municipality-LVL1-MiniMap-ArrowIcon-160428-VVD-0.1.png" />).similar(<span class="dig">0.88</span>))
+        <span class="skw">click</span>(<img src="1461849822023.png" />)
+        <span class="skw">wait</span>(Pattern(<img src="1461850858853.png" />).similar(<span class="dig">0.87</span>), FOREVER)
+        <span class="skw">click</span>()
+        <span class="skw">wait</span>(<img src="1461850895182.png" />, <span class="dig">10</span>)
+        <span class="skw">click</span>()
+
+<span class="cmt">#        click("1461669742268.png")</span>
+<span class="cmt">#        wait("1461669772050.png", 5)</span>
+<span class="cmt">#        click()</span>
+<span class="cmt">#        wait("1461669817711.png")</span>
+<span class="cmt">#        dragDrop(Pattern("1461669817711.png").targetOffset(-11,-84), Pattern("1461669817711.png").targetOffset(-181,-86))</span>
+<span class="cmt">#        paste("4/2/2010")</span>
+<span class="cmt">#        click("1461669963955.png")</span>
+<span class="cmt">#        wait("1461671232017.png", FOREVER)</span>
+<span class="cmt">#        click()</span>
+<span class="cmt">#        wait("1461671253872.png")</span>
+<span class="cmt">#        click("1461671279745.png") </span>
+
+    <span class="cmt"># Confirming build permit requests</span>
+
+        <span class="kw">for</span> x <span class="kw">in</span> range(<span class="dig">0</span>, <span class="dig">300</span>):
+            <span class="kw">while</span> exists(Pattern(<img src="Multiplayer-CG5-MAC-Municipality-LVL1-MiniMap-QMarkIcon-160428-VVD-0.1.png" />).similar(<span class="dig">0.80</span>), x):
+                <span class="skw">click</span>()
+                exists(<img src="Multiplayer-CG5-MAC-Municipality-LVL1-ConfMenu-YesBtn-160428-VVD-0.1.png" />)
+                <span class="skw">click</span>()
+                <span class="kw">break</span>
+
+    <span class="cmt">##############</span>
+    <span class="cmt"># Waterboard #</span>
+    <span class="cmt">##############</span>
+
+    <span class="kw">elif</span> exists(<img src="Multiplayer-CG5-Waterboard-LVL1-IntroPanel-160426-VVD-0.1.png" />):
+        <span class="kw">print</span><span class="str">"[info] Waterboard selected on OSX as stakeholder"</span>
+        logging.info(<span class="str">"[info] Waterboard selected on OSX as stakeholder"</span>)
+        <span class="skw">find</span>(<img src="Multiplayer-CG5-WaterBoard-LVL1-IntroMainView-160426-VVD-0.1.png" />)
+        <span class="skw">click</span>()
+        <span class="skw">click</span>()
+        <span class="skw">type</span>(Key.SPACE)
+        <span class="skw">wait</span>(<img src="Multiplayer-CG5-Waterbaord-LVL1-MiniMap1-160426-VVD-0.2.png" />, <span class="dig">3</span>)
+        <span class="skw">click</span>()
+
+        <span class="cmt"># Building something</span>
+
+        <span class="skw">click</span>(<img src="Multiplayer-CG5-Waterboard-LVL1-WaterActionMenuBtn-160426-VVD-0.1.png" />)
+        exists(<img src="Multiplayer-CG5-Waterboard-LVL1-OpenWaterLocation-160426-VVD-0.1.png" />, <span class="dig">5</span>)
+        <span class="skw">dragDrop</span>(Pattern(<img src="1461676305234.png" />).targetOffset(<span class="dig">589</span>,-<span class="dig">287</span>), Pattern(<img src="1461676305234.png" />).targetOffset(-<span class="dig">665</span>,<span class="dig">301</span>))
+        <span class="skw">click</span>(<img src="Multiplayer-CG5-Waterboard-LVL1-WaterActionMenuYesBtn-160426-VVD-0.1.png" />)
+        <span class="skw">wait</span>(<img src="1461669772050.png" />, <span class="dig">10</span>)
+        <span class="skw">click</span>()
+        <span class="skw">wait</span>(<img src="Multiplayer-CG5-Waterboard-LVL1-OpenWater-ConfPanelImage-160426-VVD-0.1.png" />)
+        <span class="skw">dragDrop</span>(Pattern(<img src="Multiplayer-CG5-Waterboard-LVL1-OpenWater-ConfPanelDate-160426-VVD-0.1.png" />).targetOffset(<span class="dig">67</span>,<span class="dig">0</span>), Pattern(<img src="Multiplayer-CG5-Waterboard-LVL1-OpenWater-ConfPanelDate-160426-VVD-0.1.png" />).targetOffset(-<span class="dig">105</span>,-<span class="dig">3</span>))
+        paste(<span class="str">"4/2/2010"</span>)
+        <span class="skw">click</span>(<img src="Multiplayer-CG5-Waterboard-LVL1-OpenWater-ConfirmBtn-160426-VVD-0.1.png" />)
+        <span class="skw">wait</span>(<img src="1461671232017.png" />, FOREVER)
+        <span class="skw">click</span>()
+        <span class="skw">wait</span>(<img src="Multiplayer-CG5-Waterboard-LVL1-OpenWater-ApprovalPanel-160426-VVD-0.1.png" />, <span class="dig">3</span>)
+        <span class="skw">click</span>(Pattern(<img src="Multiplayer-CG5-Waterboard-LVL1-OpenWater-ApprovalPanel-160426-VVD-0.1.png" />).targetOffset(<span class="dig">394</span>,<span class="dig">144</span>))
+
+    <span class="cmt">#######</span>
+    <span class="cmt"># SSH #</span>
+    <span class="cmt">#######</span>
+
+    <span class="kw">elif</span> exists(Pattern(<img src="1461669319306.png" />).similar(<span class="dig">0.90</span>)):
+        <span class="kw">print</span><span class="str">"[info] SSH selected on OSX as stakeholder"</span>
+        logging.info(<span class="str">"[info] SSH selected on OSX as stakeholder"</span>)
+        <span class="skw">find</span>(<img src="1461669423619.png" />)
+        <span class="skw">click</span>()
+        <span class="skw">click</span>()
+        <span class="skw">type</span>(Key.SPACE)
+        <span class="skw">click</span>(<img src="1461669563841.png" />)
+
+        <span class="cmt"># Building cheap student housing</span>
+
+        <span class="skw">click</span>(<img src="1461669579386.png" />)
+        <span class="skw">click</span>(<img src="1461669604651.png" />)
+        <span class="skw">dragDrop</span>(Pattern(<img src="1461670183163.png" />).targetOffset(-<span class="dig">242</span>,-<span class="dig">46</span>), Pattern(<img src="1461670183163.png" />).targetOffset(<span class="dig">174</span>,-<span class="dig">5</span>))
+        <span class="skw">click</span>(<img src="1461669742268.png" />)
+        <span class="skw">wait</span>(<img src="1461669772050.png" />, <span class="dig">5</span>)
+        <span class="skw">click</span>()
+        <span class="skw">wait</span>(<img src="1461669817711.png" />)
+        <span class="skw">dragDrop</span>(Pattern(<img src="1461669817711.png" />).targetOffset(-<span class="dig">11</span>,-<span class="dig">84</span>), Pattern(<img src="1461669817711.png" />).targetOffset(-<span class="dig">181</span>,-<span class="dig">86</span>))
+        paste(<span class="str">"4/2/2010"</span>)
+        <span class="skw">click</span>(<img src="1461669963955.png" />)
+        <span class="skw">wait</span>(<img src="1461671232017.png" />, FOREVER)
+        <span class="skw">click</span>()
+        <span class="skw">wait</span>(<img src="1461671253872.png" />)
+        <span class="skw">click</span>(<img src="1461671279745.png" />)
+
+    <span class="cmt">###################</span>
+    <span class="cmt"># UNI Real Estate #</span>
+    <span class="cmt">###################</span>
+
+    <span class="kw">else</span>:
+    <span class="cmt">#elif exists("Multiplayer-CG5-UNI-LVL1-IntroPanel-160426-VVD-0.1.png"):</span>
+        <span class="kw">print</span><span class="str">"[info] Uni Real Estate selected on OSX as stakeholder"</span>
+        logging.info(<span class="str">"[info] Uni Real Estate selected on OSX as stakeholder"</span>)
+        <span class="skw">find</span>(<img src="Multiplayer-CG5-UNI-LVL1-IntroMainViewl-160426-VVD-0.1.png" />)
+        <span class="skw">click</span>()
+        <span class="skw">click</span>()
+        <span class="skw">type</span>(Key.SPACE)
+        <span class="skw">click</span>(<img src="Multiplayer-CG5-UNI-LVL1-MiniMap1l-160426-VVD-0.1.png" />)
+
+    <span class="cmt"># Building educational building</span>
+
+        <span class="skw">click</span>(<img src="Multiplayer-CG5-UNI-LVL1-BuildActionMenuBtn-160426-VVD-0.1.png" />)
+        <span class="skw">click</span>(<img src="Multiplayer-CG5-UNI-LVL1-EduLuxuryBtn-160426-VVD-0.1.png" />)
+        <span class="skw">dragDrop</span>(Pattern(<img src="Multiplayer-CG5-UNI-LVL1-EduLuxeLocation-160426-VVD-0.1.png" />).targetOffset(-<span class="dig">85</span>,-<span class="dig">90</span>), Pattern(<img src="Multiplayer-CG5-UNI-LVL1-EduLuxeLocation-160426-VVD-0.1.png" />).targetOffset(<span class="dig">67</span>,<span class="dig">78</span>))
+        <span class="skw">click</span>(<img src="1461669742268.png" />)
+        <span class="skw">wait</span>(<img src="1461669772050.png" />, <span class="dig">5</span>)
+        <span class="skw">click</span>()
+        <span class="skw">wait</span>(<img src="1461669817711.png" />)
+        <span class="skw">dragDrop</span>(Pattern(<img src="1461669817711.png" />).targetOffset(-<span class="dig">11</span>,-<span class="dig">84</span>), Pattern(<img src="1461669817711.png" />).targetOffset(-<span class="dig">181</span>,-<span class="dig">86</span>))
+        paste(<span class="str">"4/2/2010"</span>)
+        <span class="skw">click</span>(<img src="1461669963955.png" />)
+        <span class="skw">wait</span>(<img src="1461671232017.png" />, FOREVER)
+        <span class="skw">click</span>()
+        <span class="skw">wait</span>(<img src="1461671253872.png" />)
+        <span class="skw">click</span>(<img src="1461671279745.png" />)
+
+<span class="kw">else</span>:
+    <span class="kw">print</span><span class="str">"[error] OS error!"</span>
+    logging.error(<span class="str">"[error] OS error!"</span>)
+    exit(<span class="dig">1</span>)
+</pre>
+</body>
+</html>

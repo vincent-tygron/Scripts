@@ -1,0 +1,151 @@
+
+<html>
+   <head>
+      <style type="text/css">
+         .sikuli-code {
+            font-size: 20px;
+            font-family: "Osaka-mono", Monospace;
+            line-height: 1.5em;
+            display:table-cell;
+            white-space: pre-wrap;       /* css-3 */
+            white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* Internet Explorer 5.5+ */
+            width: 99%;   /* remove horizontal scroll-bar when viewing in IE7 */
+         }
+         .sikuli-code img {
+            vertical-align: middle;
+            margin: 2px;
+            border: 1px solid #ccc;
+            padding: 2px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-box-shadow: 1px 1px 1px gray;
+            -webkit-box-shadow: 1px 1px 2px gray;
+         }
+         .kw {
+            color: blue;
+         }
+         .skw {
+            color: rgb(63, 127, 127);
+         }
+
+         .str {
+            color: rgb(128, 0, 0);
+         }
+
+         .dig {
+            color: rgb(128, 64, 0);
+         }
+
+         .cmt {
+            color: rgb(200, 0, 200);
+         }
+
+         h2 {
+            display: inline;
+            font-weight: normal;
+         }
+
+         .info {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            display: none;
+         }
+
+         a {
+            color: #9D2900;
+         }
+
+         body {
+            font-family: "Trebuchet MS", Arial, Sans-Serif;
+         }
+
+      </style>
+   </head>
+<body>
+<div class="info">
+<h2>Multiplayer-Cg5-Client-StartSession-160422-VVD-0.6.sikuli</h2> <a href="Multiplayer-Cg5-Client-StartSession-160422-VVD-0.6.zip">(Download this script)</a>
+</div>
+<pre class="sikuli-code">
+<span class="kw">import</span> logging; reload(logging)
+FORMAT=(<span class="str">"%(asctime) -8s %(message) s"</span>)
+logging.basicConfig(format=FORMAT, filename=<span class="str">"TestLog.txt"</span>, level=logging.DEBUG)
+
+logging.info(<span class="str">"[info] Accept invite and load Cg5 session..."</span>)
+
+<span class="kw">if</span> Settings.isLinux() <span class="kw">or</span> Settings.isWindows():
+    <span class="skw">wait</span>(<img src="Multiplayer-Client-SplashScreen-ContinueBtn-160422-VVD-0.1.png" />, FOREVER)
+    <span class="skw">click</span>()
+    <span class="kw">if</span> exists(<img src="Multiplayer-Client-Cg5-ExplanationScreen-160422-VVD-0.1.png" />, <span class="dig">60</span>):
+        <span class="kw">print</span><span class="str">"[success] Client is proceeding into session setup!"</span>
+        logging.info(<span class="str">"[success] Client is proceeding into session setup!"</span>)
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[error] Client did not proceed to session setup (in time)!"</span>
+        logging.error(<span class="str">"[error] Client did not proceed to session setup (in time)!"</span>)
+        exit(<span class="dig">1</span>)
+
+    <span class="skw">click</span>(<img src="Multiplayer-Client-SplashScreen-ContinueBtn2-160422-VVD-0.1.png" />)
+    <span class="kw">if</span> <span class="kw">not</span> exists(<img src="Multiplayer-Client-TeamName-FilledIn-160422-VVD-0.1.png" />, <span class="dig">3</span>):
+        <span class="skw">type</span>(<img src="Multiplayer-Client-TeamName-Blank-160422-VVD-0.1.png" />, <span class="str">"QA"</span>)
+    Region(<span class="dig">805</span>,<span class="dig">541</span>,<span class="dig">874</span>,<span class="dig">467</span>)
+    <span class="skw">click</span>(<img src="Multiplayer-Client-SesionName-ContinueBtn3-160422-VVD-0.1.png" />)
+    <span class="skw">wait</span>(<img src="Multiplayer-Client-StakeholderPanelTitle-160422-VVD-0.1.png" />, <span class="dig">15</span>)
+    <span class="skw">click</span>(Pattern(<img src="Multiplayer-Client-StakeholderSelectionList-160422-VVD-0.1.png" />).targetOffset(-<span class="dig">32</span>,-<span class="dig">122</span>))
+    exists(<img src="Multiplayer-Client-StakeholderSelection-ChooseStakeholderBtn-160422-VVD-0.1.png" />)
+    <span class="skw">click</span>()
+    <span class="kw">if</span> <span class="kw">not</span> exists(<img src="Multiplayer-Client-AssignmentPanelTitle-160422-VVD-0.1.png" />, <span class="dig">3</span>):
+        <span class="skw">click</span>(<img src="Multiplayer-Client-StakeholderSelection-Waterboard-160425-VVD-0.1.png" />)
+        exists(<img src="Multiplayer-Client-StakeholderSelection-ChooseStakeholderBtn-160422-VVD-0.1.png" />)
+        <span class="skw">click</span>()
+        <span class="kw">if</span> <span class="kw">not</span> exists(<img src="Multiplayer-Client-AssignmentPanelTitle-160422-VVD-0.1.png" />, <span class="dig">3</span>):
+            <span class="skw">click</span>(<img src="Multiplayer-Client-StakeholderSelection-SSH-160425-VVD-0.1.png" />)
+            exists(<img src="Multiplayer-Client-StakeholderSelection-ChooseStakeholderBtn-160422-VVD-0.1.png" />)
+            <span class="skw">click</span>()
+            <span class="kw">if</span> <span class="kw">not</span> exists(<img src="Multiplayer-Client-AssignmentPanelTitle-160422-VVD-0.1.png" />, <span class="dig">3</span>):
+                <span class="skw">click</span>(<img src="Multiplayer-Client-StakeholderSelection-UniRealEstate-160425-VVD-0.1.png" />)
+
+                <span class="skw">click</span>(<img src="Multiplayer-Client-StakeholderSelection-ChooseStakeholderBtn-160422-VVD-0.1.png" />)
+
+    <span class="skw">wait</span>(<img src="Multiplayer-Client-AssignmentPanelTitle-160422-VVD-0.1.png" />, <span class="dig">10</span>)
+    <span class="skw">click</span>(<img src="Multiplayer-Client-SplashScreen-ContinueBtn2-160422-VVD-0.1.png" />)
+
+<span class="kw">if</span> Settings.isMac():
+    <span class="skw">wait</span>(<img src="Multiplayer-Client-MAC-SplashScreen-ContinueBtn-160425-VVD-0.1.png" />, FOREVER)
+    <span class="skw">click</span>()
+    <span class="kw">if</span> exists(<img src="Multiplayer-Client-MAC-Cg5-ExplanationScreen-160425-VVD-0.1.png" />, <span class="dig">60</span>):
+        <span class="kw">print</span><span class="str">"[success] Client is proceeding into session setup!"</span>
+        logging.info(<span class="str">"[success] Client is proceeding into session setup!"</span>)
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[error] Client did not proceed to session setup (in time)!"</span>
+        logging.error(<span class="str">"[error] Client did not proceed to session setup (in time)!"</span>)
+        exit(<span class="dig">1</span>)
+
+    <span class="skw">click</span>(<img src="Multiplayer-Client-MAC-SplashScreen-ContinueBtn2-160425-VVD-0.1.png" />)
+    <span class="kw">if</span> <span class="kw">not</span> exists(<img src="Multiplayer-MAC-Client-TeamName-FilledIn-160425-VVD-0.1.png" />, <span class="dig">3</span>):
+        <span class="skw">type</span>(<img src="Multiplayer-Client-MAC-TeamName-Blank-160425-VVD-0.1.png" />, <span class="str">"QA"</span>)
+    Region(<span class="dig">805</span>,<span class="dig">541</span>,<span class="dig">874</span>,<span class="dig">467</span>)
+    <span class="skw">click</span>(<img src="Multiplayer-Client-MAC-SesionName-ContinueBtn3-160425-VVD-0.1.png" />)
+    <span class="skw">wait</span>(<img src="Multiplayer-Client-MAC-StakeholderPanelTitle-160425-VVD-0.1.png" />, <span class="dig">15</span>)
+    <span class="skw">click</span>(Pattern(<img src="Multiplayer-Client-MAC-StakeholderSelectionList-160425-VVD-0.1.png" />).targetOffset(-<span class="dig">17</span>,-<span class="dig">89</span>))
+    exists(<img src="Multiplayer-Client-MAC-StakeholderSelection-ChooseStakeholderBtn-160425-VVD-0.1.png" />)
+    <span class="skw">click</span>()
+    <span class="kw">if</span> <span class="kw">not</span> exists(<img src="Multiplayer-Client-MAC-AssignmentPanelTitle-160425-VVD-0.1.png" />, <span class="dig">3</span>):
+        <span class="skw">click</span>(<img src="Multiplayer-Client-MAC-StakeholderSelection-Waterboard-160426-VVD-0.1.png" />)
+        exists(<img src="Multiplayer-Client-MAC-StakeholderSelection-ChooseStakeholderBtn-160425-VVD-0.1.png" />)
+        <span class="skw">click</span>()
+        <span class="kw">if</span> <span class="kw">not</span> exists(<img src="Multiplayer-Client-MAC-AssignmentPanelTitle-160425-VVD-0.1.png" />, <span class="dig">3</span>):
+            <span class="skw">click</span>(<img src="Multiplayer-Client-MAC-StakeholderSelection-SSH-160426-VVD-0.1.png" />)
+            exists(<img src="Multiplayer-Client-MAC-StakeholderSelection-ChooseStakeholderBtn-160425-VVD-0.1.png" />)
+            <span class="skw">click</span>()
+            <span class="kw">if</span> <span class="kw">not</span> exists(<img src="Multiplayer-Client-MAC-AssignmentPanelTitle-160425-VVD-0.1.png" />, <span class="dig">3</span>):
+                <span class="skw">click</span>(<img src="Multiplayer-Client-MAC-StakeholderSelection-UniRealEstate-160426-VVD-0.1.png" />)
+                <span class="skw">click</span>(<img src="Multiplayer-Client-MAC-StakeholderSelection-ChooseStakeholderBtn-160425-VVD-0.1.png" />)
+
+    <span class="skw">wait</span>(<img src="Multiplayer-Client-MAC-AssignmentPanelTitle-160425-VVD-0.1.png" />, <span class="dig">10</span>)
+    <span class="skw">click</span>(<img src="Multiplayer-Client-MAC-SplashScreen-ContinueBtn2-160425-VVD-0.1.png" />)
+</pre>
+</body>
+</html>
