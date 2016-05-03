@@ -97,6 +97,8 @@ if Settings.isLinux() or Settings.isWindows():
     
         click("1461669579386.png")
         click("1461669604651.png")
+        loc = SCREEN.getCenter
+        wheel(loc,WHEEL_UP,1)
         dragDrop(Pattern("1461670183163.png").targetOffset(-242,-46), Pattern("1461670183163.png").targetOffset(174,-5))
         click("1461669742268.png")
         wait("1461669772050.png", 5)
