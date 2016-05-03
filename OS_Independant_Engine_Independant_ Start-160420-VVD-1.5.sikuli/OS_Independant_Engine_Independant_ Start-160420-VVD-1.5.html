@@ -130,26 +130,29 @@ myVer = Settings.getOSVersion()
     logging.info(<span class="str">"[info] MAC OSX detected !"</span> + myVer)
     <span class="kw">if</span> selected == engines[<span class="dig">0</span>]:
         App.open(<span class="str">"Finder"</span>)
-        <span class="skw">click</span>(<img src="1461066980956.png" />)
-        <span class="skw">doubleClick</span>(<img src="1460109683894.png" />)
+        <span class="skw">click</span>(<img src="OSX-Finder-DownloadsIcon-160502-VVD-0.1.png" />)
+        <span class="skw">doubleClick</span>(<img src="1462188996164.png" />)
+        <span class="skw">click</span>(Pattern(<img src="1462189033370.png" />).targetOffset(-<span class="dig">20</span>,<span class="dig">0</span>))
 
-        <span class="kw">if</span> exists(<img src="1458652391503.png" />, <span class="dig">3</span>):
-            <span class="skw">click</span>(Pattern(<img src="1458652391503.png" />).targetOffset(<span class="dig">145</span>,<span class="dig">62</span>))
+        <span class="kw">if</span> exists(<img src="1458652391503-1.png" />, <span class="dig">3</span>):
+            <span class="skw">click</span>(Pattern(<img src="1458652391503-1.png" />).targetOffset(<span class="dig">145</span>,<span class="dig">62</span>))
 
     <span class="kw">elif</span> selected == engines[<span class="dig">1</span>]:
         App.open(<span class="str">"Finder"</span>)
-        <span class="skw">click</span>(<img src="1461066980956.png" />)
-        <span class="skw">doubleClick</span>(<img src="1461151858330.png" />)
+        <span class="skw">click</span>(<img src="OSX-Finder-DownloadsIcon-160502-VVD-0.1.png" />)
+        <span class="skw">doubleClick</span>(<img src="1462189513802.png" />)
+        <span class="skw">click</span>(Pattern(<img src="1462189033370.png" />).targetOffset(-<span class="dig">20</span>,<span class="dig">0</span>))
 
-        <span class="kw">if</span> exists(<img src="1458652391503.png" />, <span class="dig">3</span>):
-            <span class="skw">click</span>(Pattern(<img src="1458652391503.png" />).targetOffset(<span class="dig">145</span>,<span class="dig">62</span>))
+        <span class="kw">if</span> exists(<img src="1458652391503-1.png" />, <span class="dig">3</span>):
+            <span class="skw">click</span>(Pattern(<img src="1458652391503-1.png" />).targetOffset(<span class="dig">145</span>,<span class="dig">62</span>))
     <span class="kw">else</span>:
         App.open(<span class="str">"Finder"</span>)
-        <span class="skw">click</span>(<img src="1461066980956.png" />)
-        <span class="skw">doubleClick</span>(<img src="1461151873855.png" />)
+        <span class="skw">click</span>(<img src="OSX-Finder-DownloadsIcon-160502-VVD-0.1.png" />)
+        <span class="skw">doubleClick</span>(<img src="1462189531801.png" />)
+        <span class="skw">click</span>(Pattern(<img src="1462189033370.png" />).targetOffset(-<span class="dig">20</span>,<span class="dig">0</span>))
 
-        <span class="kw">if</span> exists(<img src="1458652391503.png" />, <span class="dig">3</span>):
-            <span class="skw">click</span>(Pattern(<img src="1458652391503.png" />).targetOffset(<span class="dig">145</span>,<span class="dig">62</span>))
+        <span class="kw">if</span> exists(<img src="1458652391503-1.png" />, <span class="dig">3</span>):
+            <span class="skw">click</span>(Pattern(<img src="1458652391503-1.png" />).targetOffset(<span class="dig">145</span>,<span class="dig">62</span>))
 
 <span class="kw">else</span>:
     <span class="kw">print</span> <span class="str">"Unsupported OS detected!"</span>

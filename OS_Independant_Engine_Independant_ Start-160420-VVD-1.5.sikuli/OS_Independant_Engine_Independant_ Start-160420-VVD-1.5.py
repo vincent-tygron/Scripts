@@ -58,27 +58,30 @@ elif Settings.isMac():
     logging.info("[info] MAC OSX detected !" + myVer)
     if selected == engines[0]:
         App.open("Finder")
-        click("1461066980956.png")    
-        doubleClick("1460109683894.png")
+        click("OSX-Finder-DownloadsIcon-160502-VVD-0.1.png")    
+        doubleClick("1462188996164.png")
+        click(Pattern("1462189033370.png").targetOffset(-20,0))
     
-        if exists("1458652391503.png", 3):
-            click(Pattern("1458652391503.png").targetOffset(145,62))
+        if exists("1458652391503-1.png", 3):
+            click(Pattern("1458652391503-1.png").targetOffset(145,62))
             
     elif selected == engines[1]:
         App.open("Finder")
-        click("1461066980956.png")    
-        doubleClick("1461151858330.png")
+        click("OSX-Finder-DownloadsIcon-160502-VVD-0.1.png")    
+        doubleClick("1462189513802.png")
+        click(Pattern("1462189033370.png").targetOffset(-20,0))
     
-        if exists("1458652391503.png", 3):
-            click(Pattern("1458652391503.png").targetOffset(145,62))
+        if exists("1458652391503-1.png", 3):
+            click(Pattern("1458652391503-1.png").targetOffset(145,62))
     else:
         App.open("Finder")
-        click("1461066980956.png")    
-        doubleClick("1461151873855.png")
+        click("OSX-Finder-DownloadsIcon-160502-VVD-0.1.png")    
+        doubleClick("1462189531801.png")
+        click(Pattern("1462189033370.png").targetOffset(-20,0))
     
-        if exists("1458652391503.png", 3):
-            click(Pattern("1458652391503.png").targetOffset(145,62))
-            
+        if exists("1458652391503-1.png", 3):
+            click(Pattern("1458652391503-1.png").targetOffset(145,62))
+
 else:
     print "Unsupported OS detected!"
     logging.error("[error] Unsupported OS detected!")
