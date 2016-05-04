@@ -1,0 +1,177 @@
+
+<html>
+   <head>
+      <style type="text/css">
+         .sikuli-code {
+            font-size: 20px;
+            font-family: "Osaka-mono", Monospace;
+            line-height: 1.5em;
+            display:table-cell;
+            white-space: pre-wrap;       /* css-3 */
+            white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* Internet Explorer 5.5+ */
+            width: 99%;   /* remove horizontal scroll-bar when viewing in IE7 */
+         }
+         .sikuli-code img {
+            vertical-align: middle;
+            margin: 2px;
+            border: 1px solid #ccc;
+            padding: 2px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-box-shadow: 1px 1px 1px gray;
+            -webkit-box-shadow: 1px 1px 2px gray;
+         }
+         .kw {
+            color: blue;
+         }
+         .skw {
+            color: rgb(63, 127, 127);
+         }
+
+         .str {
+            color: rgb(128, 0, 0);
+         }
+
+         .dig {
+            color: rgb(128, 64, 0);
+         }
+
+         .cmt {
+            color: rgb(200, 0, 200);
+         }
+
+         h2 {
+            display: inline;
+            font-weight: normal;
+         }
+
+         .info {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            display: none;
+         }
+
+         a {
+            color: #9D2900;
+         }
+
+         body {
+            font-family: "Trebuchet MS", Arial, Sans-Serif;
+         }
+
+      </style>
+   </head>
+<body>
+<div class="info">
+<h2>OS_Independant_Engine_Independant_ Start-160503-VVD-1.6a-T20.sikuli</h2> <a href="OS_Independant_Engine_Independant_ Start-160503-VVD-1.6a-T20.zip">(Download this script)</a>
+</div>
+<pre class="sikuli-code">
+<span class="kw">import</span> logging; reload(logging)
+FORMAT=(<span class="str">"%(asctime) -8s %(message) s"</span>)
+logging.basicConfig(format=FORMAT, filename=<span class="str">"TestLog.txt"</span>, level=logging.DEBUG)
+
+logging.info(<span class="str">"[info] Check for Operating System..."</span>)
+
+<span class="cmt">###########################################</span>
+<span class="cmt"># Let the tester select which AUT to test #</span>
+<span class="cmt">###########################################</span>
+
+engines = (<span class="str">"Tygron Engine Test"</span>, <span class="str">"Tygron Engine Preview"</span>, <span class="str">"Tygron Engine 2016"</span>)
+selected = select(<span class="str">"Please select which engine to test"</span>, options = engines)
+
+<span class="cmt">#############################</span>
+<span class="cmt"># Check which OS is used... #</span>
+<span class="cmt">#############################</span>
+
+<span class="kw">import</span> subprocess
+myVer = Settings.getOSVersion()
+
+<span class="cmt">#####################</span>
+<span class="cmt"># If OS is Linux... #</span>
+<span class="cmt">#####################</span>
+
+<span class="kw">if</span> Settings.isLinux():
+    <span class="kw">print</span> <span class="str">"Linux detected! "</span> + myVer
+    logging.info(<span class="str">"[info] Linux detected !"</span> + myVer)
+    <span class="kw">if</span> selected == engines[<span class="dig">0</span>]:
+        subprocess.Popen([<span class="str">"/home/tygron/Desktop/Tygron Engine Test/Tygron Engine Test.sh"</span>])
+    <span class="kw">elif</span> selected == engines[<span class="dig">1</span>]:
+        subprocess.Popen([<span class="str">"/home/tygron/Desktop/Tygron Engine Preview/Tygron Engine Preview.sh"</span>])
+    <span class="kw">else</span>:
+        subprocess.Popen([<span class="str">"/home/tygron/Desktop/Tygron Engine 2016/Tygron Engine 2016.sh"</span>])
+
+<span class="cmt">#######################</span>
+<span class="cmt"># If OS is Windows... #</span>
+<span class="cmt">#######################</span>
+
+<span class="kw">elif</span> Settings.isWindows():
+    <span class="kw">print</span> <span class="str">"Windows detected! "</span> + myVer
+    logging.info(<span class="str">"[info] Windows detected !"</span> + myVer)
+    <span class="kw">if</span> selected == engines[<span class="dig">0</span>]:
+        subprocess.Popen([<span class="str">"C:\Users\Vincent\AppData\Local\Tygron Engine Test\Tygron Engine Test.exe"</span>])
+        <span class="cmt">#subprocess.Popen(["C:\\Users\\Tygron\\AppData\\Local\\Tygron Engine Test\\Tygron Engine Test.exe"])</span>
+    <span class="kw">elif</span> selected == engines[<span class="dig">1</span>]:
+        subprocess.Popen([<span class="str">"C:\Users\Vincent\AppData\Local\Tygron Engine Preview\Tygron Engine Preview.exe"</span>])
+        <span class="cmt">#subprocess.Popen(["C:\Users\Tygron\AppData\Local\Tygron Engine Preview\Tygron Engine Preview.exe"])</span>
+    <span class="kw">else</span>:
+        subprocess.Popen([<span class="str">"C:\Users\Vincent\AppData\Local\Tygron Engine 2016\Tygron Engine 2016.exe"</span>])
+        <span class="cmt">#subprocess.Popen(["C:\Users\Tygron\AppData\Local\Tygron Engine 2016\Tygron Engine 2016.exe"])</span>
+
+<span class="cmt">########################</span>
+<span class="cmt"># If OS is MacOS(X)... #</span>
+<span class="cmt">########################</span>
+
+<span class="kw">elif</span> Settings.isMac():
+    <span class="kw">print</span> <span class="str">"Mac OSX detected! "</span> + myVer
+    logging.info(<span class="str">"[info] MAC OSX detected !"</span> + myVer)
+    <span class="kw">if</span> selected == engines[<span class="dig">0</span>]:
+        App.open(<span class="str">"Finder"</span>)
+        <span class="skw">click</span>(<img src="OSX-Finder-DownloadsIcon-160502-VVD-0.1.png" />)
+        <span class="skw">doubleClick</span>(<img src="1462188996164.png" />)
+        <span class="skw">click</span>(Pattern(<img src="1462189033370.png" />).targetOffset(-<span class="dig">20</span>,<span class="dig">0</span>))
+
+        <span class="kw">if</span> exists(<img src="1458652391503-1.png" />, <span class="dig">3</span>):
+            <span class="skw">click</span>(Pattern(<img src="1458652391503-1.png" />).targetOffset(<span class="dig">145</span>,<span class="dig">62</span>))
+
+    <span class="kw">elif</span> selected == engines[<span class="dig">1</span>]:
+        App.open(<span class="str">"Finder"</span>)
+        <span class="skw">click</span>(<img src="OSX-Finder-DownloadsIcon-160502-VVD-0.1.png" />)
+        <span class="skw">doubleClick</span>(<img src="1462189513802.png" />)
+        <span class="skw">click</span>(Pattern(<img src="1462189033370.png" />).targetOffset(-<span class="dig">20</span>,<span class="dig">0</span>))
+
+        <span class="kw">if</span> exists(<img src="1458652391503-1.png" />, <span class="dig">3</span>):
+            <span class="skw">click</span>(Pattern(<img src="1458652391503-1.png" />).targetOffset(<span class="dig">145</span>,<span class="dig">62</span>))
+    <span class="kw">else</span>:
+        App.open(<span class="str">"Finder"</span>)
+        <span class="skw">click</span>(<img src="OSX-Finder-DownloadsIcon-160502-VVD-0.1.png" />)
+        <span class="skw">doubleClick</span>(<img src="1462189531801.png" />)
+        <span class="skw">click</span>(Pattern(<img src="1462189033370.png" />).targetOffset(-<span class="dig">20</span>,<span class="dig">0</span>))
+
+        <span class="kw">if</span> exists(<img src="1458652391503-1.png" />, <span class="dig">3</span>):
+            <span class="skw">click</span>(Pattern(<img src="1458652391503-1.png" />).targetOffset(<span class="dig">145</span>,<span class="dig">62</span>))
+
+<span class="kw">else</span>:
+    <span class="kw">print</span> <span class="str">"Unsupported OS detected!"</span>
+    logging.error(<span class="str">"[error] Unsupported OS detected!"</span>)
+    exit(<span class="dig">1</span>)
+
+<span class="cmt">###############################</span>
+<span class="cmt"># Check if AUT has started... #</span>
+<span class="cmt">###############################</span>
+
+<span class="skw">wait</span>(<span class="dig">3</span>)
+<span class="kw">if</span> exists(<img src="1460109797811.png" />, <span class="dig">2</span>) <span class="kw">or</span> exists(<img src="1460111982242.png" />, <span class="dig">2</span>):
+    <span class="kw">print</span> <span class="str">"[success] Engine started!"</span>
+    logging.info(<span class="str">"[success] Engine started!"</span>)
+    <span class="cmt">#exit(1)</span>
+<span class="kw">else</span>:
+    <span class="kw">print</span> <span class="str">"[error] Engine not started!"</span>
+    logging.error(<span class="str">"[error] Engine not started!"</span>)
+    exit(<span class="dig">1</span>)
+</pre>
+</body>
+</html>
