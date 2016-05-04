@@ -95,21 +95,18 @@ if Settings.isLinux() or Settings.isWindows():
         click(loc)
         click(loc)
         type(Key.SPACE)
-        click("1461669563841.png")
+        wait("1461669563841.png", 3)
+        doubleClick()
             
         # Building cheap student housing
         wait("1462356862110.png", 3)
-        loc = SCREEN.getCenter
-        find(loc)
-        click(loc)
-        wheel(WHEEL_DOWN,1)
         
         click("1461669579386.png")
         click("1461669604651.png")
-        #exit(1)
-        #loc = SCREEN.getCenter
-        #click(loc)
-        #wheel(WHEEL_DOWN,1)
+        
+        loc = SCREEN.getCenter()
+        wheel(loc, WHEEL_DOWN, 2)
+        wait(1)
         
         dragDrop(Pattern("1461670183163.png").targetOffset(-242,-46), Pattern("1461670183163.png").targetOffset(174,-5))
         click("1461669742268.png")
