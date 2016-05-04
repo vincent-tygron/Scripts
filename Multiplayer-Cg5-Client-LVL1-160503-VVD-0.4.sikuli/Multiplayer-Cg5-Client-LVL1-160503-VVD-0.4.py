@@ -13,9 +13,9 @@ if Settings.isLinux() or Settings.isWindows():
     if exists("1462268628697.png"):
         print"[info] Municipality selected as stakeholder" 
         logging.info("[info] Municipality selected as stakeholder")
-        find("1462268680483.png")
-        click()
-        click()
+        loc = SCREEN.getCenter()
+        click(loc)
+        click(loc)
         type(Key.SPACE)
         
         # Renovating houses
@@ -57,17 +57,21 @@ if Settings.isLinux() or Settings.isWindows():
         click(loc)
         click(loc)
         type(Key.SPACE)
-        wait(Pattern("1462275915840.png").similar(0.80))
-        click()
-            
+        
+        wait(Pattern("1462275915840.png").similar(0.80), 3)
+        doubleClick()
+        wait("1462366634006.png", 3)
         # Building something
     
 
         loc = SCREEN.getCenter()
         wheel(loc,WHEEL_DOWN,1)
         click("Multiplayer-CG5-Waterboard-LVL1-WaterActionMenuBtn-160426-VVD-0.1.png")
-        exists("Multiplayer-CG5-Waterboard-LVL1-OpenWaterLocation-160426-VVD-0.1.png", 5)
-        dragDrop(Pattern("1461676305234.png").targetOffset(589,-287), Pattern("1461676305234.png").targetOffset(-665,301))
+        if exists("Multiplayer-CG5-Waterboard-LVL1-OpenWaterLocation-160426-VVD-0.1.png", 5):
+            dragDrop(Pattern("1461676305234.png").targetOffset(589,-287), Pattern("1461676305234.png").targetOffset(-665,301))
+        else:
+            print"ERROR!!!" 
+            exit(1)
         click("Multiplayer-CG5-Waterboard-LVL1-WaterActionMenuYesBtn-160426-VVD-0.1.png")
         wait("1461669772050.png", 10)
         click()
@@ -87,9 +91,9 @@ if Settings.isLinux() or Settings.isWindows():
     elif exists(Pattern("1461669319306.png").similar(0.90)):
         print"[info] SSH selected as stakeholder" 
         logging.info("[info] SSH selected as stakeholder")
-        find("1461669423619.png")
-        click()
-        click()
+        loc = SCREEN.getCenter()
+        click(loc)
+        click(loc)
         type(Key.SPACE)
         click("1461669563841.png")
             
@@ -209,9 +213,9 @@ elif Settings.isMac():
     elif exists("Multiplayer-CG5-Waterboard-LVL1-IntroPanel-160426-VVD-0.1.png"):
         print"[info] Waterboard selected on OSX as stakeholder" 
         logging.info("[info] Waterboard selected on OSX as stakeholder")
-        find("Multiplayer-CG5-WaterBoard-LVL1-IntroMainView-160426-VVD-0.1.png")
-        click()
-        click()
+        loc = SCREEN.getCenter()
+        click(loc)
+        click(loc)
         type(Key.SPACE)
         wait("Multiplayer-CG5-Waterbaord-LVL1-MiniMap1-160426-VVD-0.2.png", 3)
         click()
@@ -240,9 +244,9 @@ elif Settings.isMac():
     elif exists(Pattern("1461669319306.png").similar(0.90)):
         print"[info] SSH selected on OSX as stakeholder" 
         logging.info("[info] SSH selected on OSX as stakeholder")
-        find("1461669423619.png")
-        click()
-        click()
+        loc = SCREEN.getCenter()
+        click(loc)
+        click(loc)
         type(Key.SPACE)
         click("1461669563841.png")
             
@@ -271,9 +275,9 @@ elif Settings.isMac():
     #elif exists("Multiplayer-CG5-UNI-LVL1-IntroPanel-160426-VVD-0.1.png"):
         print"[info] Uni Real Estate selected on OSX as stakeholder" 
         logging.info("[info] Uni Real Estate selected on OSX as stakeholder")
-        find("Multiplayer-CG5-UNI-LVL1-IntroMainViewl-160426-VVD-0.1.png")
-        click()
-        click()
+        loc = SCREEN.getCenter()
+        click(loc)
+        click(loc)
         type(Key.SPACE)
         click("Multiplayer-CG5-UNI-LVL1-MiniMap1l-160426-VVD-0.1.png")
             
