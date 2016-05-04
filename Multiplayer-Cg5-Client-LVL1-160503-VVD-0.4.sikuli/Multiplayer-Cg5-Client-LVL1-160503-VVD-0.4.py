@@ -132,12 +132,14 @@ if Settings.isLinux() or Settings.isWindows():
         click(loc)
         click(loc)
         type(Key.SPACE)
-        click("Multiplayer-CG5-UNI-LVL1-MiniMap1l-160426-VVD-0.1.png")
+        wait("Multiplayer-CG5-UNI-LVL1-MiniMap1l-160426-VVD-0.1.png", 5)
+        click()
             
     # Building educational building
     
         click("Multiplayer-CG5-UNI-LVL1-BuildActionMenuBtn-160426-VVD-0.1.png")
-        click("Multiplayer-CG5-UNI-LVL1-EduLuxuryBtn-160426-VVD-0.1.png")
+        wait("1462363508989.png", 60)
+        click()
         dragDrop(Pattern("Multiplayer-CG5-UNI-LVL1-EduLuxeLocation-160426-VVD-0.1.png").targetOffset(-85,-90), Pattern("Multiplayer-CG5-UNI-LVL1-EduLuxeLocation-160426-VVD-0.1.png").targetOffset(67,78))
         click("1461669742268.png")
         wait("1461669772050.png", 5)
