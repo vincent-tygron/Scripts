@@ -7,11 +7,12 @@ logging.basicConfig(format=FORMAT, filename="testlog.log", level=logging.DEBUG)
 ################################################
 
 if Settings.isLinux() or Settings.isWindows():
-    find("LoginPanel-UserName-160418-VVD-0.2.png")
-    click()
+    #find("LoginPanel-UserName-160418-VVD-0.2.png")
+    #click()
     dragDrop(Pattern("LoginPanel-UserName-160418-VVD-0.2.png").targetOffset(262,8),Pattern("LoginPanel-UserName-160418-VVD-0.2.png").targetOffset(-273,10))
-    type(Key.DELETE)
+    #type(Key.DELETE)
     paste("qaautotest2@tygron.com")
+    wait(1)
     type(Key.TAB)
     paste("autotest2qa")
     click("LoginPanel-LoginButton-160418-VVD-0.1.png")

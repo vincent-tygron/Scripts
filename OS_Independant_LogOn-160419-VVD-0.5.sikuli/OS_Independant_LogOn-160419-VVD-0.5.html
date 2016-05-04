@@ -79,11 +79,12 @@ logging.basicConfig(format=FORMAT, filename=<span class="str">"testlog.log"</spa
 <span class="cmt">################################################</span>
 
 <span class="kw">if</span> Settings.isLinux() <span class="kw">or</span> Settings.isWindows():
-    <span class="skw">find</span>(<img src="LoginPanel-UserName-160418-VVD-0.2.png" />)
-    <span class="skw">click</span>()
+    <span class="cmt">#find("LoginPanel-UserName-160418-VVD-0.2.png")</span>
+    <span class="cmt">#click()</span>
     <span class="skw">dragDrop</span>(Pattern(<img src="LoginPanel-UserName-160418-VVD-0.2.png" />).targetOffset(<span class="dig">262</span>,<span class="dig">8</span>),Pattern(<img src="LoginPanel-UserName-160418-VVD-0.2.png" />).targetOffset(-<span class="dig">273</span>,<span class="dig">10</span>))
-    <span class="skw">type</span>(Key.DELETE)
+    <span class="cmt">#type(Key.DELETE)</span>
     paste(<span class="str">"qaautotest2@tygron.com"</span>)
+    <span class="skw">wait</span>(<span class="dig">1</span>)
     <span class="skw">type</span>(Key.TAB)
     paste(<span class="str">"autotest2qa"</span>)
     <span class="skw">click</span>(<img src="LoginPanel-LoginButton-160418-VVD-0.1.png" />)

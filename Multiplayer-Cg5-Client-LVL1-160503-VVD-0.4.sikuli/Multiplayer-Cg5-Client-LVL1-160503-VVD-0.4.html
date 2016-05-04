@@ -166,11 +166,19 @@ logging.info(<span class="str">"[info] Play Level 1..."</span>)
         <span class="skw">click</span>(<img src="1461669563841.png" />)
 
         <span class="cmt"># Building cheap student housing</span>
+        <span class="skw">wait</span>(<img src="1462356862110.png" />, <span class="dig">3</span>)
+        loc = SCREEN.getCenter
+        <span class="skw">find</span>(loc)
+        <span class="skw">click</span>(loc)
+        wheel(WHEEL_DOWN,<span class="dig">1</span>)
 
         <span class="skw">click</span>(<img src="1461669579386.png" />)
         <span class="skw">click</span>(<img src="1461669604651.png" />)
-        loc = SCREEN.getCenter
-        wheel(loc,WHEEL_UP,<span class="dig">1</span>)
+        <span class="cmt">#exit(1)</span>
+        <span class="cmt">#loc = SCREEN.getCenter</span>
+        <span class="cmt">#click(loc)</span>
+        <span class="cmt">#wheel(WHEEL_DOWN,1)</span>
+
         <span class="skw">dragDrop</span>(Pattern(<img src="1461670183163.png" />).targetOffset(-<span class="dig">242</span>,-<span class="dig">46</span>), Pattern(<img src="1461670183163.png" />).targetOffset(<span class="dig">174</span>,-<span class="dig">5</span>))
         <span class="skw">click</span>(<img src="1461669742268.png" />)
         <span class="skw">wait</span>(<img src="1461669772050.png" />, <span class="dig">5</span>)
