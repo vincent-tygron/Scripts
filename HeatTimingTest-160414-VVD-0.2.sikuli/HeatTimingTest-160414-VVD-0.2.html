@@ -1,0 +1,484 @@
+
+<html>
+   <head>
+      <style type="text/css">
+         .sikuli-code {
+            font-size: 20px;
+            font-family: "Osaka-mono", Monospace;
+            line-height: 1.5em;
+            display:table-cell;
+            white-space: pre-wrap;       /* css-3 */
+            white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* Internet Explorer 5.5+ */
+            width: 99%;   /* remove horizontal scroll-bar when viewing in IE7 */
+         }
+         .sikuli-code img {
+            vertical-align: middle;
+            margin: 2px;
+            border: 1px solid #ccc;
+            padding: 2px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-box-shadow: 1px 1px 1px gray;
+            -webkit-box-shadow: 1px 1px 2px gray;
+         }
+         .kw {
+            color: blue;
+         }
+         .skw {
+            color: rgb(63, 127, 127);
+         }
+
+         .str {
+            color: rgb(128, 0, 0);
+         }
+
+         .dig {
+            color: rgb(128, 64, 0);
+         }
+
+         .cmt {
+            color: rgb(200, 0, 200);
+         }
+
+         h2 {
+            display: inline;
+            font-weight: normal;
+         }
+
+         .info {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            display: none;
+         }
+
+         a {
+            color: #9D2900;
+         }
+
+         body {
+            font-family: "Trebuchet MS", Arial, Sans-Serif;
+         }
+
+      </style>
+   </head>
+<body>
+<div class="info">
+<h2>HeatTimingTest-160414-VVD-0.2.sikuli</h2> <a href="HeatTimingTest-160414-VVD-0.2.zip">(Download this script)</a>
+</div>
+<pre class="sikuli-code">
+<span class="cmt">#Use on project Heat test-0330-c only!!!</span>
+
+<span class="kw">import</span> logging;reload(logging)
+FORMAT=<span class="str">"%(asctime)-8s %(message)s"</span>
+logging.basicConfig(format=FORMAT, filename=<span class="str">"test.log"</span>, level=logging.DEBUG)
+
+<span class="cmt">#logging.info("=====[START] HEAT timing test=====")</span>
+logging.info(<span class="str">"[info] Start HEAT timing test run..."</span>)
+
+hover(<img src="1460972045746.png" />)
+<span class="skw">click</span>(<img src="1459431155419.png" />)
+waittime = <span class="dig">0.5</span>
+<span class="kw">for</span> x <span class="kw">in</span> range(<span class="dig">0</span>, <span class="dig">240</span>):
+    <span class="kw">if</span> exists(<img src="1459431179074.png" />, waittime):
+        <span class="kw">print</span>(<span class="str">"[success] Stakeholder switched in %d seconds!"</span> % (x*waittime))
+        logging.info(<span class="str">"[success] Stakeholder switched in %d seconds!"</span> % (x*waittime))
+        <span class="kw">break</span>
+    <span class="kw">else</span>:
+        <span class="kw">print</span>(<span class="str">"[error] Can't verify Stakeholder switch!"</span>)
+        logging.error(<span class="str">"[error] Can't verify Stakeholder switch!"</span>)
+        exit(<span class="dig">1</span>)
+
+<span class="skw">click</span>(<img src="1459429822491.png" />)
+
+waittime = <span class="dig">1</span>
+<span class="kw">for</span> x <span class="kw">in</span> range(<span class="dig">0</span>, <span class="dig">300</span>):
+    <span class="kw">if</span> exists(<img src="1459434932738.png" />, waittime):
+        <span class="kw">print</span> <span class="str">'[success] Starting testrun in %d seconds'</span> % (x*waittime)
+        logging.info(<span class="str">'[success] Starting testrun in %d seconds'</span> % (x*waittime))
+        <span class="kw">break</span>
+    <span class="cmt">#else:</span>
+        <span class="cmt">#print("[error] Test run did not start in %d seconds!" % (x*waittime))</span>
+        <span class="cmt">#logging.error("[error] Test run did not start in %d seconds!" % (x*waittime))</span>
+        <span class="cmt">#exit(1)</span>
+<span class="cmt">#else:</span>
+    <span class="cmt">#print("[success] Test run started!")</span>
+    <span class="cmt">#logging.info("[success] Test run started!")</span>
+<span class="skw">click</span>(<img src="1459430804824.png" />)
+<span class="skw">wait</span>(<span class="dig">1</span>)
+<span class="skw">type</span>(Key.SPACE)
+<span class="cmt">#wait(1)</span>
+<span class="cmt">#click("1459433388524.png")</span>
+<span class="cmt">#wait("1459430885411.png", 15)</span>
+<span class="skw">wait</span>(<img src="1459519052482.png" />, FOREVER)
+
+logging.info(<span class="str">"[info] Press Ctrl-Shift-A to flip loads..."</span>)
+
+<span class="skw">type</span>(<span class="str">"a"</span>,Key.SHIFT+Key.CTRL)
+
+<span class="kw">for</span> x <span class="kw">in</span> range(<span class="dig">0</span>,<span class="dig">30</span>):
+    <span class="kw">if</span> exists(<img src="1459434785850.png" />, x):
+        <span class="kw">print</span> <span class="str">'[succes] Loads were flipped in %d seconds'</span> % x
+        logging.info(<span class="str">'[succes] Loads were flipped in %d seconds'</span> % x)
+        <span class="kw">break</span>
+
+<span class="kw">if</span> <span class="kw">not</span> exists(<img src="1459434785850.png" />):
+    <span class="kw">print</span>(<span class="str">"[error] Loads were not flipped!"</span>)
+    logging.error(<span class="str">"[error] Loads were not flipped!"</span>)
+    <span class="cmt">#exit(1)</span>
+<span class="cmt">#else:</span>
+<span class="cmt">#    print("[success] Loads were flipped within acceptable time (10s)!")</span>
+<span class="cmt">#    logging.info("[success] Loads were flipped within acceptable time (10s)!")</span>
+
+<span class="kw">for</span> x <span class="kw">in</span> range(<span class="dig">0</span>,<span class="dig">60</span>):
+    <span class="kw">if</span> exists(Pattern(<img src="1462352270302.png" />).similar(<span class="dig">0.80</span>), x):
+        <span class="kw">print</span> <span class="str">'[success] Indicators update received in %d seconds'</span> % x
+        logging.info(<span class="str">'[success] Indicators update received in %d seconds'</span> % x)
+        <span class="kw">break</span>
+
+<span class="kw">if</span> <span class="kw">not</span> exists(Pattern(<img src="1462352270302.png" />).similar(<span class="dig">0.80</span>)):
+    <span class="kw">print</span>(<span class="str">"[error] Loads were not calculated in time!"</span>)
+    logging.error(<span class="str">"[error] Loads were not calculated in time!"</span>)
+<span class="cmt">#    exit(1)</span>
+<span class="cmt">#else:</span>
+<span class="cmt">#    print("[success] Loads were calculated within acceptable time (60s)!")</span>
+<span class="cmt">#    logging.info("[success] Loads were calculated within acceptable time (60s)!")</span>
+
+<span class="skw">type</span>(<span class="str">"a"</span>,Key.SHIFT+Key.CTRL)
+
+<span class="kw">for</span> x <span class="kw">in</span> range(<span class="dig">0</span>,<span class="dig">30</span>):
+    <span class="kw">if</span> exists(Pattern(<img src="1459519052482.png" />).exact(), x):
+        <span class="kw">print</span> <span class="str">'[success] Loads were flipped back in %d seconds'</span> % x
+        logging.info(<span class="str">'[success] Loads were flipped back in %d seconds'</span> % x)
+        <span class="kw">break</span>
+
+<span class="kw">if</span> <span class="kw">not</span> exists(Pattern(<img src="1459519052482.png" />).similar(<span class="dig">0.95</span>)):
+    <span class="kw">print</span>(<span class="str">"[error] Loads were not flipped back!"</span>)
+    logging.error(<span class="str">"[error] Loads were not flipped back!"</span>)
+    <span class="cmt">#exit(1)</span>
+<span class="cmt">#else:</span>
+<span class="cmt">#    print("[success] Loads were flipped back within acceptable time (10s)!")</span>
+<span class="cmt">#    logging.info("[success] Loads were flipped back within acceptable time (10s)!")</span>
+
+<span class="kw">for</span> x <span class="kw">in</span> range(<span class="dig">0</span>,<span class="dig">60</span>):
+    <span class="kw">if</span> exists(<img src="1462352378926.png" />, x):
+        <span class="kw">print</span> <span class="str">'[success] Indicators update received in %d seconds'</span> % x
+        logging.info(<span class="str">'[success] Indicators update received in %d seconds'</span> % x)
+        <span class="kw">break</span>
+
+<span class="kw">if</span> <span class="kw">not</span> exists(<img src="1462352378926.png" />):
+    <span class="kw">print</span>(<span class="str">"[error] Loads were not calculated in time!"</span>)
+    logging.error(<span class="str">"[error] Loads were not calculated in time!"</span>)
+    <span class="cmt">#exit(1)</span>
+<span class="cmt">#else:</span>
+<span class="cmt">#    print("[success] Loads were calculated within acceptable time (60s)!")</span>
+<span class="cmt">#    logging.info("[success] Loads were calculated within acceptable time (60s)!")</span>
+
+<span class="skw">sleep</span>(<span class="dig">2</span>)
+
+<span class="skw">type</span>(<span class="str">"a"</span>,Key.SHIFT+Key.CTRL)
+
+<span class="kw">for</span> x <span class="kw">in</span> range(<span class="dig">0</span>,<span class="dig">30</span>):
+    <span class="kw">if</span> exists(<img src="1459434785850.png" />, x):
+        <span class="kw">print</span> <span class="str">'[succes] Loads were flipped in %d seconds'</span> % x
+        logging.info(<span class="str">'[succes] Loads were flipped in %d seconds'</span> % x)
+        <span class="kw">break</span>
+
+<span class="kw">if</span> <span class="kw">not</span> exists(<img src="1459434785850.png" />):
+    <span class="kw">print</span>(<span class="str">"[error] Loads were not flipped!"</span>)
+    logging.error(<span class="str">"[error] Loads were not flipped!"</span>)
+    <span class="cmt">#exit(1)</span>
+<span class="cmt">#else:</span>
+<span class="cmt">#    print("[success] Loads were flipped within acceptable time (10s)!")</span>
+<span class="cmt">#    logging.info("[success] Loads were flipped within acceptable time (10s)!")</span>
+
+<span class="kw">for</span> x <span class="kw">in</span> range(<span class="dig">0</span>,<span class="dig">60</span>):
+    <span class="kw">if</span> exists(Pattern(<img src="1462352270302.png" />).similar(<span class="dig">0.80</span>), x):
+        <span class="kw">print</span> <span class="str">'[success] Indicators update received in %d seconds'</span> % x
+        logging.info(<span class="str">'[success] Indicators update received in %d seconds'</span> % x)
+        <span class="kw">break</span>
+
+<span class="kw">if</span> <span class="kw">not</span> exists(Pattern(<img src="1462352270302.png" />).similar(<span class="dig">0.80</span>)):
+    <span class="kw">print</span>(<span class="str">"[error] Loads were not calculated in time!"</span>)
+    logging.error(<span class="str">"[error] Loads were not calculated in time!"</span>)
+<span class="cmt">#    exit(1)</span>
+<span class="cmt">#else:</span>
+<span class="cmt">#    print("[success] Loads were calculated within acceptable time (60s)!")</span>
+<span class="cmt">#    logging.info("[success] Loads were calculated within acceptable time (60s)!")</span>
+
+<span class="skw">type</span>(<span class="str">"a"</span>,Key.SHIFT+Key.CTRL)
+
+<span class="kw">for</span> x <span class="kw">in</span> range(<span class="dig">0</span>,<span class="dig">30</span>):
+    <span class="kw">if</span> exists(Pattern(<img src="1459519052482.png" />).exact(), x):
+        <span class="kw">print</span> <span class="str">'[success] Loads were flipped back in %d seconds'</span> % x
+        logging.info(<span class="str">'[success] Loads were flipped back in %d seconds'</span> % x)
+        <span class="kw">break</span>
+
+<span class="kw">if</span> <span class="kw">not</span> exists(Pattern(<img src="1459519052482.png" />).similar(<span class="dig">0.95</span>)):
+    <span class="kw">print</span>(<span class="str">"[error] Loads were not flipped back!"</span>)
+    logging.error(<span class="str">"[error] Loads were not flipped back!"</span>)
+    <span class="cmt">#exit(1)</span>
+<span class="cmt">#else:</span>
+<span class="cmt">#    print("[success] Loads were flipped back within acceptable time (10s)!")</span>
+<span class="cmt">#    logging.info("[success] Loads were flipped back within acceptable time (10s)!")</span>
+
+<span class="kw">for</span> x <span class="kw">in</span> range(<span class="dig">0</span>,<span class="dig">60</span>):
+    <span class="kw">if</span> exists(<img src="1462352378926.png" />, x):
+        <span class="kw">print</span> <span class="str">'[success] Indicators update received in %d seconds'</span> % x
+        logging.info(<span class="str">'[success] Indicators update received in %d seconds'</span> % x)
+        <span class="kw">break</span>
+
+<span class="kw">if</span> <span class="kw">not</span> exists(<img src="1462352378926.png" />):
+    <span class="kw">print</span>(<span class="str">"[error] Loads were not calculated in time!"</span>)
+    logging.error(<span class="str">"[error] Loads were not calculated in time!"</span>)
+    <span class="cmt">#exit(1)</span>
+<span class="cmt">#else:</span>
+<span class="cmt">#    print("[success] Loads were calculated within acceptable time (60s)!")</span>
+<span class="cmt">#    logging.info("[success] Loads were calculated within acceptable time (60s)!")</span>
+
+<span class="skw">type</span>(<span class="str">"a"</span>,Key.SHIFT+Key.CTRL)
+
+<span class="kw">for</span> x <span class="kw">in</span> range(<span class="dig">0</span>,<span class="dig">30</span>):
+    <span class="kw">if</span> exists(<img src="1459434785850.png" />, x):
+        <span class="kw">print</span> <span class="str">'[succes] Loads were flipped in %d seconds'</span> % x
+        logging.info(<span class="str">'[succes] Loads were flipped in %d seconds'</span> % x)
+        <span class="kw">break</span>
+
+<span class="kw">if</span> <span class="kw">not</span> exists(<img src="1459434785850.png" />):
+    <span class="kw">print</span>(<span class="str">"[error] Loads were not flipped!"</span>)
+    logging.error(<span class="str">"[error] Loads were not flipped!"</span>)
+    <span class="cmt">#exit(1)</span>
+<span class="cmt">#else:</span>
+<span class="cmt">#    print("[success] Loads were flipped within acceptable time (10s)!")</span>
+<span class="cmt">#    logging.info("[success] Loads were flipped within acceptable time (10s)!")</span>
+
+<span class="kw">for</span> x <span class="kw">in</span> range(<span class="dig">0</span>,<span class="dig">60</span>):
+    <span class="kw">if</span> exists(Pattern(<img src="1462352270302.png" />).similar(<span class="dig">0.80</span>), x):
+        <span class="kw">print</span> <span class="str">'[success] Indicators update received in %d seconds'</span> % x
+        logging.info(<span class="str">'[success] Indicators update received in %d seconds'</span> % x)
+        <span class="kw">break</span>
+
+<span class="kw">if</span> <span class="kw">not</span> exists(Pattern(<img src="1462352270302.png" />).similar(<span class="dig">0.80</span>)):
+    <span class="kw">print</span>(<span class="str">"[error] Loads were not calculated in time!"</span>)
+    logging.error(<span class="str">"[error] Loads were not calculated in time!"</span>)
+<span class="cmt">#    exit(1)</span>
+<span class="cmt">#else:</span>
+<span class="cmt">#    print("[success] Loads were calculated within acceptable time (60s)!")</span>
+<span class="cmt">#    logging.info("[success] Loads were calculated within acceptable time (60s)!")</span>
+
+<span class="skw">type</span>(<span class="str">"a"</span>,Key.SHIFT+Key.CTRL)
+
+<span class="kw">for</span> x <span class="kw">in</span> range(<span class="dig">0</span>,<span class="dig">30</span>):
+    <span class="kw">if</span> exists(Pattern(<img src="1459519052482.png" />).exact(), x):
+        <span class="kw">print</span> <span class="str">'[success] Loads were flipped back in %d seconds'</span> % x
+        logging.info(<span class="str">'[success] Loads were flipped back in %d seconds'</span> % x)
+        <span class="kw">break</span>
+
+<span class="kw">if</span> <span class="kw">not</span> exists(Pattern(<img src="1459519052482.png" />).similar(<span class="dig">0.95</span>)):
+    <span class="kw">print</span>(<span class="str">"[error] Loads were not flipped back!"</span>)
+    logging.error(<span class="str">"[error] Loads were not flipped back!"</span>)
+    <span class="cmt">#exit(1)</span>
+<span class="cmt">#else:</span>
+<span class="cmt">#    print("[success] Loads were flipped back within acceptable time (10s)!")</span>
+<span class="cmt">#    logging.info("[success] Loads were flipped back within acceptable time (10s)!")</span>
+
+<span class="kw">for</span> x <span class="kw">in</span> range(<span class="dig">0</span>,<span class="dig">60</span>):
+    <span class="kw">if</span> exists(<img src="1462352378926.png" />, x):
+        <span class="kw">print</span> <span class="str">'[success] Indicators update received in %d seconds'</span> % x
+        logging.info(<span class="str">'[success] Indicators update received in %d seconds'</span> % x)
+        <span class="kw">break</span>
+
+<span class="kw">if</span> <span class="kw">not</span> exists(<img src="1462352378926.png" />):
+    <span class="kw">print</span>(<span class="str">"[error] Loads were not calculated in time!"</span>)
+    logging.error(<span class="str">"[error] Loads were not calculated in time!"</span>)
+    <span class="cmt">#exit(1)</span>
+<span class="cmt">#else:</span>
+<span class="cmt">#    print("[success] Loads were calculated within acceptable time (60s)!")</span>
+<span class="cmt">#    logging.info("[success] Loads were calculated within acceptable time (60s)!")</span>
+
+<span class="skw">type</span>(<span class="str">"a"</span>,Key.SHIFT+Key.CTRL)
+
+<span class="kw">for</span> x <span class="kw">in</span> range(<span class="dig">0</span>,<span class="dig">30</span>):
+    <span class="kw">if</span> exists(<img src="1459434785850.png" />, x):
+        <span class="kw">print</span> <span class="str">'[succes] Loads were flipped in %d seconds'</span> % x
+        logging.info(<span class="str">'[succes] Loads were flipped in %d seconds'</span> % x)
+        <span class="kw">break</span>
+
+<span class="kw">if</span> <span class="kw">not</span> exists(<img src="1459434785850.png" />):
+    <span class="kw">print</span>(<span class="str">"[error] Loads were not flipped!"</span>)
+    logging.error(<span class="str">"[error] Loads were not flipped!"</span>)
+    <span class="cmt">#exit(1)</span>
+<span class="cmt">#else:</span>
+<span class="cmt">#    print("[success] Loads were flipped within acceptable time (10s)!")</span>
+<span class="cmt">#    logging.info("[success] Loads were flipped within acceptable time (10s)!")</span>
+
+<span class="kw">for</span> x <span class="kw">in</span> range(<span class="dig">0</span>,<span class="dig">60</span>):
+    <span class="kw">if</span> exists(Pattern(<img src="1462352270302.png" />).similar(<span class="dig">0.80</span>), x):
+        <span class="kw">print</span> <span class="str">'[success] Indicators update received in %d seconds'</span> % x
+        logging.info(<span class="str">'[success] Indicators update received in %d seconds'</span> % x)
+        <span class="kw">break</span>
+
+<span class="kw">if</span> <span class="kw">not</span> exists(Pattern(<img src="1462352270302.png" />).similar(<span class="dig">0.80</span>)):
+    <span class="kw">print</span>(<span class="str">"[error] Loads were not calculated in time!"</span>)
+    logging.error(<span class="str">"[error] Loads were not calculated in time!"</span>)
+<span class="cmt">#    exit(1)</span>
+<span class="cmt">#else:</span>
+<span class="cmt">#    print("[success] Loads were calculated within acceptable time (60s)!")</span>
+<span class="cmt">#    logging.info("[success] Loads were calculated within acceptable time (60s)!")</span>
+
+<span class="skw">type</span>(<span class="str">"a"</span>,Key.SHIFT+Key.CTRL)
+
+<span class="kw">for</span> x <span class="kw">in</span> range(<span class="dig">0</span>,<span class="dig">30</span>):
+    <span class="kw">if</span> exists(Pattern(<img src="1459519052482.png" />).exact(), x):
+        <span class="kw">print</span> <span class="str">'[success] Loads were flipped back in %d seconds'</span> % x
+        logging.info(<span class="str">'[success] Loads were flipped back in %d seconds'</span> % x)
+        <span class="kw">break</span>
+
+<span class="kw">if</span> <span class="kw">not</span> exists(Pattern(<img src="1459519052482.png" />).similar(<span class="dig">0.95</span>)):
+    <span class="kw">print</span>(<span class="str">"[error] Loads were not flipped back!"</span>)
+    logging.error(<span class="str">"[error] Loads were not flipped back!"</span>)
+    <span class="cmt">#exit(1)</span>
+<span class="cmt">#else:</span>
+<span class="cmt">#    print("[success] Loads were flipped back within acceptable time (10s)!")</span>
+<span class="cmt">#    logging.info("[success] Loads were flipped back within acceptable time (10s)!")</span>
+
+<span class="kw">for</span> x <span class="kw">in</span> range(<span class="dig">0</span>,<span class="dig">60</span>):
+    <span class="kw">if</span> exists(<img src="1462352378926.png" />, x):
+        <span class="kw">print</span> <span class="str">'[success] Indicators update received in %d seconds'</span> % x
+        logging.info(<span class="str">'[success] Indicators update received in %d seconds'</span> % x)
+        <span class="kw">break</span>
+
+<span class="kw">if</span> <span class="kw">not</span> exists(<img src="1462352378926.png" />):
+    <span class="kw">print</span>(<span class="str">"[error] Loads were not calculated in time!"</span>)
+    logging.error(<span class="str">"[error] Loads were not calculated in time!"</span>)
+    <span class="cmt">#exit(1)</span>
+<span class="cmt">#else:</span>
+<span class="cmt">#    print("[success] Loads were calculated within acceptable time (60s)!")</span>
+<span class="cmt">#    logging.info("[success] Loads were calculated within acceptable time (60s)!")</span>
+
+<span class="skw">type</span>(<span class="str">"a"</span>,Key.SHIFT+Key.CTRL)
+
+<span class="kw">for</span> x <span class="kw">in</span> range(<span class="dig">0</span>,<span class="dig">30</span>):
+    <span class="kw">if</span> exists(<img src="1459434785850.png" />, x):
+        <span class="kw">print</span> <span class="str">'[succes] Loads were flipped in %d seconds'</span> % x
+        logging.info(<span class="str">'[succes] Loads were flipped in %d seconds'</span> % x)
+        <span class="kw">break</span>
+
+<span class="kw">if</span> <span class="kw">not</span> exists(<img src="1459434785850.png" />):
+    <span class="kw">print</span>(<span class="str">"[error] Loads were not flipped!"</span>)
+    logging.error(<span class="str">"[error] Loads were not flipped!"</span>)
+    <span class="cmt">#exit(1)</span>
+<span class="cmt">#else:</span>
+<span class="cmt">#    print("[success] Loads were flipped within acceptable time (10s)!")</span>
+<span class="cmt">#    logging.info("[success] Loads were flipped within acceptable time (10s)!")</span>
+
+<span class="kw">for</span> x <span class="kw">in</span> range(<span class="dig">0</span>,<span class="dig">60</span>):
+    <span class="kw">if</span> exists(Pattern(<img src="1462352270302.png" />).similar(<span class="dig">0.80</span>), x):
+        <span class="kw">print</span> <span class="str">'[success] Indicators update received in %d seconds'</span> % x
+        logging.info(<span class="str">'[success] Indicators update received in %d seconds'</span> % x)
+        <span class="kw">break</span>
+
+<span class="kw">if</span> <span class="kw">not</span> exists(Pattern(<img src="1462352270302.png" />).similar(<span class="dig">0.80</span>)):
+    <span class="kw">print</span>(<span class="str">"[error] Loads were not calculated in time!"</span>)
+    logging.error(<span class="str">"[error] Loads were not calculated in time!"</span>)
+<span class="cmt">#    exit(1)</span>
+<span class="cmt">#else:</span>
+<span class="cmt">#    print("[success] Loads were calculated within acceptable time (60s)!")</span>
+<span class="cmt">#    logging.info("[success] Loads were calculated within acceptable time (60s)!")</span>
+
+<span class="skw">type</span>(<span class="str">"a"</span>,Key.SHIFT+Key.CTRL)
+
+<span class="kw">for</span> x <span class="kw">in</span> range(<span class="dig">0</span>,<span class="dig">30</span>):
+    <span class="kw">if</span> exists(Pattern(<img src="1459519052482.png" />).exact(), x):
+        <span class="kw">print</span> <span class="str">'[success] Loads were flipped back in %d seconds'</span> % x
+        logging.info(<span class="str">'[success] Loads were flipped back in %d seconds'</span> % x)
+        <span class="kw">break</span>
+
+<span class="kw">if</span> <span class="kw">not</span> exists(Pattern(<img src="1459519052482.png" />).similar(<span class="dig">0.95</span>)):
+    <span class="kw">print</span>(<span class="str">"[error] Loads were not flipped back!"</span>)
+    logging.error(<span class="str">"[error] Loads were not flipped back!"</span>)
+    <span class="cmt">#exit(1)</span>
+<span class="cmt">#else:</span>
+<span class="cmt">#    print("[success] Loads were flipped back within acceptable time (10s)!")</span>
+<span class="cmt">#    logging.info("[success] Loads were flipped back within acceptable time (10s)!")</span>
+
+<span class="kw">for</span> x <span class="kw">in</span> range(<span class="dig">0</span>,<span class="dig">60</span>):
+    <span class="kw">if</span> exists(<img src="1462352378926.png" />, x):
+        <span class="kw">print</span> <span class="str">'[success] Indicators update received in %d seconds'</span> % x
+        logging.info(<span class="str">'[success] Indicators update received in %d seconds'</span> % x)
+        <span class="kw">break</span>
+
+<span class="kw">if</span> <span class="kw">not</span> exists(<img src="1462352378926.png" />):
+    <span class="kw">print</span>(<span class="str">"[error] Loads were not calculated in time!"</span>)
+    logging.error(<span class="str">"[error] Loads were not calculated in time!"</span>)
+    <span class="cmt">#exit(1)</span>
+<span class="cmt">#else:</span>
+<span class="cmt">#    print("[success] Loads were calculated within acceptable time (60s)!")</span>
+<span class="cmt">#    logging.info("[success] Loads were calculated within acceptable time (60s)!")</span>
+
+<span class="skw">sleep</span>(<span class="dig">2</span>)
+
+<span class="skw">type</span>(<span class="str">"a"</span>,Key.SHIFT+Key.CTRL)
+
+<span class="kw">for</span> x <span class="kw">in</span> range(<span class="dig">0</span>,<span class="dig">30</span>):
+    <span class="kw">if</span> exists(<img src="1459434785850.png" />, x):
+        <span class="kw">print</span> <span class="str">'[succes] Loads were flipped in %d seconds'</span> % x
+        logging.info(<span class="str">'[succes] Loads were flipped in %d seconds'</span> % x)
+        <span class="kw">break</span>
+
+<span class="kw">if</span> <span class="kw">not</span> exists(<img src="1459434785850.png" />):
+    <span class="kw">print</span>(<span class="str">"[error] Loads were not flipped!"</span>)
+    logging.error(<span class="str">"[error] Loads were not flipped!"</span>)
+    <span class="cmt">#exit(1)</span>
+<span class="cmt">#else:</span>
+<span class="cmt">#    print("[success] Loads were flipped within acceptable time (10s)!")</span>
+<span class="cmt">#    logging.info("[success] Loads were flipped within acceptable time (10s)!")</span>
+
+<span class="kw">for</span> x <span class="kw">in</span> range(<span class="dig">0</span>,<span class="dig">60</span>):
+    <span class="kw">if</span> exists(Pattern(<img src="1462352270302.png" />).similar(<span class="dig">0.80</span>), x):
+        <span class="kw">print</span> <span class="str">'[success] Indicators update received in %d seconds'</span> % x
+        logging.info(<span class="str">'[success] Indicators update received in %d seconds'</span> % x)
+        <span class="kw">break</span>
+
+<span class="kw">if</span> <span class="kw">not</span> exists(Pattern(<img src="1462352270302.png" />).similar(<span class="dig">0.80</span>)):
+    <span class="kw">print</span>(<span class="str">"[error] Loads were not calculated in time!"</span>)
+    logging.error(<span class="str">"[error] Loads were not calculated in time!"</span>)
+<span class="cmt">#    exit(1)</span>
+<span class="cmt">#else:</span>
+<span class="cmt">#    print("[success] Loads were calculated within acceptable time (60s)!")</span>
+<span class="cmt">#    logging.info("[success] Loads were calculated within acceptable time (60s)!")</span>
+
+<span class="skw">type</span>(<span class="str">"a"</span>,Key.SHIFT+Key.CTRL)
+
+<span class="kw">for</span> x <span class="kw">in</span> range(<span class="dig">0</span>,<span class="dig">30</span>):
+    <span class="kw">if</span> exists(Pattern(<img src="1459519052482.png" />).exact(), x):
+        <span class="kw">print</span> <span class="str">'[success] Loads were flipped back in %d seconds'</span> % x
+        logging.info(<span class="str">'[success] Loads were flipped back in %d seconds'</span> % x)
+        <span class="kw">break</span>
+
+<span class="kw">if</span> <span class="kw">not</span> exists(Pattern(<img src="1459519052482.png" />).similar(<span class="dig">0.95</span>)):
+    <span class="kw">print</span>(<span class="str">"[error] Loads were not flipped back!"</span>)
+    logging.error(<span class="str">"[error] Loads were not flipped back!"</span>)
+    <span class="cmt">#exit(1)</span>
+<span class="cmt">#was this removed properly?    </span>
+<span class="kw">for</span> x <span class="kw">in</span> range(<span class="dig">0</span>,<span class="dig">60</span>):
+    <span class="kw">if</span> exists(<img src="1462352378926.png" />, x):
+        <span class="kw">print</span> <span class="str">'[success] Indicators update received in %d seconds'</span> % x
+        logging.info(<span class="str">'[success] Indicators update received in %d seconds'</span> % x)
+        <span class="kw">break</span>
+
+<span class="kw">if</span> <span class="kw">not</span> exists(<img src="1462352378926.png" />):
+    <span class="kw">print</span>(<span class="str">"[error] Loads were not calculated in time!"</span>)
+    logging.error(<span class="str">"[error] Loads were not calculated in time!"</span>)
+    <span class="cmt">#exit(1)</span>
+<span class="cmt">#else:</span>
+<span class="cmt">#    print("[success] Loads were calculated within acceptable time (60s)!")</span>
+<span class="cmt">#    logging.info("[success] Loads were calculated within acceptable time (60s)!")</span>
+<span class="cmt">#logging.info("=====[END] HEAT timing test=====")</span>
+
+</pre>
+</body>
+</html>
