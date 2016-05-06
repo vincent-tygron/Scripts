@@ -60,6 +60,8 @@ if Settings.isLinux() or Settings.isWindows():
         
 elif Settings.isMac():
 
+    wait("Multiplayer-CG5-MAC-IntroPane-CntBtnl-160506-VVD-0.1.png", FOREVER)
+
     ################
     # Municipality #
     ################
