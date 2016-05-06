@@ -51,7 +51,6 @@ if Settings.isLinux() or Settings.isWindows():
         click(loc)
         type(Key.SPACE)
         
->>>>>>> master
 elif Settings.isMac():
 
     ################
