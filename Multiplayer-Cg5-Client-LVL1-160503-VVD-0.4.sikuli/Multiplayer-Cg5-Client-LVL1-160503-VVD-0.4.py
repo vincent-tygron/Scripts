@@ -237,7 +237,7 @@ elif Settings.isMac():
         dragDrop(Pattern("Multiplayer-CG5-MAC-Waterboard-LVL1-OpenWater-ConfPanelDate-160506-VVD-0.1.png").targetOffset(67,0), Pattern("Multiplayer-CG5-MAC-Waterboard-LVL1-OpenWater-ConfPanelDate-160506-VVD-0.1.png").targetOffset(-105,-3))
         paste("4/2/2010")
         click("Multiplayer-CG5-MAC-Waterboard-LVL1-OpenWater-ConfirmBtn-160506-VVD-0.1.png")
-        wait("1461671232017.png", FOREVER)
+        wait("1462545153790.png", FOREVER)
         click()
         wait("Multiplayer-CG5-MAC-Waterboard-LVL1-OpenWater-ConfPanelImage-160506-VVD-0.1.png", 3)
         click("Multiplayer-CG5-MAC-Waterboard-LVL1-OpenWater-ConfirmBtn-160506-VVD-0.1.png")
