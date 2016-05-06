@@ -27,7 +27,7 @@ if Settings.isLinux() or Settings.isWindows():
     #######
     # SSH #
     #######
-    if exists("Multiplayer-CG5-SSH-LVL2-IntroPanel-160506-VVD-0.1.png"):
+    elif exists("Multiplayer-CG5-SSH-LVL2-IntroPanel-160506-VVD-0.1.png"):
         print"[info] SSH switched to Level 2..." 
         logging.info("[info] SSH switched to Level 2...")
         
