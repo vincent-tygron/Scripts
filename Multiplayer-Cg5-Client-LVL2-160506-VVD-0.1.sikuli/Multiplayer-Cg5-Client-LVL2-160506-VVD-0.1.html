@@ -82,12 +82,19 @@ logging.info(<span class="str">"[info] Play Level 2..."</span>)
     <span class="cmt"># Municipality #</span>
     <span class="cmt">################</span>
 
-    <span class="cmt">#WIP - See Mac</span>
+    <span class="kw">if</span> exists(<img src="Multiplayer-CG5-Municipality-LVL2-IntroPanel-160506-VVD-0.1.png" />):
+        <span class="kw">print</span><span class="str">"[info] Municipality switched to Level 2..."</span>
+        logging.info(<span class="str">"[info] Municipality switched to Level 2..."</span>)
+
+        loc = SCREEN.getCenter()
+        <span class="skw">click</span>(loc)
+        <span class="skw">click</span>(loc)
+        <span class="skw">type</span>(Key.SPACE)
 
     <span class="cmt">##############</span>
     <span class="cmt"># Waterboard #</span>
     <span class="cmt">##############</span>
-    <span class="kw">if</span> exists(<img src="Multiplayer-CG5-Waterboard-LVL2-IntroPanel-160506-VVD-0.1.png" />):
+    <span class="kw">elif</span> exists(<img src="Multiplayer-CG5-Waterboard-LVL2-IntroPanel-160506-VVD-0.1.png" />):
         <span class="kw">print</span><span class="str">"[info] Waterboard switched to Level 2..."</span>
         logging.info(<span class="str">"[info] Waterboard switched to Level 2..."</span>)
 
@@ -127,8 +134,8 @@ logging.info(<span class="str">"[info] Play Level 2..."</span>)
     <span class="cmt"># Municipality #</span>
     <span class="cmt">################</span>
     <span class="kw">if</span> exists(<img src="Multiplayer-CG5-MAC-Municipality-LVL2-IntroPanel-160506-VVD-0.1.png" />):
-        <span class="kw">print</span><span class="str">"[info] Switched to Level 2..."</span>
-        logging.info(<span class="str">"[info] Switched to Level 2..."</span>)
+        <span class="kw">print</span><span class="str">"[info] Municipality switched to Level 2..."</span>
+        logging.info(<span class="str">"[info] Municipality switched to Level 2..."</span>)
 
         loc = SCREEN.getCenter()
         <span class="skw">click</span>(loc)

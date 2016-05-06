@@ -10,12 +10,19 @@ if Settings.isLinux() or Settings.isWindows():
     # Municipality #
     ################
 
-    #WIP - See Mac
+    if exists("Multiplayer-CG5-Municipality-LVL2-IntroPanel-160506-VVD-0.1.png"):
+        print"[info] Municipality switched to Level 2..." 
+        logging.info("[info] Municipality switched to Level 2...")
+        
+        loc = SCREEN.getCenter()
+        click(loc)
+        click(loc)
+        type(Key.SPACE)
 
     ##############
     # Waterboard #
     ##############
-    if exists("Multiplayer-CG5-Waterboard-LVL2-IntroPanel-160506-VVD-0.1.png"):
+    elif exists("Multiplayer-CG5-Waterboard-LVL2-IntroPanel-160506-VVD-0.1.png"):
         print"[info] Waterboard switched to Level 2..." 
         logging.info("[info] Waterboard switched to Level 2...")
         
@@ -55,8 +62,8 @@ elif Settings.isMac():
     # Municipality #
     ################
     if exists("Multiplayer-CG5-MAC-Municipality-LVL2-IntroPanel-160506-VVD-0.1.png"):
-        print"[info] Switched to Level 2..."
-        logging.info("[info] Switched to Level 2...")
+        print"[info] Municipality switched to Level 2..."
+        logging.info("[info] Municipality switched to Level 2...")
 
         loc = SCREEN.getCenter()
         click(loc)
