@@ -17,11 +17,19 @@ if Settings.isLinux() or Settings.isWindows():
     #######
     # SSH #
     #######
-
+    if exists("Multiplayer-CG5-SSH-LVL2-IntroPanel-160506-VVD-0.1.png"):
+        print"[info] SSH switched to Level 2..." 
+        logging.info("[info] SSH switched to Level 2...")
+        
+        loc = SCREEN.getCenter()
+        click(loc)
+        click(loc)
+        type(Key.SPACE)
+                
     ###################
     # UNI Real Estate #
     ###################
-
+'''
 elif Settings.isMac():
 
     ################
@@ -44,3 +52,4 @@ else:
     print"[error] OS error!"
     logging.error("[error] OS error!")
     exit(1)
+'''
