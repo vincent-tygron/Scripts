@@ -228,8 +228,8 @@ elif Settings.isMac():
         # Building something
     
         click("1462541375880.png")
-        exists("Multiplayer-CG5-Waterboard-LVL1-OpenWaterLocation-160426-VVD-0.1.png", 5)
-        dragDrop(Pattern("1461676305234.png").targetOffset(589,-287), Pattern("1461676305234.png").targetOffset(-665,301))
+        exists("Multiplayer-CG5-MAC-Waterboard-LVL1-OpenWaterLocation-160506-VVD-0.1.png", 5)
+        dragDrop(Pattern("Multiplayer-CG5-MAC-Waterboard-LVL1-OpenWaterLocation-160506-VVD-0.1.png").targetOffset(408,-219), Pattern("Multiplayer-CG5-MAC-Waterboard-LVL1-OpenWaterLocation-160506-VVD-0.1.png").targetOffset(-494,183))
         click("Multiplayer-CG5-Waterboard-LVL1-WaterActionMenuYesBtn-160426-VVD-0.1.png")
         wait("1461669772050.png", 10)
         click()
