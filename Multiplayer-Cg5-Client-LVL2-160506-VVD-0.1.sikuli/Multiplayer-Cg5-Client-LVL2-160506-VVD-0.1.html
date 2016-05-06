@@ -84,7 +84,7 @@ logging.info(<span class="str">"[info] Play Level 2..."</span>)
     <span class="cmt"># Municipality #</span>
     <span class="cmt">################</span>
 
-    <span class="kw">if</span> exists(<img src="Multiplayer-CG5-Municipality-LVL2-IntroPanel-160506-VVD-0.1.png" />):
+    <span class="kw">if</span> exists(Pattern(<img src="Multiplayer-CG5-Municipality-LVL2-IntroPanel-160506-VVD-0.1.png" />).similar(<span class="dig">0.80</span>)):
         <span class="kw">print</span><span class="str">"[info] Municipality switched to Level 2..."</span>
         logging.info(<span class="str">"[info] Municipality switched to Level 2..."</span>)
 

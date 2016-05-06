@@ -12,7 +12,7 @@ if Settings.isLinux() or Settings.isWindows():
     # Municipality #
     ################
 
-    if exists("Multiplayer-CG5-Municipality-LVL2-IntroPanel-160506-VVD-0.1.png"):
+    if exists(Pattern("Multiplayer-CG5-Municipality-LVL2-IntroPanel-160506-VVD-0.1.png").similar(0.80)):
         print"[info] Municipality switched to Level 2..." 
         logging.info("[info] Municipality switched to Level 2...")
         
