@@ -70,7 +70,11 @@
 <h2>OS_Independant_Admin-CG5-RunSession-LVL2-160506-VVD-0.1.sikuli</h2> <a href="OS_Independant_Admin-CG5-RunSession-LVL2-160506-VVD-0.1.zip">(Download this script)</a>
 </div>
 <pre class="sikuli-code">
+<span class="kw">import</span> logging; reload(logging)
+FORMAT=(<span class="str">"%(asctime) -8s %(message) s"</span>)
+logging.basicConfig(format=FORMAT, filename=<span class="str">"testLog.txt"</span>, level=logging.DEBUG)
 
+logging.info(<span class="str">"[info] Admin runs session LVL2..."</span>)
 </pre>
 </body>
 </html>
