@@ -129,10 +129,12 @@ if Settings.isLinux() or Settings.isWindows():
     #elif exists("Multiplayer-CG5-UNI-LVL1-IntroPanel-160426-VVD-0.1.png"):
         print"[info] Uni Real Estate selected as stakeholder" 
         logging.info("[info] Uni Real Estate selected as stakeholder")
+        
         loc = SCREEN.getCenter()
         click(loc)
         click(loc)
         type(Key.SPACE)
+        
         wait("Multiplayer-CG5-UNI-LVL1-MiniMap1l-160426-VVD-0.1.png", 5)
         click()
             
@@ -159,7 +161,7 @@ elif Settings.isMac():
     ################
     # Municipality #
     ################
-    if exists("Multiplayer-CG5-MAC-Municipality-LVL1-IntroPanel-160428-VVD-0.1.png", 10):
+    if exists(Pattern("Multiplayer-CG5-MAC-Municipality-LVL1-IntroPanel-160428-VVD-0.1.png").similar(0.81), 10):
         print"[info] Municipality selected on OSX as stakeholder" 
         logging.info("[info] Municipality selected on OSX as stakeholder")
 
@@ -207,19 +209,25 @@ elif Settings.isMac():
     # Waterboard #
     ##############
     
-    elif exists("Multiplayer-CG5-Waterboard-LVL1-IntroPanel-160426-VVD-0.1.png"):
+    elif exists(Pattern("1462541275986.png").similar(0.80)):
         print"[info] Waterboard selected on OSX as stakeholder" 
         logging.info("[info] Waterboard selected on OSX as stakeholder")
+        
         loc = SCREEN.getCenter()
         click(loc)
         click(loc)
         type(Key.SPACE)
-        wait("Multiplayer-CG5-Waterbaord-LVL1-MiniMap1-160426-VVD-0.2.png", 3)
-        click()
-            
+        
+        wait(Pattern("1462541323201.png").targetOffset(-2,2), 3)
+        doubleClick()
+        wait("1462542476981.png")
+                
+        loc = SCREEN.getCenter()
+        wheel(loc,WHEEL_UP,1)    
+        
         # Building something
     
-        click("Multiplayer-CG5-Waterboard-LVL1-WaterActionMenuBtn-160426-VVD-0.1.png")
+        click("1462541375880.png")
         exists("Multiplayer-CG5-Waterboard-LVL1-OpenWaterLocation-160426-VVD-0.1.png", 5)
         dragDrop(Pattern("1461676305234.png").targetOffset(589,-287), Pattern("1461676305234.png").targetOffset(-665,301))
         click("Multiplayer-CG5-Waterboard-LVL1-WaterActionMenuYesBtn-160426-VVD-0.1.png")
