@@ -10,7 +10,7 @@ if Settings.isLinux() or Settings.isWindows():
     # Municipality #
     ################
 
-#WIP - See Mac
+    #WIP - See Mac
 
     ##############
     # Waterboard #
@@ -23,9 +23,7 @@ if Settings.isLinux() or Settings.isWindows():
         click(loc)
         click(loc)
         type(Key.SPACE)
-
-    else:
-        exit(1)        
+       
     #######
     # SSH #
     #######
@@ -80,4 +78,3 @@ else:
     print"[error] OS error!"
     logging.error("[error] OS error!")
     exit(1)
-'''
