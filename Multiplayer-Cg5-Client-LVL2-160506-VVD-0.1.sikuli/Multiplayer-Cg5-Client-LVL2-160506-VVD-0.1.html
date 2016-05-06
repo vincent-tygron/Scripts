@@ -82,59 +82,11 @@ logging.info(<span class="str">"[info] Play Level 2..."</span>)
     <span class="cmt"># Municipality #</span>
     <span class="cmt">################</span>
 
-<<<<<<< HEAD
 <span class="cmt">#WIP - See Mac</span>
 =======
     <span class="cmt">##############</span>
     <span class="cmt"># Waterboard #</span>
     <span class="cmt">##############</span>
-
-    <span class="cmt">#######</span>
-    <span class="cmt"># SSH #</span>
-    <span class="cmt">#######</span>
-    <span class="kw">if</span> exists(<img src="Multiplayer-CG5-SSH-LVL2-IntroPanel-160506-VVD-0.1.png" />):
-        <span class="kw">print</span><span class="str">"[info] SSH switched to Level 2..."</span>
-        logging.info(<span class="str">"[info] SSH switched to Level 2..."</span>)
-
-<<<<<<< HEAD
-=======
-    <span class="cmt">###################</span>
-    <span class="cmt"># UNI Real Estate #</span>
-    <span class="cmt">###################</span>
-    <span class="kw">else</span>:
-        <span class="kw">print</span><span class="str">"[info] Uni Real Estate switched to Level2..."</span>
-        logging.info(<span class="str">"[info] Uni Real Estate switched to Level2..."</span>)
-
->>>>>>> master
-        loc = SCREEN.getCenter()
-        <span class="skw">click</span>(loc)
-        <span class="skw">click</span>(loc)
-        <span class="skw">type</span>(Key.SPACE)
-<<<<<<< HEAD
-=======
-
-<span class="kw">elif</span> Settings.isMac():
-
-    <span class="cmt">################</span>
-    <span class="cmt"># Municipality #</span>
-    <span class="cmt">################</span>
-<<<<<<< HEAD
-    <span class="kw">if</span> exists():
-        <span class="kw">print</span><span class="str">"[info] Switched to Level 2..."</span>
-        logging.info(<span class="str">"[info] Switched to Level 2..."</span>)
-
-        loc = SCREEN.getCenter()
-        <span class="skw">click</span>(loc)
-        <span class="skw">click</span>(loc)
-        <span class="skw">type</span>(Key.SPACE)
-=======
->>>>>>> origin/master
-
->>>>>>> origin/master
-    <span class="cmt">##############</span>
-    <span class="cmt"># Waterboard #</span>
-    <span class="cmt">##############</span>
-<<<<<<< HEAD
     <span class="kw">if</span> exists(<img src="Multiplayer-CG5-Waterboard-LVL2-IntroPanel-160506-VVD-0.1.png" />):
         <span class="kw">print</span><span class="str">"[info] Waterboard switched to Level 2..."</span>
         logging.info(<span class="str">"[info] Waterboard switched to Level 2..."</span>)
@@ -146,54 +98,63 @@ logging.info(<span class="str">"[info] Play Level 2..."</span>)
 
     <span class="kw">else</span>:
         exit(<span class="dig">1</span>)
-<span class="str">'''        
-        wait(, 3)
-        doubleClick()
-        wait(, 3)
-        
-    #######
-    # SSH #
-    #######
-
-    ###################
-    # UNI Real Estate #
-    ###################
-
-=======
-
     <span class="cmt">#######</span>
     <span class="cmt"># SSH #</span>
     <span class="cmt">#######</span>
->>>>>>> master
+    <span class="kw">if</span> exists(<img src="Multiplayer-CG5-SSH-LVL2-IntroPanel-160506-VVD-0.1.png" />):
+        <span class="kw">print</span><span class="str">"[info] SSH switched to Level 2..."</span>
+        logging.info(<span class="str">"[info] SSH switched to Level 2..."</span>)
+
+        loc = SCREEN.getCenter()
+        <span class="skw">click</span>(loc)
+        <span class="skw">click</span>(loc)
+        <span class="skw">type</span>(Key.SPACE)
 
     <span class="cmt">###################</span>
     <span class="cmt"># UNI Real Estate #</span>
     <span class="cmt">###################</span>
-<span class="str">'''
->>>>>>> origin/master
-elif Settings.isMac():
 
-    ################
-    # Municipality #
-    ################
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[info] Uni Real Estate switched to Level2..."</span>
+        logging.info(<span class="str">"[info] Uni Real Estate switched to Level2..."</span>)
 
-    ##############
-    # Waterboard #
-    ##############
+        loc = SCREEN.getCenter()
+        <span class="skw">click</span>(loc)
+        <span class="skw">click</span>(loc)
+        <span class="skw">type</span>(Key.SPACE)
 
-    #######
-    # SSH #
-    #######
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; master
+<span class="kw">elif</span> Settings.isMac():
 
-    ###################
-    # UNI Real Estate #
-    ###################
+    <span class="cmt">################</span>
+    <span class="cmt"># Municipality #</span>
+    <span class="cmt">################</span>
+    <span class="kw">if</span> exists(<img src="Multiplayer-CG5-MAC-Municipality-LVL2-IntroPanel-160506-VVD-0.1.png" />):
+        <span class="kw">print</span><span class="str">"[info] Switched to Level 2..."</span>
+        logging.info(<span class="str">"[info] Switched to Level 2..."</span>)
 
-else:
-    print"[error] OS error!"
-    logging.error("[error] OS error!")
-    exit(1)
-'''</span>
+        loc = SCREEN.getCenter()
+        <span class="skw">click</span>(loc)
+        <span class="skw">click</span>(loc)
+        <span class="skw">type</span>(Key.SPACE)
+    <span class="cmt">##############</span>
+    <span class="cmt"># Waterboard #</span>
+    <span class="cmt">##############</span>
+
+    <span class="cmt">#######</span>
+    <span class="cmt"># SSH #</span>
+    <span class="cmt">#######</span>
+
+    <span class="cmt">###################</span>
+    <span class="cmt"># UNI Real Estate #</span>
+    <span class="cmt">###################</span>
+
+<span class="kw">else</span>:
+    <span class="kw">print</span><span class="str">"[error] OS error!"</span>
+    logging.error(<span class="str">"[error] OS error!"</span>)
+    exit(<span class="dig">1</span>)
+<h3>ERROR: EOF in multi-line string</h3>'''
+</font></pre>
 </pre>
 </body>
 </html>

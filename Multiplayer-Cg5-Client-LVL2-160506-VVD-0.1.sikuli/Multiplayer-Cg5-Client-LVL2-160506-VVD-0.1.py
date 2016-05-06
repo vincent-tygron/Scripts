@@ -25,12 +25,7 @@ if Settings.isLinux() or Settings.isWindows():
         type(Key.SPACE)
 
     else:
-        exit(1)
-'''        
-        wait(, 3)
-        doubleClick()
-        wait(, 3)
-        
+        exit(1)        
     #######
     # SSH #
     #######
@@ -46,9 +41,7 @@ if Settings.isLinux() or Settings.isWindows():
     ###################
     # UNI Real Estate #
     ###################
-<<<<<<< HEAD
-'''
-=======
+
     else:
         print"[info] Uni Real Estate switched to Level2..." 
         logging.info("[info] Uni Real Estate switched to Level2...")
@@ -64,7 +57,7 @@ elif Settings.isMac():
     ################
     # Municipality #
     ################
-    if exists():
+    if exists("Multiplayer-CG5-MAC-Municipality-LVL2-IntroPanel-160506-VVD-0.1.png"):
         print"[info] Switched to Level 2..."
         logging.info("[info] Switched to Level 2...")
 
