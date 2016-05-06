@@ -67,16 +67,32 @@
    </head>
 <body>
 <div class="info">
-<h2>Cg5-MP-test-AdminApp-160503-VVD-0.3.sikuli</h2> <a href="Cg5-MP-test-AdminApp-160503-VVD-0.3.zip">(Download this script)</a>
+<h2>OS_Independant_Admin-CG5-RunSession-LVL1-160428-VVD-0.1.sikuli</h2> <a href="OS_Independant_Admin-CG5-RunSession-LVL1-160428-VVD-0.1.zip">(Download this script)</a>
 </div>
 <pre class="sikuli-code">
-runScript(<span class="str">"./OS_Independant_Engine_Independant_ Start-160503-VVD-1.6a-T20.sikuli"</span>)
-runScript(<span class="str">"./OS_Independant_LogOn-160419-VVD-0.5.sikuli"</span>)
-runScript(<span class="str">"./OS_Independant_AdminStart-160422-VVD-0.1.sikuli"</span>)
-runScript(<span class="str">"./OS_Independant_AdminAssigningClients-160422-VVD-0.2.sikuli"</span>)
-runScript(<span class="str">"./OS_Independant_Admin-StartSession-160422-VVD-0.1.sikuli"</span>)
-runScript(<span class="str">"./OS_Independant_Admin-CG5-RunSession-LVL1-160428-VVD-0.1.sikuli"</span>)
-runScript(<span class="str">"./OS_Independant_Admin-CG5-SkipToLVL2-160428-VVD-0.1.sikuli"</span>)
+<span class="kw">import</span> logging; reload(logging)
+FORMAT=(<span class="str">"%(asctime) -8s %(message) s"</span>)
+logging.basicConfig(format=FORMAT, filename=<span class="str">"testLog.txt"</span>, level=logging.DEBUG)
+
+logging.info(<span class="str">"[info] Admin runs session..."</span>)
+
+<span class="kw">if</span> Settings.isLinux() <span class="kw">or</span> Settings.isWindows():
+    <span class="kw">if</span> exists(<img src="Admin-CG5-Team1-MessageIcon2-160428-VVD-0.1.png" />, <span class="dig">60</span>):
+        <span class="skw">click</span>(<img src="Admin-CG5-Team1-MessageIcon-160428-VVD-0.1.png" />)
+        <span class="skw">wait</span>(<img src="Admin-CG5-TopBar-MessageIcon-160428-VVD-0.1.png" />)
+        <span class="skw">click</span>()
+        <span class="skw">wait</span>(<img src="Admin-CG5-TopBar-Messages-Sender-160428-VVD-0.1.png" />)
+        <span class="skw">click</span>()
+        <span class="skw">wait</span>(<img src="Admin-CG5-TopBar-Messages-ReplyBtn-160428-VVD-0.1.png" />)
+        <span class="skw">click</span>()
+        <span class="cmt">#wait("Admin-CG5-TopBar-Messages-ReplyBtn-160428-VVD-0.1.png")</span>
+        <span class="cmt">#click()</span>
+        <span class="skw">click</span>(<img src="Admin-CG5-GlobalBtn-160428-VVD-0.1.png" />)
+
+
+<span class="kw">else</span>:
+    <span class="kw">print</span><span class="str">"WIP - OS error"</span>
+    exit(<span class="dig">1</span>)
 </pre>
 </body>
 </html>
