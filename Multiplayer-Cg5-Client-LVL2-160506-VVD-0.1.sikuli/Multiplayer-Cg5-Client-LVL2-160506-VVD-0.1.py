@@ -21,7 +21,15 @@ if Settings.isLinux() or Settings.isWindows():
     ###################
     # UNI Real Estate #
     ###################
-
+    else:
+        print"[info] Uni Real Estate switched to Level2..." 
+        logging.info("[info] Uni Real Estate switched to Level2...")
+        
+        loc = SCREEN.getCenter()
+        click(loc)
+        click(loc)
+        type(Key.SPACE)
+        
 elif Settings.isMac():
 
     ################
