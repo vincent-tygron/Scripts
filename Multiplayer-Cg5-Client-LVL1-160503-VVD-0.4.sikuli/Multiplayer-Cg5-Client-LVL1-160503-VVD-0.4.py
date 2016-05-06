@@ -234,7 +234,7 @@ elif Settings.isMac():
         wait(Pattern("Multiplayer-CG5-MAC-Municipality-LVL1-MiniMap-ArrowIcon-160428-VVD-0.1.png").similar(0.88), 10)
         click()
         wait("Multiplayer-CG5-MAC-Waterboard-LVL1-OpenWater-ConfPanelImage-160506-VVD-0.1.png", 3)
-        dragDrop(Pattern("Multiplayer-CG5-MAC-Waterboard-LVL1-OpenWater-ConfPanelDate-160506-VVD-0.1.png").targetOffset(67,0), Pattern("Multiplayer-CG5-MAC-Waterboard-LVL1-OpenWater-ConfPanelDate-160506-VVD-0.1.png").targetOffset(-105,-3))
+        dragDrop(Pattern("Multiplayer-CG5-MAC-Waterboard-LVL1-OpenWater-ConfPanelDate-160506-VVD-0.1.png").targetOffset(47,0), Pattern("Multiplayer-CG5-MAC-Waterboard-LVL1-OpenWater-ConfPanelDate-160506-VVD-0.1.png").targetOffset(-105,-3))
         paste("4/2/2010")
         click("Multiplayer-CG5-MAC-Waterboard-LVL1-OpenWater-ConfirmBtn-160506-VVD-0.1.png")
         wait("1462545153790.png", FOREVER)
