@@ -6,6 +6,8 @@ logging.info("[info] Play Level 2...")
 
 if Settings.isLinux() or Settings.isWindows():
 
+    wait("Multiplayer-CG5-IntroPane-CntBtnl-160506-VVD-0.1.png", FOREVER)
+
     ################
     # Municipality #
     ################
