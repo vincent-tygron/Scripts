@@ -27,7 +27,14 @@ elif Settings.isMac():
     ################
     # Municipality #
     ################
+    if exists():
+        print"[info] Switched to Level 2..."
+        logging.info("[info] Switched to Level 2...")
 
+        loc = SCREEN.getCenter()
+        click(loc)
+        click(loc)
+        type(Key.SPACE)
     ##############
     # Waterboard #
     ##############
