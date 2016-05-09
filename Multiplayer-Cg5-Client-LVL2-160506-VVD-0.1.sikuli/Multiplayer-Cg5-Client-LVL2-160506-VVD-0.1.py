@@ -6,7 +6,7 @@ logging.info("[info] Play Level 2...")
 
 if Settings.isLinux() or Settings.isWindows():
 
-    wait("Multiplayer-CG5-IntroPane-CntBtnl-160506-VVD-0.1.png", FOREVER)
+    wait("Multiplayer-CG5-IntroPane-CntBtnl-160506-VVD-0.1.png", 10)
 
     ################
     # Municipality #
@@ -60,12 +60,14 @@ if Settings.isLinux() or Settings.isWindows():
         
 elif Settings.isMac():
 
-    wait("Multiplayer-CG5-MAC-IntroPane-CntBtnl-160506-VVD-0.1.png", FOREVER)
+    if exists("Multiplayer-CG5-MAC-IntroPane-CntBtnl-160506-VVD-0.1.png", 10):
+        print"[info] Level 2 has started..."
+        logging.info("[info] Level 2 has started...")
 
     ################
     # Municipality #
     ################
-    if exists("Multiplayer-CG5-MAC-Municipality-LVL2-IntroPanel-160506-VVD-0.1.png"):
+    if exists(Pattern("Multiplayer-CG5-MAC-Municipality-LVL2-IntroPanel-160506-VVD-0.1.png").similar(0.90)):
         print"[info] Municipality switched to Level 2..."
         logging.info("[info] Municipality switched to Level 2...")
 
