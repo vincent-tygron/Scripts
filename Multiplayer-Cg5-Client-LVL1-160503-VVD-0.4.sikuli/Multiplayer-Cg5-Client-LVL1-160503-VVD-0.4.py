@@ -10,7 +10,7 @@ if Settings.isLinux() or Settings.isWindows():
     # Municipality #
     ################
 
-    if exists("1462268628697.png"):
+    if exists(Pattern("1462268628697.png").similar(0.90)):
         print"[info] Municipality selected as stakeholder" 
         logging.info("[info] Municipality selected as stakeholder")
         loc = SCREEN.getCenter()
@@ -50,7 +50,7 @@ if Settings.isLinux() or Settings.isWindows():
     # Waterboard #
     ##############
     
-    elif exists("Multiplayer-CG5-Waterboard-LVL1-IntroPanel-160426-VVD-0.1.png"):
+    elif exists(Pattern("Multiplayer-CG5-Waterboard-LVL1-IntroPanel-160426-VVD-0.1.png").similar(0.90)):
         print"[info] Waterboard selected as stakeholder" 
         logging.info("[info] Waterboard selected as stakeholder")
         loc = SCREEN.getCenter()

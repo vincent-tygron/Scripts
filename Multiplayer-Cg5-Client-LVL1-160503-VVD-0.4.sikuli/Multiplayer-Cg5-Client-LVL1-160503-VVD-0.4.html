@@ -82,7 +82,7 @@ logging.info(<span class="str">"[info] Play Level 1..."</span>)
     <span class="cmt"># Municipality #</span>
     <span class="cmt">################</span>
 
-    <span class="kw">if</span> exists(<img src="1462268628697.png" />):
+    <span class="kw">if</span> exists(Pattern(<img src="1462268628697.png" />).similar(<span class="dig">0.90</span>)):
         <span class="kw">print</span><span class="str">"[info] Municipality selected as stakeholder"</span>
         logging.info(<span class="str">"[info] Municipality selected as stakeholder"</span>)
         loc = SCREEN.getCenter()
@@ -122,7 +122,7 @@ logging.info(<span class="str">"[info] Play Level 1..."</span>)
     <span class="cmt"># Waterboard #</span>
     <span class="cmt">##############</span>
 
-    <span class="kw">elif</span> exists(<img src="Multiplayer-CG5-Waterboard-LVL1-IntroPanel-160426-VVD-0.1.png" />):
+    <span class="kw">elif</span> exists(Pattern(<img src="Multiplayer-CG5-Waterboard-LVL1-IntroPanel-160426-VVD-0.1.png" />).similar(<span class="dig">0.90</span>)):
         <span class="kw">print</span><span class="str">"[info] Waterboard selected as stakeholder"</span>
         logging.info(<span class="str">"[info] Waterboard selected as stakeholder"</span>)
         loc = SCREEN.getCenter()
