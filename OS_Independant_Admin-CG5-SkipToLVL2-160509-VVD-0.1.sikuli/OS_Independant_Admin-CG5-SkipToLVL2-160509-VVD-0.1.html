@@ -1,0 +1,113 @@
+
+<html>
+   <head>
+      <style type="text/css">
+         .sikuli-code {
+            font-size: 20px;
+            font-family: "Osaka-mono", Monospace;
+            line-height: 1.5em;
+            display:table-cell;
+            white-space: pre-wrap;       /* css-3 */
+            white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* Internet Explorer 5.5+ */
+            width: 99%;   /* remove horizontal scroll-bar when viewing in IE7 */
+         }
+         .sikuli-code img {
+            vertical-align: middle;
+            margin: 2px;
+            border: 1px solid #ccc;
+            padding: 2px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-box-shadow: 1px 1px 1px gray;
+            -webkit-box-shadow: 1px 1px 2px gray;
+         }
+         .kw {
+            color: blue;
+         }
+         .skw {
+            color: rgb(63, 127, 127);
+         }
+
+         .str {
+            color: rgb(128, 0, 0);
+         }
+
+         .dig {
+            color: rgb(128, 64, 0);
+         }
+
+         .cmt {
+            color: rgb(200, 0, 200);
+         }
+
+         h2 {
+            display: inline;
+            font-weight: normal;
+         }
+
+         .info {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            display: none;
+         }
+
+         a {
+            color: #9D2900;
+         }
+
+         body {
+            font-family: "Trebuchet MS", Arial, Sans-Serif;
+         }
+
+      </style>
+   </head>
+<body>
+<div class="info">
+<h2>OS_Independant_Admin-CG5-SkipToLVL2-160509-VVD-0.1.sikuli</h2> <a href="OS_Independant_Admin-CG5-SkipToLVL2-160509-VVD-0.1.zip">(Download this script)</a>
+</div>
+<pre class="sikuli-code">
+<span class="kw">import</span> logging; reload(logging)
+FORMAT=(<span class="str">"%(asctime) -8s %(message) s"</span>)
+logging.basicConfig(format=FORMAT, filename=<span class="str">"testLog.txt"</span>, level=logging.DEBUG)
+
+logging.info(<span class="str">"[info] Admin waits for results and skips to LVL2..."</span>)
+
+<span class="kw">if</span> Settings.isLinux() <span class="kw">or</span> Settings.isWindows():
+
+    <span class="skw">wait</span>(<img src="Admin-CG5-Settings-SpeedUpBtn-160429-VVD-0.1.png" />)
+    <span class="skw">click</span>()
+    <span class="skw">click</span>()
+    <span class="skw">click</span>()
+    <span class="cmt">#wait(30)</span>
+
+    <span class="skw">click</span>(<img src="Admin-CG5-Team1-TeamIcon-160428-VVD-0.1.png" />)
+    <span class="skw">click</span>(<img src="Admin-CG5-Team1-StatusBtn-160428-VVD-0.1.png" />)
+    <span class="cmt">#if exists(Pattern("Admin-CG5-Team1-ResultsScore-160428-VVD-0.1.png").exact(), 300):</span>
+    <span class="cmt">#if exists(Pattern("Admin-CG5-Team1-LVL1-TeamScore-160509-VVD-0.1.png").exact(), 300):</span>
+    <span class="kw">if</span> exists(Pattern(<img src="Admin-CG5-Team1-LVL1-TeamScore-160509-VVD-0.2.png" />).exact(), <span class="dig">300</span>):
+        <span class="kw">print</span><span class="str">"[info] Results from LVL1 are ready!"</span>
+        logging.info(<span class="str">"[info] Results from LVL1 are ready!"</span>)
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[error] Results from LVL1 are NOT ready!"</span>
+        logging.error(<span class="str">"[error] Results from LVL1 are NOT ready!"</span>)
+        exit(<span class="dig">1</span>)
+
+    <span class="skw">click</span>(<img src="Admin-CG5-GlobalBtn-160428-VVD-0.1.png" />)
+    <span class="skw">wait</span>(<img src="Admin-CG5-LevelBtn-160428-VVD-0.1.png" />)
+    <span class="skw">click</span>()
+    <span class="skw">wait</span>(<img src="Admin-CG5-Levels-LVL2Btn-160428-VVD-0.1.png" />)
+    <span class="skw">click</span>(Pattern(<img src="Admin-CG5-Levels-LVL2Btn-160428-VVD-0.1.png" />).targetOffset(<span class="dig">64</span>,<span class="dig">12</span>))
+    <span class="kw">if</span> exists(<img src="Admin-CG5-Levels-LVL2Activated-160428-VVD-0.1.png" />):
+        <span class="kw">print</span><span class="str">"[success] level 2 has been activated!"</span>
+        logging.info(<span class="str">"[success] level 2 has been activated!"</span>)
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[error] Level 2 has not been activated as expected!"</span>
+        logging.error(<span class="str">"[error] Level 2 has not been activated as expected!"</span>)
+        exit(<span class="dig">1</span>)
+</pre>
+</body>
+</html>

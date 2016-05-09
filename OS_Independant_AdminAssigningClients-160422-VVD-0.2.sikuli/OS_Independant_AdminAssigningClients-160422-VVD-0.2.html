@@ -81,22 +81,10 @@ logging.info(<span class="str">"[info] Assigning clients to team..."</span>)
     <span class="kw">for</span> x <span class="kw">in</span> range(<span class="dig">0</span>, <span class="dig">10</span>):
         <span class="kw">while</span> exists(<img src="MainMenu-MultiPlayer-ClientBtn-160426-VVD-0.1.png" />, x):
             <span class="skw">click</span>()
-            <span class="skw">click</span>(<img src="MainMenu-MultiPlayer-SettingsBtn-160426-VVD-0.1.png" />)
+            <span class="skw">click</span>(<img src="Admin-CG5-LevelBtn-160428-VVD-0.1.png" />)
+            <span class="skw">click</span>(<img src="MainMenu-MultiPlayer-SettingsBtn-160509-VVD-0.1.png" />)
             <span class="skw">click</span>(<img src="MainMenu-MultiPlayer-ServerBtn-160426-VVD-0.1.png" />)
-            <span class="cmt">#waitVanish("MainMenu-MultiPlayer-ClientBtn-160426-VVD-0.1.png")</span>
             <span class="kw">break</span>
-
-<span class="cmt">#########################################</span>
-<span class="cmt"># Check if all clients are connected... #</span>
-<span class="cmt">#########################################</span>
-    <span class="kw">if</span> exists(<img src="Admin-MultiPlayer-FourClientsConnected-160422-VVD-0.1.png" />, <span class="dig">30</span>):
-        <span class="kw">print</span><span class="str">"[success] Clients were successfully invited and connected!"</span>
-        logging.info(<span class="str">"[success] Clients were successfully invited and connected!"</span>)
-    <span class="kw">else</span>:
-        <span class="kw">print</span><span class="str">"[error] Clients were not connected (in time)!"</span>
-        logging.error(<span class="str">"[error] Clients were not connected (in time)!"</span>)
-        exit(<span class="dig">1</span>)
-
 <span class="kw">else</span>:
     exit(<span class="dig">1</span>) <span class="cmt">#OSX &gt;&gt;&gt; Wip</span>
 </pre>
