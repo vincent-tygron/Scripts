@@ -307,3 +307,5 @@ else:
     print"[error] OS error!"
     logging.error("[error] OS error!")
     exit(1)
+
+logging.info("[info] End Level 1...")
