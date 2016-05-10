@@ -61,6 +61,7 @@ if Settings.isLinux() or Settings.isWindows():
         type(Key.SPACE)
         
 elif Settings.isMac():
+    print"OS iS MAC!"
 
     if exists("Multiplayer-CG5-MAC-IntroPane-CntBtnl-160506-VVD-0.1.png", FOREVER):
         print"[info] Level 2 has started..."
