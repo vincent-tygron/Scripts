@@ -7,7 +7,7 @@ logging.info("[info] Play Level 2...")
 
 if Settings.isLinux() or Settings.isWindows():
 
-    if exists(Pattern("Multiplayer-CG5-IntroPane-CntBtnl-160506-VVD-0.1.png").similar(0.80), FOREVER):
+    if exists("Multiplayer-CG5-IntroPane-CntBtnl-160506-VVD-0.1.png", FOREVER):
         print"[info] Level 2 has started..."
         logging.info("[info] Level 2 has started...")
 
