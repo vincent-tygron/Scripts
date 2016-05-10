@@ -6,7 +6,7 @@ logging.info("[info] Accept invite and load Cg5 session...")
 
 if Settings.isLinux() or Settings.isWindows():
     wait("Multiplayer-Client-InviteMessage-160422-VVD-0.1.png", FOREVER)
-    click("Multiplayer-Client-InviteMessage-YesBtn-160422-VVD-0.1.png")
+    type(Key.ENTER)
     if exists("Multiplayer-Client-Cg5-SplashScreen-160422-VVD-0.1.png", 60):
         print"[success] Client is connected to session!"
         logging.info("[success] Client is connected to session!")
@@ -17,7 +17,7 @@ if Settings.isLinux() or Settings.isWindows():
 
 if Settings.isMac():
     wait("Multiplayer-Client-MAC-InviteMessage-160425-VVD-0.1.png", FOREVER)
-    click("Multiplayer-Client-MAC-InviteMessage-YesBtn-160425-VVD-0.1.png")
+    type(Key.ENTER)
     if exists("Multiplayer-Client-MAC-Cg5-SplashScreen-160425-VVD-0.1.png", 60):
         print"[success] Client is connected to session!"
         logging.info("[success] Client is connected to session!")
