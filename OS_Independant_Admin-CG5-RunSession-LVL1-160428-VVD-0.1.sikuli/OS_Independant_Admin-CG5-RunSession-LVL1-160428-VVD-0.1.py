@@ -10,7 +10,7 @@ if Settings.isLinux() or Settings.isWindows():
         wait("Admin-CG5-TopBar-MessageIcon-160428-VVD-0.1.png")
         click()
         wait("Admin-CG5-TopBar-Messages-Sender-160428-VVD-0.1.png")
-        click()
+        click("Admin-CG5-TopBar-Messages-Sender-160428-VVD-0.1.png")
         wait("Admin-CG5-TopBar-Messages-ReplyBtn-160428-VVD-0.1.png")
         click()
         #wait("Admin-CG5-TopBar-Messages-ReplyBtn-160428-VVD-0.1.png")
@@ -18,8 +18,19 @@ if Settings.isLinux() or Settings.isWindows():
         click("Admin-CG5-GlobalBtn-160428-VVD-0.1.png")
 
 elif Settings.isMac():
-    print"WIP - MAC not scripted yet!"
-    exit(1)
+
+    if exists("1462884531540.png", 60):
+        click("1462884545549.png")
+        wait("1462884568365.png")
+        click()
+        wait("1462884601787.png")
+        click()
+        wait("1462884624587.png")
+        click()
+        #wait("Admin-CG5-TopBar-Messages-ReplyBtn-160428-VVD-0.1.png")
+        #click()
+        click("1462884638290.png")
+
 
 else:
     print"WIP - OS error"

@@ -82,7 +82,7 @@ logging.info(<span class="str">"[info] Admin runs session LVL1..."</span>)
         <span class="skw">wait</span>(<img src="Admin-CG5-TopBar-MessageIcon-160428-VVD-0.1.png" />)
         <span class="skw">click</span>()
         <span class="skw">wait</span>(<img src="Admin-CG5-TopBar-Messages-Sender-160428-VVD-0.1.png" />)
-        <span class="skw">click</span>()
+        <span class="skw">click</span>(<img src="Admin-CG5-TopBar-Messages-Sender-160428-VVD-0.1.png" />)
         <span class="skw">wait</span>(<img src="Admin-CG5-TopBar-Messages-ReplyBtn-160428-VVD-0.1.png" />)
         <span class="skw">click</span>()
         <span class="cmt">#wait("Admin-CG5-TopBar-Messages-ReplyBtn-160428-VVD-0.1.png")</span>
@@ -90,8 +90,19 @@ logging.info(<span class="str">"[info] Admin runs session LVL1..."</span>)
         <span class="skw">click</span>(<img src="Admin-CG5-GlobalBtn-160428-VVD-0.1.png" />)
 
 <span class="kw">elif</span> Settings.isMac():
-    <span class="kw">print</span><span class="str">"WIP - MAC not scripted yet!"</span>
-    exit(<span class="dig">1</span>)
+
+    <span class="kw">if</span> exists(<img src="1462884531540.png" />, <span class="dig">60</span>):
+        <span class="skw">click</span>(<img src="1462884545549.png" />)
+        <span class="skw">wait</span>(<img src="1462884568365.png" />)
+        <span class="skw">click</span>()
+        <span class="skw">wait</span>(<img src="1462884601787.png" />)
+        <span class="skw">click</span>()
+        <span class="skw">wait</span>(<img src="1462884624587.png" />)
+        <span class="skw">click</span>()
+        <span class="cmt">#wait("Admin-CG5-TopBar-Messages-ReplyBtn-160428-VVD-0.1.png")</span>
+        <span class="cmt">#click()</span>
+        <span class="skw">click</span>(<img src="1462884638290.png" />)
+
 
 <span class="kw">else</span>:
     <span class="kw">print</span><span class="str">"WIP - OS error"</span>

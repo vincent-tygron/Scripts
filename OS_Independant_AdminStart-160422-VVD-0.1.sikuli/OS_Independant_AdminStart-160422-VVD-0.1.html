@@ -97,8 +97,28 @@ logging.info(<span class="str">"[info] Starting Admin Application for Cg5 sessio
         <span class="kw">print</span><span class="str">"[success] Cg5 session ready!"</span>
         logging.info(<span class="str">"[success] Cg5 session ready!"</span>)
 
-<span class="kw">else</span>:<span class="cmt">#if Settings.isMac()</span>
-    exit(<span class="dig">1</span>) <span class="cmt">#Temp exit... WIP</span>
+<span class="kw">elif</span> Settings.isMac():
+
+    <span class="skw">wait</span>(<img src="1462882029995.png" />, <span class="dig">3</span>)
+    <span class="skw">click</span>()
+    <span class="skw">wait</span>(<img src="1462882086368.png" />,<span class="dig">3</span>)
+    <span class="skw">click</span>()
+    <span class="skw">wait</span>(<img src="1462882116663.png" />,<span class="dig">3</span>)
+    <span class="skw">click</span>()
+    paste(<span class="str">"cg5"</span>)
+    <span class="skw">type</span>(Key.ENTER)
+    <span class="skw">wait</span>(<img src="1462882151614.png" />,<span class="dig">3</span>)
+    <span class="skw">click</span>()
+    <span class="skw">wait</span>(<img src="1462882194613.png" />,<span class="dig">3</span>)
+    <span class="skw">click</span>()
+    <span class="kw">if</span> exists(<img src="1462882239612.png" />,<span class="dig">900</span>):
+        <span class="kw">print</span><span class="str">"[success] Cg5 session ready!"</span>
+        logging.info(<span class="str">"[success] Cg5 session ready!"</span>)
+
+<span class="kw">else</span>:
+    <span class="kw">print</span><span class="str">"[error] OS error!"</span>
+    logging.error(<span class="str">"[error] OS error!"</span>)
+    exit(<span class="dig">1</span>)
 </pre>
 </body>
 </html>

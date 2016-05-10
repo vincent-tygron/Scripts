@@ -99,8 +99,35 @@ logging.info(<span class="str">"[info] Admin starts session..."</span>)
         logging.error(<span class="str">"[error] Session did not start in time and/ or as expected!"</span>)
         exit(<span class="dig">1</span>)
 
+<span class="kw">elif</span> Settings.isMac():
+<span class="cmt">#########################################</span>
+<span class="cmt"># Check if all clients are connected... #</span>
+<span class="cmt">#########################################</span>
+    <span class="cmt">#if exists("Admin-MultiPlayer-MAC-FourClientsConnected-160422-VVD-0.1.png", 30):#Add 30 seconds if needed</span>
+    <span class="kw">if</span> exists(<img src="1462882938643.png" />, <span class="dig">30</span>):
+        <span class="kw">print</span><span class="str">"[success] Clients were successfully invited and connected!"</span>
+        logging.info(<span class="str">"[success] Clients were successfully invited and connected!"</span>)
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[error] Clients were not connected (in time)!"</span>
+        logging.error(<span class="str">"[error] Clients were not connected (in time)!"</span>)
+        exit(<span class="dig">1</span>)
+
+    <span class="cmt">#click("Admin-MultiPlayer-MAC-SettingsBtn-160422-VVD-0.1.png")</span>
+    <span class="skw">click</span>(<img src="1462882978082.png" />)
+    <span class="cmt">#click("Admin-MultiPlayer-MAC-Settings-StartSessionBtn-160422-VVD-0.2.png")</span>
+    <span class="skw">click</span>(<img src="1462883004489.png" />)
+
+    <span class="kw">if</span> exists(<img src="Admin-MultiPlayer-MAC-Settings-SessionsAreRunning-160422-VVD-0.1.png" />, <span class="dig">30</span>):
+        <span class="kw">print</span><span class="str">"[success] Session has started!"</span>
+        logging.info(<span class="str">"[success] Session has started!"</span>)
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[error] Session did not start in time and/ or as expected!"</span>
+        logging.error(<span class="str">"[error] Session did not start in time and/ or as expected!"</span>)
+        exit(<span class="dig">1</span>)
+
 <span class="kw">else</span>:
-    <span class="cmt">#OSX - WIP</span>
+    <span class="kw">print</span><span class="str">"[error] OS error!"</span>
+    logging.error(<span class="str">"[error] OS error!"</span>)
     exit(<span class="dig">1</span>)
 </pre>
 </body>

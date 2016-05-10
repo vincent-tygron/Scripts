@@ -13,5 +13,18 @@ if Settings.isLinux() or Settings.isWindows():
             click("MainMenu-MultiPlayer-SettingsBtn-160509-VVD-0.1.png")
             click("MainMenu-MultiPlayer-ServerBtn-160426-VVD-0.1.png")
             break
+
+elif Settings.isMac():
+
+    for x in range(0, 10):
+        while exists(Pattern("1462882460519.png").exact(),x):
+            click()
+            click("1462882491645.png")
+            click("1462882535453.png")
+            click("1462882553117.png")
+            break
+    
 else:
-    exit(1) #OSX >>> Wip
+    print"[error] OS error!"
+    logging.error("[error] OS error!")
+    exit(1) 

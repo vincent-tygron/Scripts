@@ -85,8 +85,21 @@ logging.info(<span class="str">"[info] Assigning clients to team..."</span>)
             <span class="skw">click</span>(<img src="MainMenu-MultiPlayer-SettingsBtn-160509-VVD-0.1.png" />)
             <span class="skw">click</span>(<img src="MainMenu-MultiPlayer-ServerBtn-160426-VVD-0.1.png" />)
             <span class="kw">break</span>
+
+<span class="kw">elif</span> Settings.isMac():
+
+    <span class="kw">for</span> x <span class="kw">in</span> range(<span class="dig">0</span>, <span class="dig">10</span>):
+        <span class="kw">while</span> exists(Pattern(<img src="1462882460519.png" />).exact(),x):
+            <span class="skw">click</span>()
+            <span class="skw">click</span>(<img src="1462882491645.png" />)
+            <span class="skw">click</span>(<img src="1462882535453.png" />)
+            <span class="skw">click</span>(<img src="1462882553117.png" />)
+            <span class="kw">break</span>
+
 <span class="kw">else</span>:
-    exit(<span class="dig">1</span>) <span class="cmt">#OSX &gt;&gt;&gt; Wip</span>
+    <span class="kw">print</span><span class="str">"[error] OS error!"</span>
+    logging.error(<span class="str">"[error] OS error!"</span>)
+    exit(<span class="dig">1</span>)
 </pre>
 </body>
 </html>

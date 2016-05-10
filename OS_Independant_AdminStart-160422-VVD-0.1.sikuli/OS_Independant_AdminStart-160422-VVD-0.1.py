@@ -25,5 +25,25 @@ if Settings.isLinux() or Settings.isWindows():
         print"[success] Cg5 session ready!"
         logging.info("[success] Cg5 session ready!")
 
-else:#if Settings.isMac()
-    exit(1) #Temp exit... WIP
+elif Settings.isMac():
+
+    wait("1462882029995.png", 3)
+    click()
+    wait("1462882086368.png",3)
+    click()
+    wait("1462882116663.png",3)
+    click()
+    paste("cg5")
+    type(Key.ENTER)
+    wait("1462882151614.png",3)
+    click()
+    wait("1462882194613.png",3)
+    click()
+    if exists("1462882239612.png",900):
+        print"[success] Cg5 session ready!"
+        logging.info("[success] Cg5 session ready!")
+
+else:
+    print"[error] OS error!"
+    logging.error("[error] OS error!")
+    exit(1)
