@@ -74,6 +74,7 @@
 FORMAT=(<span class="str">"%(asctime) -8s %(message) s"</span>)
 logging.basicConfig(format=FORMAT, filename=<span class="str">"TestLog.txt"</span>, level=logging.DEBUG)
 
+<span class="kw">print</span><span class="str">"[info] Play Level 2..."</span>
 logging.info(<span class="str">"[info] Play Level 2..."</span>)
 
 <span class="kw">if</span> Settings.isLinux() <span class="kw">or</span> Settings.isWindows():
@@ -132,9 +133,7 @@ logging.info(<span class="str">"[info] Play Level 2..."</span>)
         <span class="skw">click</span>(loc)
         <span class="skw">type</span>(Key.SPACE)
 
-<span class="cmt">#elif Settings.isMac():</span>
-<span class="kw">else</span>:
-    <span class="kw">print</span><span class="str">"[info] OSX check level2!"</span>
+<span class="kw">elif</span> Settings.isMac():
 
     <span class="kw">if</span> exists(<img src="Multiplayer-CG5-MAC-IntroPane-CntBtnl-160506-VVD-0.1.png" />, FOREVER):
         <span class="kw">print</span><span class="str">"[info] Level 2 has started..."</span>
@@ -143,7 +142,7 @@ logging.info(<span class="str">"[info] Play Level 2..."</span>)
     <span class="cmt">################</span>
     <span class="cmt"># Municipality #</span>
     <span class="cmt">################</span>
-    <span class="kw">if</span> exists(<img src="Multiplayer-CG5-MAC-Municipality-LVL2-IntroPanel-160510-VVD-0.1.png" />, <span class="dig">0</span>):
+    <span class="kw">if</span> exists(Pattern(<img src="Multiplayer-CG5-MAC-Municipality-LVL2-IntroPanel-160510-VVD-0.1.png" />).similar(<span class="dig">0.90</span>), <span class="dig">0</span>):
         <span class="kw">print</span><span class="str">"[info] Municipality switched to Level 2..."</span>
         logging.info(<span class="str">"[info] Municipality switched to Level 2..."</span>)
 
@@ -188,11 +187,10 @@ logging.info(<span class="str">"[info] Play Level 2..."</span>)
         <span class="skw">click</span>(loc)
         <span class="skw">type</span>(Key.SPACE)
 
-<span class="cmt">#else:</span>
-<span class="cmt">#    print"[error] OS error!"</span>
-<span class="cmt">#    logging.error("[error] OS error!")</span>
-<span class="cmt">#    exit(1)</span>
-
+<span class="kw">else</span>:
+    <span class="kw">print</span><span class="str">"[error] OS error!"</span>
+    logging.error(<span class="str">"[error] OS error!"</span>)
+    exit(<span class="dig">1</span>)
 </pre>
 </body>
 </html>

@@ -2,6 +2,7 @@ import logging; reload(logging)
 FORMAT=("%(asctime) -8s %(message) s")
 logging.basicConfig(format=FORMAT, filename="TestLog.txt", level=logging.DEBUG)
 
+print"[info] Play Level 2..."
 logging.info("[info] Play Level 2...")
 
 if Settings.isLinux() or Settings.isWindows():
@@ -60,9 +61,7 @@ if Settings.isLinux() or Settings.isWindows():
         click(loc)
         type(Key.SPACE)
         
-#elif Settings.isMac():
-else:
-    print"[info] OSX check level2!"
+elif Settings.isMac():
 
     if exists("Multiplayer-CG5-MAC-IntroPane-CntBtnl-160506-VVD-0.1.png", FOREVER):
         print"[info] Level 2 has started..."
@@ -71,7 +70,7 @@ else:
     ################
     # Municipality #
     ################
-    if exists("Multiplayer-CG5-MAC-Municipality-LVL2-IntroPanel-160510-VVD-0.1.png", 0):
+    if exists(Pattern("Multiplayer-CG5-MAC-Municipality-LVL2-IntroPanel-160510-VVD-0.1.png").similar(0.90), 0):
         print"[info] Municipality switched to Level 2..."
         logging.info("[info] Municipality switched to Level 2...")
 
@@ -116,7 +115,7 @@ else:
         click(loc)
         type(Key.SPACE)
         
-#else:
-#    print"[error] OS error!"
-#    logging.error("[error] OS error!")
-#    exit(1)
+else:
+    print"[error] OS error!"
+    logging.error("[error] OS error!")
+    exit(1)
