@@ -2,7 +2,6 @@ import logging; reload(logging)
 FORMAT=("%(asctime) -8s %(message) s")
 logging.basicConfig(format=FORMAT, filename="TestLog.txt", level=logging.DEBUG)
 
-print"[info] Play Level 1..."
 logging.info("[info] Play Level 1...")
 
 if Settings.isLinux() or Settings.isWindows():
@@ -308,6 +307,5 @@ else:
     print"[error] OS error!"
     logging.error("[error] OS error!")
     exit(1)
-    
-print"[info] End Level 1..."
+
 logging.info("[info] End Level 1...")
