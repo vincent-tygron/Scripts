@@ -61,7 +61,6 @@ if Settings.isLinux() or Settings.isWindows():
         type(Key.SPACE)
         
 elif Settings.isMac():
-    print"OS iS MAC!"
 
     if exists("Multiplayer-CG5-MAC-IntroPane-CntBtnl-160506-VVD-0.1.png", FOREVER):
         print"[info] Level 2 has started..."
@@ -78,6 +77,7 @@ elif Settings.isMac():
         click(loc)
         click(loc)
         type(Key.SPACE)
+        
     ##############
     # Waterboard #
     ##############
@@ -89,14 +89,31 @@ elif Settings.isMac():
         click(loc)
         click(loc)
         type(Key.SPACE)
+        
     #######
     # SSH #
     #######
-
+    elif exists("Multiplayer-CG5-MAC-SSH-LVL2-IntroPanel-160510-VVD-0.1.png", 0):
+        print"[info] SSH switched to Level 2..." 
+        logging.info("[info] SSH switched to Level 2...")
+        
+        loc = SCREEN.getCenter()
+        click(loc)
+        click(loc)
+        type(Key.SPACE)
+        
     ###################
     # UNI Real Estate #
     ###################
-
+    else:
+        print"[info] Uni Real Estate switched to Level2..." 
+        logging.info("[info] Uni Real Estate switched to Level2...")
+        
+        loc = SCREEN.getCenter()
+        click(loc)
+        click(loc)
+        type(Key.SPACE)
+        
 else:
     print"[error] OS error!"
     logging.error("[error] OS error!")
