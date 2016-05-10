@@ -14,7 +14,7 @@ if Settings.isLinux() or Settings.isWindows():
     # Municipality #
     ################
 
-    if exists(Pattern("Multiplayer-CG5-Municipality-LVL2-IntroPanel-160506-VVD-0.1.png").similar(0.80), 0):
+    if exists("Multiplayer-CG5-Municipality-LVL2-IntroPanel-160510-VVD-0.1.png", 0):
         print"[info] Municipality switched to Level 2..." 
         logging.info("[info] Municipality switched to Level 2...")
         
@@ -26,7 +26,7 @@ if Settings.isLinux() or Settings.isWindows():
     ##############
     # Waterboard #
     ##############
-    elif exists("Multiplayer-CG5-Waterboard-LVL2-IntroPanel-160506-VVD-0.1.png", 0):
+    elif exists("Multiplayer-CG5-Waterboard-LVL2-IntroPanel-160510-VVD-0.1.png", 0):
         print"[info] Waterboard switched to Level 2..." 
         logging.info("[info] Waterboard switched to Level 2...")
         
@@ -38,7 +38,7 @@ if Settings.isLinux() or Settings.isWindows():
     #######
     # SSH #
     #######
-    elif exists("Multiplayer-CG5-SSH-LVL2-IntroPanel-160506-VVD-0.1.png", 0):
+    elif exists("Multiplayer-CG5-SSH-LVL2-IntroPanel-160510-VVD-0.1.png", 0):
         print"[info] SSH switched to Level 2..." 
         logging.info("[info] SSH switched to Level 2...")
         
@@ -70,7 +70,7 @@ elif Settings.isMac():
     ################
     # Municipality #
     ################
-    if exists(Pattern("Multiplayer-CG5-MAC-Municipality-LVL2-IntroPanel-160506-VVD-0.1.png").similar(0.90), 0):
+    if exists(Pattern("Multiplayer-CG5-MAC-Municipality-LVL2-IntroPanel-160510-VVD-0.1.png").similar(0.90), 0):
         print"[info] Municipality switched to Level 2..."
         logging.info("[info] Municipality switched to Level 2...")
 
