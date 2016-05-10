@@ -40,7 +40,7 @@ if Settings.isLinux() or Settings.isWindows():
         wait("1461669963955.png")
         click()
 
-        for x in range(0, 300):
+        for x in range(0, 10):
             while exists("1462273944361.png", x):
                 click()
                 exists("1461669963955.png")
