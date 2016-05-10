@@ -2,6 +2,7 @@ import logging; reload(logging)
 FORMAT=("%(asctime) -8s %(message) s")
 logging.basicConfig(format=FORMAT, filename="TestLog.txt", level=logging.DEBUG)
 
+print"[info] Play Level 1..."
 logging.info("[info] Play Level 1...")
 
 if Settings.isLinux() or Settings.isWindows():
@@ -39,7 +40,7 @@ if Settings.isLinux() or Settings.isWindows():
         wait("1461669963955.png")
         click()
 
-        for x in range(0, 10):
+        for x in range(0, 5):
             while exists("1462273944361.png", x):
                 click()
                 exists("1461669963955.png")
@@ -307,5 +308,6 @@ else:
     print"[error] OS error!"
     logging.error("[error] OS error!")
     exit(1)
-
+    
+print"[info] End Level 1..."
 logging.info("[info] End Level 1...")
