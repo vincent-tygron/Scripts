@@ -60,7 +60,9 @@ if Settings.isLinux() or Settings.isWindows():
         click(loc)
         type(Key.SPACE)
         
-elif Settings.isMac():
+#elif Settings.isMac():
+else:
+    print"[info] OSX check level2!"
 
     if exists("Multiplayer-CG5-MAC-IntroPane-CntBtnl-160506-VVD-0.1.png", FOREVER):
         print"[info] Level 2 has started..."
@@ -69,7 +71,7 @@ elif Settings.isMac():
     ################
     # Municipality #
     ################
-    if exists(Pattern("Multiplayer-CG5-MAC-Municipality-LVL2-IntroPanel-160510-VVD-0.1.png").similar(0.90), 0):
+    if exists("Multiplayer-CG5-MAC-Municipality-LVL2-IntroPanel-160510-VVD-0.1.png", 0):
         print"[info] Municipality switched to Level 2..."
         logging.info("[info] Municipality switched to Level 2...")
 
@@ -114,7 +116,7 @@ elif Settings.isMac():
         click(loc)
         type(Key.SPACE)
         
-else:
-    print"[error] OS error!"
-    logging.error("[error] OS error!")
-    exit(1)
+#else:
+#    print"[error] OS error!"
+#    logging.error("[error] OS error!")
+#    exit(1)
