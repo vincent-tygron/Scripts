@@ -22,17 +22,17 @@ if Settings.isLinux() or Settings.isWindows():
     click("Multiplayer-Client-SesionName-ContinueBtn3-160422-VVD-0.1.png")
     wait("Multiplayer-Client-StakeholderPanelTitle-160422-VVD-0.1.png", 15)
     click(Pattern("Multiplayer-Client-StakeholderSelectionList-160422-VVD-0.1.png").targetOffset(-32,-122))
-    exists("Multiplayer-Client-StakeholderSelection-ChooseStakeholderBtn-160422-VVD-0.1.png")
+    exists("Multiplayer-Client-StakeholderSelection-ChooseStakeholderBtn-160422-VVD-0.1.png", 1)
     click()
-    if not exists("Multiplayer-Client-AssignmentPanelTitle-160422-VVD-0.1.png", 3):
+    if not exists("Multiplayer-Client-AssignmentPanelTitle-160422-VVD-0.1.png"):
         click("Multiplayer-Client-StakeholderSelection-Waterboard-160425-VVD-0.1.png")
-        exists("Multiplayer-Client-StakeholderSelection-ChooseStakeholderBtn-160422-VVD-0.1.png")
+        exists("Multiplayer-Client-StakeholderSelection-ChooseStakeholderBtn-160422-VVD-0.1.png", 1)
         click()
-        if not exists("Multiplayer-Client-AssignmentPanelTitle-160422-VVD-0.1.png", 3):
+        if not exists("Multiplayer-Client-AssignmentPanelTitle-160422-VVD-0.1.png"):
             click("Multiplayer-Client-StakeholderSelection-SSH-160425-VVD-0.1.png")
-            exists("Multiplayer-Client-StakeholderSelection-ChooseStakeholderBtn-160422-VVD-0.1.png")
+            exists("Multiplayer-Client-StakeholderSelection-ChooseStakeholderBtn-160422-VVD-0.1.png", 1)
             click()
-            if not exists("Multiplayer-Client-AssignmentPanelTitle-160422-VVD-0.1.png", 3):
+            if not exists("Multiplayer-Client-AssignmentPanelTitle-160422-VVD-0.1.png"):
                 click("Multiplayer-Client-StakeholderSelection-UniRealEstate-160425-VVD-0.1.png")
 
                 click("Multiplayer-Client-StakeholderSelection-ChooseStakeholderBtn-160422-VVD-0.1.png")
@@ -58,17 +58,17 @@ if Settings.isMac():
     click("Multiplayer-Client-MAC-SesionName-ContinueBtn3-160425-VVD-0.1.png")
     wait("Multiplayer-Client-MAC-StakeholderPanelTitle-160425-VVD-0.1.png", 15)
     click(Pattern("Multiplayer-Client-MAC-StakeholderSelectionList-160425-VVD-0.1.png").targetOffset(-17,-89))
-    exists("Multiplayer-Client-MAC-StakeholderSelection-ChooseStakeholderBtn-160425-VVD-0.1.png")
+    exists("Multiplayer-Client-MAC-StakeholderSelection-ChooseStakeholderBtn-160425-VVD-0.1.png", 1)
     click()
-    if not exists("Multiplayer-Client-MAC-AssignmentPanelTitle-160425-VVD-0.1.png", 3):
+    if not exists("Multiplayer-Client-MAC-AssignmentPanelTitle-160425-VVD-0.1.png"):
         click("Multiplayer-Client-MAC-StakeholderSelection-Waterboard-160426-VVD-0.1.png")
-        exists("Multiplayer-Client-MAC-StakeholderSelection-ChooseStakeholderBtn-160425-VVD-0.1.png")
+        exists("Multiplayer-Client-MAC-StakeholderSelection-ChooseStakeholderBtn-160425-VVD-0.1.png", 1)
         click()
-        if not exists("Multiplayer-Client-MAC-AssignmentPanelTitle-160425-VVD-0.1.png", 3):
+        if not exists("Multiplayer-Client-MAC-AssignmentPanelTitle-160425-VVD-0.1.png"):
             click("Multiplayer-Client-MAC-StakeholderSelection-SSH-160426-VVD-0.1.png")
-            exists("Multiplayer-Client-MAC-StakeholderSelection-ChooseStakeholderBtn-160425-VVD-0.1.png")
+            exists("Multiplayer-Client-MAC-StakeholderSelection-ChooseStakeholderBtn-160425-VVD-0.1.png", 1)
             click()
-            if not exists("Multiplayer-Client-MAC-AssignmentPanelTitle-160425-VVD-0.1.png", 3):       
+            if not exists("Multiplayer-Client-MAC-AssignmentPanelTitle-160425-VVD-0.1.png"):       
                 click("Multiplayer-Client-MAC-StakeholderSelection-UniRealEstate-160426-VVD-0.1.png")
                 click("Multiplayer-Client-MAC-StakeholderSelection-ChooseStakeholderBtn-160425-VVD-0.1.png")
 
