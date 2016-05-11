@@ -11,7 +11,7 @@ if Settings.isLinux() or Settings.isWindows():
     # Municipality #
     ################
 
-    if exists("Multiplayer-CG5-Municipality-LVL2-IntroPanel-160510-VVD-0.1.png", 0):
+    if exists("1462975903681.png", 0):
         pass
 
     ##############
