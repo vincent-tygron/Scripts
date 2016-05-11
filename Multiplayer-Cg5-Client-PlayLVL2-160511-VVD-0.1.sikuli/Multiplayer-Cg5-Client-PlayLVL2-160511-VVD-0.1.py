@@ -12,13 +12,15 @@ if Settings.isLinux() or Settings.isWindows():
     ################
 
     if exists("1462975903681.png", 0):
-        pass
+        print"[info] Municipality will now perform actions in LVL2..."
+        logging.info("[info] Municipality will now perform actions in LVL2...")
 
     ##############
     # Waterboard #
     ##############
-    elif exists("1462975283856.png", 0):
-        pass
+    elif exists(Pattern("1462975283856.png").similar(0.89), 0):
+        print"[info] Waterboard will now perform actions in LVL2..."
+        logging.info("[info] Waterboard will now perform actions in LVL2...")
        
     #######
     # SSH #
@@ -64,7 +66,8 @@ if Settings.isLinux() or Settings.isWindows():
     ###################
 
     else:
-        pass
+        print"[info] UNI Real Estate will now perform actions in LVL2..."
+        logging.info("[info] UNI Real Estate will now perform actions in LVL2...")
         
 elif Settings.isMac():
 

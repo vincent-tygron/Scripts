@@ -84,13 +84,15 @@ logging.info(<span class="str">"[info] Play Level 2..."</span>)
     <span class="cmt">################</span>
 
     <span class="kw">if</span> exists(<img src="1462975903681.png" />, <span class="dig">0</span>):
-        <span class="kw">pass</span>
+        <span class="kw">print</span><span class="str">"[info] Municipality will now perform actions in LVL2..."</span>
+        logging.info(<span class="str">"[info] Municipality will now perform actions in LVL2..."</span>)
 
     <span class="cmt">##############</span>
     <span class="cmt"># Waterboard #</span>
     <span class="cmt">##############</span>
-    <span class="kw">elif</span> exists(<img src="1462975283856.png" />, <span class="dig">0</span>):
-        <span class="kw">pass</span>
+    <span class="kw">elif</span> exists(Pattern(<img src="1462975283856.png" />).similar(<span class="dig">0.89</span>), <span class="dig">0</span>):
+        <span class="kw">print</span><span class="str">"[info] Waterboard will now perform actions in LVL2..."</span>
+        logging.info(<span class="str">"[info] Waterboard will now perform actions in LVL2..."</span>)
 
     <span class="cmt">#######</span>
     <span class="cmt"># SSH #</span>
@@ -136,7 +138,8 @@ logging.info(<span class="str">"[info] Play Level 2..."</span>)
     <span class="cmt">###################</span>
 
     <span class="kw">else</span>:
-        <span class="kw">pass</span>
+        <span class="kw">print</span><span class="str">"[info] UNI Real Estate will now perform actions in LVL2..."</span>
+        logging.info(<span class="str">"[info] UNI Real Estate will now perform actions in LVL2..."</span>)
 
 <span class="kw">elif</span> Settings.isMac():
 
