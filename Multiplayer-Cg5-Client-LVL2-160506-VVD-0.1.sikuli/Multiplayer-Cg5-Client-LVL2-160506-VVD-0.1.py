@@ -2,8 +2,8 @@ import logging; reload(logging)
 FORMAT=("%(asctime) -8s %(message) s")
 logging.basicConfig(format=FORMAT, filename="TestLog.txt", level=logging.DEBUG)
 
-print"[info] Play Level 2..."
-logging.info("[info] Play Level 2...")
+print"[info] Start Level 2..."
+logging.info("[info] Start Level 2...")
 
 if Settings.isLinux() or Settings.isWindows():
 
