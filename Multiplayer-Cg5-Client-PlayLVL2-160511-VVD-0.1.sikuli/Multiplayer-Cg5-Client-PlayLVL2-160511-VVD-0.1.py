@@ -71,19 +71,27 @@ elif Settings.isMac():
     ################
     # Municipality #
     ################
-    if exists(Pattern("Multiplayer-CG5-MAC-Municipality-LVL2-IntroPanel-160510-VVD-0.1.png").similar(0.90), 0):
-        pass
+    if exists("1462975511142.png", 0):
+        
+    # Confirming build permit requests
+        wait(Pattern("Multiplayer-CG5-MAC-Municipality-LVL1-MiniMap-QMarkIcon-160428-VVD-0.1.png").similar(0.80), FOREVER)
+        for x in range(0, 15):
+            while exists(Pattern("Multiplayer-CG5-MAC-Municipality-LVL1-MiniMap-QMarkIcon-160428-VVD-0.1.png").similar(0.80), x):
+                click()
+                exists("Multiplayer-CG5-MAC-Municipality-LVL1-ConfMenu-YesBtn-160428-VVD-0.1.png")
+                click()
+                break        
         
     ##############
     # Waterboard #
     ##############
-    elif exists("Multiplayer-CG5-MAC-Waterboard-LVL2-IntroPanel-160510-VVD-0.1.png", 0):
+    elif exists("1462976000265.png", 0):
         pass
         
     #######
     # SSH #
     #######
-    elif exists("Multiplayer-CG5-MAC-SSH-LVL2-IntroPanel-160510-VVD-0.1.png", 0):
+    elif exists(, 0):
         pass
         
     ###################
