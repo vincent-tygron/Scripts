@@ -52,7 +52,7 @@ if Settings.isLinux() or Settings.isWindows():
         print"[info] Construction started!"
         logging.info("[info] Construction started!")
         
-        wait("1462971096960.png", FOREVER)
+        wait("1462971096960.png", FOREVER) # WIP!!!!
         print"[success] Construction completed!"
         logging.info("[success] Construction completed!")
         
