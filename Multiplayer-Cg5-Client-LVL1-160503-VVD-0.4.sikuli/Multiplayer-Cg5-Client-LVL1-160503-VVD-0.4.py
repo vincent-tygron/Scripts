@@ -111,7 +111,8 @@ if Settings.isLinux() or Settings.isWindows():
         wait(1)
         
         dragDrop(Pattern("1461670183163.png").targetOffset(-242,-46), Pattern("1461670183163.png").targetOffset(174,-5))
-        click("1461669742268.png")
+        wait("1461669742268.png", 2)
+        click()
         wait("1461669772050.png", 5)
         click()
         wait("1461669817711.png")
