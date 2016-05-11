@@ -17,7 +17,7 @@ if Settings.isLinux() or Settings.isWindows():
     ##############
     # Waterboard #
     ##############
-    elif exists("Multiplayer-CG5-Waterboard-LVL2-IntroPanel-160510-VVD-0.1.png", 0):
+    elif exists("1462975283856.png", 0):
         pass
        
     #######
