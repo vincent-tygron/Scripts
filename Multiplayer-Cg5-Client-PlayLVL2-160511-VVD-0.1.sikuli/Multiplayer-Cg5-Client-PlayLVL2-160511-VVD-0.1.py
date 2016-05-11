@@ -91,7 +91,7 @@ elif Settings.isMac():
     #######
     # SSH #
     #######
-    elif exists(, 0):
+    elif exists("1462976939123.png", 0):
         pass
         
     ###################
