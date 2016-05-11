@@ -39,8 +39,9 @@ if Settings.isLinux() or Settings.isWindows():
         click()     
         wait("1461669963955.png")
         click()
-
-        for x in range(0, 30):
+        
+        wait("1462273944361.png", FOREVER)
+        for x in range(0, 15):
             while exists("1462273944361.png", x):
                 click()
                 exists("1461669963955.png")
@@ -198,8 +199,8 @@ elif Settings.isMac():
 #        click("1461671279745.png") 
 
     # Confirming build permit requests
-
-        for x in range(0, 30):
+        wait(Pattern("Multiplayer-CG5-MAC-Municipality-LVL1-MiniMap-QMarkIcon-160428-VVD-0.1.png").similar(0.80), FOREVER)
+        for x in range(0, 15):
             while exists(Pattern("Multiplayer-CG5-MAC-Municipality-LVL1-MiniMap-QMarkIcon-160428-VVD-0.1.png").similar(0.80), x):
                 click()
                 exists("Multiplayer-CG5-MAC-Municipality-LVL1-ConfMenu-YesBtn-160428-VVD-0.1.png")
