@@ -30,7 +30,7 @@ if Settings.isLinux() or Settings.isWindows():
         # Build student housing with green roof
         click("1462964532757.png")
         click("1462965017051.png")
-        dragDrop(Pattern("1462965186874.png").targetOffset(-166,-18), Pattern("1462965186874.png").targetOffset(170,12))
+        dragDrop(Pattern("1462969596032.png").targetOffset(-342,-36), Pattern("1462969596032.png").targetOffset(354,36))
         click("1462965284753.png")
         click("1462965316481.png")
         click("1462965356299.png")            
@@ -47,12 +47,12 @@ if Settings.isLinux() or Settings.isWindows():
         click()
         print"[info] Waiting for construction to start..."
         logging.info("[info] Waiting for construction to start...")
-        
+        wait("1462968082813.png")
         waitVanish("1462968082813.png", FOREVER)
         print"[info] Construction started!"
         logging.info("[info] Construction started!")
         
-        wait("1462968697823.png", FOREVER)
+        wait("1462971096960.png", FOREVER)
         print"[success] Construction completed!"
         logging.info("[success] Construction completed!")
         
