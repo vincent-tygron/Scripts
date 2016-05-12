@@ -18,18 +18,15 @@ if Settings.isLinux() or Settings.isWindows():
     ##############
     # Waterboard #
     ##############
-<<<<<<< HEAD
+    
     elif exists("1463039840247.png",0):
-=======
-    elif exists(Pattern("1462975283856.png").exact(), 0):
->>>>>>> origin/master
         print"[info] Waterboard will now perform actions in LVL2..."
         logging.info("[info] Waterboard will now perform actions in LVL2...")
        
     #######
     # SSH #
     #######
-    elif exists(Pattern("1462964850731.png").similar(0.90), 0):
+    elif exists("1463042633259.png", 0):
         print"[info] SSH will now perform actions in LVL2..."
         logging.info("[info] SSH will now perform actions in LVL2...")
 
@@ -61,17 +58,14 @@ if Settings.isLinux() or Settings.isWindows():
         wait("1462971096960.png", FOREVER) # WIP!!!!
         print"[success] Construction completed!"
         logging.info("[success] Construction completed!")
-        
-        
-        
-                
+                        
     ###################
     # UNI Real Estate #
     ###################
 
 #    elif exists("1463039752222.png", 0):
-        print"[info] UNI Real Estate will now perform actions in LVL2..."
-        logging.info("[info] UNI Real Estate will now perform actions in LVL2...")
+#        print"[info] UNI Real Estate will now perform actions in LVL2..."
+#        logging.info("[info] UNI Real Estate will now perform actions in LVL2...")
 
     else:
         print"[info] UNI Real Estate will now perform actions in LVL2..."
@@ -84,14 +78,11 @@ elif Settings.isMac():
     ################
     # Municipality #
     ################
-<<<<<<< HEAD
+
     if exists("1463039923773.png", 0):
         print"[info] Municipality will now perform actions in LVL2..."
         logging.info("[info] Municipality will now perform actions in LVL2...")        
-=======
-    if exists(Pattern("1462975511142.png").similar(0.81), 0):
-        
->>>>>>> origin/master
+
     # Confirming build permit requests
         wait(Pattern("Multiplayer-CG5-MAC-Municipality-LVL1-MiniMap-QMarkIcon-160428-VVD-0.1.png").similar(0.80), FOREVER)
         for x in range(0, 15):
