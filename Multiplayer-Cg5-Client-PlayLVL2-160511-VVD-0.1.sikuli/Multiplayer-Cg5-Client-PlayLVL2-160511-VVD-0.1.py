@@ -74,8 +74,9 @@ elif Settings.isMac():
     ################
     # Municipality #
     ################
-    if exists("1462975511142.png", 0):
-        
+    if exists("1463039923773.png", 0):
+        print"[info] Municipality will now perform actions in LVL2..."
+        logging.info("[info] Municipality will now perform actions in LVL2...")        
     # Confirming build permit requests
         wait(Pattern("Multiplayer-CG5-MAC-Municipality-LVL1-MiniMap-QMarkIcon-160428-VVD-0.1.png").similar(0.80), FOREVER)
         for x in range(0, 15):
@@ -88,13 +89,13 @@ elif Settings.isMac():
     ##############
     # Waterboard #
     ##############
-    elif exists("1462976000265.png", 0):
+    elif exists("1463040053199.png", 0):
         pass
         
     #######
     # SSH #
     #######
-    elif exists("1462976939123.png", 0):
+    elif exists("1463040372253.png", 0):
         pass
         
     ###################
