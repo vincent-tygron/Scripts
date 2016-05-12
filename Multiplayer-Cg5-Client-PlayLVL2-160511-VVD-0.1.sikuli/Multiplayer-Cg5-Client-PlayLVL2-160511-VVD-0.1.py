@@ -69,7 +69,23 @@ if Settings.isLinux() or Settings.isWindows():
 
     else:
         print"[info] UNI Real Estate will now perform actions in LVL2..."
-        logging.info("[info] UNI Real Estate will now perform actions in LVL2...")    
+        logging.info("[info] UNI Real Estate will now perform actions in LVL2...")
+
+        click("1463044784704.png")
+        click("1463044826697.png")
+        dragDrop(Pattern("1463044887584.png").similar(0.91).targetOffset(-56,-41), Pattern("1463044887584.png").similar(0.92).targetOffset(69,36))
+        click("1463045049624.png")
+        wait("1463045255224.png")
+        click()
+        click("1463045092808.png")
+        wait("1463045360208.png", FOREVER)
+        click()
+        wait("1463045489473.png")
+        click()
+        
+        
+        
+        
 #        print"[error] Oops!"
 #        exit(1)
         
