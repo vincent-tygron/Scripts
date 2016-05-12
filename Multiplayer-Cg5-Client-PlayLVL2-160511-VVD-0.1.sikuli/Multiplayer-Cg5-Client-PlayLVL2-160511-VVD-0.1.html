@@ -90,14 +90,18 @@ logging.info(<span class="str">"[info] Play Level 2..."</span>)
     <span class="cmt">##############</span>
     <span class="cmt"># Waterboard #</span>
     <span class="cmt">##############</span>
+<<<<<<< HEAD
     <span class="kw">elif</span> exists(<img src="1463039840247.png" />,<span class="dig">0</span>):
+=======
+    <span class="kw">elif</span> exists(Pattern(<img src="1462975283856.png" />).exact(), <span class="dig">0</span>):
+>>>>>>> origin/master
         <span class="kw">print</span><span class="str">"[info] Waterboard will now perform actions in LVL2..."</span>
         logging.info(<span class="str">"[info] Waterboard will now perform actions in LVL2..."</span>)
 
     <span class="cmt">#######</span>
     <span class="cmt"># SSH #</span>
     <span class="cmt">#######</span>
-    <span class="kw">elif</span> exists(<img src="1462964850731.png" />, <span class="dig">0</span>):
+    <span class="kw">elif</span> exists(Pattern(<img src="1462964850731.png" />).similar(<span class="dig">0.90</span>), <span class="dig">0</span>):
         <span class="kw">print</span><span class="str">"[info] SSH will now perform actions in LVL2..."</span>
         logging.info(<span class="str">"[info] SSH will now perform actions in LVL2..."</span>)
 
@@ -137,16 +141,22 @@ logging.info(<span class="str">"[info] Play Level 2..."</span>)
     <span class="cmt"># UNI Real Estate #</span>
     <span class="cmt">###################</span>
 
+<span class="cmt">#    elif exists("1463039752222.png", 0):</span>
+        <span class="kw">print</span><span class="str">"[info] UNI Real Estate will now perform actions in LVL2..."</span>
+        logging.info(<span class="str">"[info] UNI Real Estate will now perform actions in LVL2..."</span>)
+
     <span class="kw">else</span>:
         <span class="kw">print</span><span class="str">"[info] UNI Real Estate will now perform actions in LVL2..."</span>
         logging.info(<span class="str">"[info] UNI Real Estate will now perform actions in LVL2..."</span>)
+<span class="cmt">#        print"[error] Oops!"</span>
+<span class="cmt">#        exit(1)</span>
 
 <span class="kw">elif</span> Settings.isMac():
 
     <span class="cmt">################</span>
     <span class="cmt"># Municipality #</span>
     <span class="cmt">################</span>
-    <span class="kw">if</span> exists(<img src="1462975511142.png" />, <span class="dig">0</span>):
+    <span class="kw">if</span> exists(Pattern(<img src="1462975511142.png" />).similar(<span class="dig">0.81</span>), <span class="dig">0</span>):
 
     <span class="cmt"># Confirming build permit requests</span>
         <span class="skw">wait</span>(Pattern(<img src="Multiplayer-CG5-MAC-Municipality-LVL1-MiniMap-QMarkIcon-160428-VVD-0.1.png" />).similar(<span class="dig">0.80</span>), FOREVER)
