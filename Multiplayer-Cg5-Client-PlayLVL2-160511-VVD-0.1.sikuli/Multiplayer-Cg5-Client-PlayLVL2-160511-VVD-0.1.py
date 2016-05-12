@@ -19,7 +19,7 @@ if Settings.isLinux() or Settings.isWindows():
     # Waterboard #
     ##############
     
-    elif exists("1463039840247.png",0):
+    elif exists("1463039840247.png", 0):
         print"[info] Waterboard will now perform actions in LVL2..."
         logging.info("[info] Waterboard will now perform actions in LVL2...")
        
