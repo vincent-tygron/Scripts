@@ -18,14 +18,14 @@ if Settings.isLinux() or Settings.isWindows():
     ##############
     # Waterboard #
     ##############
-    elif exists(Pattern("1462975283856.png").exact(), 0):
+    elif exists(Pattern("1462975283856.png").similar(0.89), 0):
         print"[info] Waterboard will now perform actions in LVL2..."
         logging.info("[info] Waterboard will now perform actions in LVL2...")
        
     #######
     # SSH #
     #######
-    elif exists(Pattern("1462964850731.png").similar(0.90), 0):
+    elif exists("1462964850731.png", 0):
         print"[info] SSH will now perform actions in LVL2..."
         logging.info("[info] SSH will now perform actions in LVL2...")
 
@@ -65,22 +65,16 @@ if Settings.isLinux() or Settings.isWindows():
     # UNI Real Estate #
     ###################
 
-#    elif exists("1463039752222.png", 0):
-        print"[info] UNI Real Estate will now perform actions in LVL2..."
-        logging.info("[info] UNI Real Estate will now perform actions in LVL2...")
-
     else:
         print"[info] UNI Real Estate will now perform actions in LVL2..."
-        logging.info("[info] UNI Real Estate will now perform actions in LVL2...")    
-#        print"[error] Oops!"
-#        exit(1)
+        logging.info("[info] UNI Real Estate will now perform actions in LVL2...")
         
 elif Settings.isMac():
 
     ################
     # Municipality #
     ################
-    if exists(Pattern("1462975511142.png").similar(0.81), 0):
+    if exists("1462975511142.png", 0):
         
     # Confirming build permit requests
         wait(Pattern("Multiplayer-CG5-MAC-Municipality-LVL1-MiniMap-QMarkIcon-160428-VVD-0.1.png").similar(0.80), FOREVER)
