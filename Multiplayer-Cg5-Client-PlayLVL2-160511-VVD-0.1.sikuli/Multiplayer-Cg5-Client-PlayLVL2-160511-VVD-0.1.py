@@ -11,14 +11,14 @@ if Settings.isLinux() or Settings.isWindows():
     # Municipality #
     ################
 
-    if exists("1462975903681.png", 0):
+    if exists("1463040139645.png", 0):
         print"[info] Municipality will now perform actions in LVL2..."
         logging.info("[info] Municipality will now perform actions in LVL2...")
 
     ##############
     # Waterboard #
     ##############
-    elif exists(Pattern("1462975283856.png").similar(0.89), 0):
+    elif exists("1463039840247.png",0):
         print"[info] Waterboard will now perform actions in LVL2..."
         logging.info("[info] Waterboard will now perform actions in LVL2...")
        
