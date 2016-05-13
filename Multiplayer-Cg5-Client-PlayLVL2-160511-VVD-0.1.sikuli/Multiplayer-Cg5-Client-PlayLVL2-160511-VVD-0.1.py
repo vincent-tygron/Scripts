@@ -82,9 +82,16 @@ if Settings.isLinux() or Settings.isWindows():
         click()
         wait("1463045489473.png")
         click()
-        
-        
-        
+        print"[info] Waiting for construction to start..."
+        logging.info("[info] Waiting for construction to start...")
+        wait("1462968082813.png")
+        waitVanish("1462968082813.png", FOREVER)
+        print"[info] Construction started!"
+        logging.info("[info] Construction started!")
+        wait("1463143496863.png", FOREVER) # WIP!!!!
+        print"[success] Construction completed!"
+        logging.info("[success] Construction completed!")        
+                
     else:        
         print"[error] Oops!"
         exit(1)
