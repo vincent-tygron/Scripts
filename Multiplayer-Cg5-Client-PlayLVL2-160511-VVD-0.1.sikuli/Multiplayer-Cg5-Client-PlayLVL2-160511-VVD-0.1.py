@@ -24,8 +24,39 @@ if Settings.isLinux() or Settings.isWindows():
     elif exists(Pattern("1463039840247.png").similar(0.90)):
         print"[info] Waterboard will now perform actions in LVL2..."
         logging.info("[info] Waterboard will now perform actions in LVL2...")
-        Region(0,0,1680,1050)    
-       
+        Region(0,0,1680,1050) 
+        loc = SCREEN.getCenter()
+        wheel(loc, WHEEL_DOWN, 4)
+
+        # Propose water storage
+        click("1463143734812.png")
+        wait("1463144399984.png")
+        click("1463143757604.png")
+        click()
+        click()
+        wait("1463145285817.png")
+        click()
+        loc = SCREEN.getCenter()
+        click(loc)
+        click("1463143890923.png")
+        click("1463143950402.png")
+        click("1463144928028.png")        
+        click("1463143912316.png")
+        click("1463143950402.png")
+        wait(Pattern("1463145164522.png").similar(0.90) ,FOREVER)
+        click()
+        wait("1463145189826.png")
+        click()
+
+        click("1463145749221.png")
+        if exists(Pattern("1463145784614.png").similar(0.90) , FOREVER):
+            click("1463145814317.png")
+            print"[success] Waterstorage proposal has been constructed!"
+            logging.info("[success] Waterstorage proposal has been constructed!")
+        else:
+            print"[error] Oops!"
+            exit(1)        
+      
     #######
     # SSH #
     #######
