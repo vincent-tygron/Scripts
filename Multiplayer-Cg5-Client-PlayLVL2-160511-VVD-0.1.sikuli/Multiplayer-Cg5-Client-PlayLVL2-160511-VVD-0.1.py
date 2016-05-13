@@ -63,11 +63,7 @@ if Settings.isLinux() or Settings.isWindows():
     # UNI Real Estate #
     ###################
 
-#    elif exists("1463039752222.png"):
-#        print"[info] UNI Real Estate will now perform actions in LVL2..."
-#        logging.info("[info] UNI Real Estate will now perform actions in LVL2...")
-
-    else:
+    elif exists("1463039752222.png"):
         print"[info] UNI Real Estate will now perform actions in LVL2..."
         logging.info("[info] UNI Real Estate will now perform actions in LVL2...")
 
@@ -85,9 +81,9 @@ if Settings.isLinux() or Settings.isWindows():
         
         
         
-        
-#        print"[error] Oops!"
-#        exit(1)
+    else:        
+        print"[error] Oops!"
+        exit(1)
         
 elif Settings.isMac():
 

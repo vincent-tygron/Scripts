@@ -135,11 +135,7 @@ logging.info(<span class="str">"[info] Play Level 2..."</span>)
     <span class="cmt"># UNI Real Estate #</span>
     <span class="cmt">###################</span>
 
-<span class="cmt">#    elif exists("1463039752222.png"):</span>
-<span class="cmt">#        print"[info] UNI Real Estate will now perform actions in LVL2..."</span>
-<span class="cmt">#        logging.info("[info] UNI Real Estate will now perform actions in LVL2...")</span>
-
-    <span class="kw">else</span>:
+    <span class="kw">elif</span> exists(<img src="1463039752222.png" />):
         <span class="kw">print</span><span class="str">"[info] UNI Real Estate will now perform actions in LVL2..."</span>
         logging.info(<span class="str">"[info] UNI Real Estate will now perform actions in LVL2..."</span>)
 
@@ -157,9 +153,9 @@ logging.info(<span class="str">"[info] Play Level 2..."</span>)
 
 
 
-
-<span class="cmt">#        print"[error] Oops!"</span>
-<span class="cmt">#        exit(1)</span>
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[error] Oops!"</span>
+        exit(<span class="dig">1</span>)
 
 <span class="kw">elif</span> Settings.isMac():
 
