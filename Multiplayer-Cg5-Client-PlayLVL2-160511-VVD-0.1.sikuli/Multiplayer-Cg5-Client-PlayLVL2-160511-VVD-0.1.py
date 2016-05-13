@@ -13,7 +13,7 @@ if Settings.isLinux() or Settings.isWindows():
     # Municipality #
     ################
 
-    if exists("1463040139645.png"):
+    if exists(Pattern("1463040139645.png").similar(0.90)):
         print"[info] Municipality will now perform actions in LVL2..."
         logging.info("[info] Municipality will now perform actions in LVL2...")
         Region(0,0,1680,1050)
@@ -21,7 +21,7 @@ if Settings.isLinux() or Settings.isWindows():
     # Waterboard #
     ##############
     
-    elif exists("1463039840247.png"):
+    elif exists(Pattern("1463039840247.png").similar(0.90)):
         print"[info] Waterboard will now perform actions in LVL2..."
         logging.info("[info] Waterboard will now perform actions in LVL2...")
         Region(0,0,1680,1050)    
@@ -29,7 +29,7 @@ if Settings.isLinux() or Settings.isWindows():
     #######
     # SSH #
     #######
-    elif exists("1463042633259.png"):
+    elif exists(Pattern("1463042633259.png").similar(0.90)):
         print"[info] SSH will now perform actions in LVL2..."
         logging.info("[info] SSH will now perform actions in LVL2...")    
         Region(0,0,1680,1050)        
@@ -67,7 +67,7 @@ if Settings.isLinux() or Settings.isWindows():
     # UNI Real Estate #
     ###################
 
-    elif exists("1463039752222.png"):
+    elif exists(Pattern("1463039752222.png").similar(0.90)):
         print"[info] UNI Real Estate will now perform actions in LVL2..."
         logging.info("[info] UNI Real Estate will now perform actions in LVL2...")
         Region(0,0,1680,1050)
@@ -95,7 +95,7 @@ elif Settings.isMac():
     # Municipality #
     ################
 
-    if exists("1463039923773.png"):
+    if exists(Pattern("1463039923773.png").similar(0.90)):
         print"[info] Municipality will now perform actions in LVL2..."
         logging.info("[info] Municipality will now perform actions in LVL2...")        
 
@@ -111,13 +111,13 @@ elif Settings.isMac():
     ##############
     # Waterboard #
     ##############
-    elif exists("1463040053199.png"):
+    elif exists(Pattern("1463040053199.png").similar(0.90)):
         pass
         
     #######
     # SSH #
     #######
-    elif exists("1463040372253.png"):
+    elif exists(Pattern("1463040372253.png").similar(0.90)):
         pass
         
     ###################
