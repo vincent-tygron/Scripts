@@ -11,7 +11,7 @@ if Settings.isLinux() or Settings.isWindows():
     # Municipality #
     ################
 
-    if exists("1463040139645.png", 0):
+    if exists("1463040139645.png"):
         print"[info] Municipality will now perform actions in LVL2..."
         logging.info("[info] Municipality will now perform actions in LVL2...")
 
@@ -19,14 +19,14 @@ if Settings.isLinux() or Settings.isWindows():
     # Waterboard #
     ##############
     
-    elif exists("1463039840247.png", 0):
+    elif exists("1463039840247.png"):
         print"[info] Waterboard will now perform actions in LVL2..."
         logging.info("[info] Waterboard will now perform actions in LVL2...")
        
     #######
     # SSH #
     #######
-    elif exists("1463042633259.png", 0):
+    elif exists("1463042633259.png"):
         print"[info] SSH will now perform actions in LVL2..."
         logging.info("[info] SSH will now perform actions in LVL2...")
 
@@ -63,7 +63,7 @@ if Settings.isLinux() or Settings.isWindows():
     # UNI Real Estate #
     ###################
 
-#    elif exists("1463039752222.png", 0):
+#    elif exists("1463039752222.png"):
 #        print"[info] UNI Real Estate will now perform actions in LVL2..."
 #        logging.info("[info] UNI Real Estate will now perform actions in LVL2...")
 
@@ -95,7 +95,7 @@ elif Settings.isMac():
     # Municipality #
     ################
 
-    if exists("1463039923773.png", 0):
+    if exists("1463039923773.png"):
         print"[info] Municipality will now perform actions in LVL2..."
         logging.info("[info] Municipality will now perform actions in LVL2...")        
 
@@ -111,13 +111,13 @@ elif Settings.isMac():
     ##############
     # Waterboard #
     ##############
-    elif exists("1463040053199.png", 0):
+    elif exists("1463040053199.png"):
         pass
         
     #######
     # SSH #
     #######
-    elif exists("1463040372253.png", 0):
+    elif exists("1463040372253.png"):
         pass
         
     ###################
