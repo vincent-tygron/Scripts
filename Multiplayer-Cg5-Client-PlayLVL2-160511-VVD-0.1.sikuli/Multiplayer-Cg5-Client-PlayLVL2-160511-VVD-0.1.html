@@ -79,6 +79,8 @@ logging.info(<span class="str">"[info] Play Level 2..."</span>)
 
 <span class="kw">if</span> Settings.isLinux() <span class="kw">or</span> Settings.isWindows():
 
+    Region(<span class="dig">1</span>,<span class="dig">1</span>,<span class="dig">429</span>,<span class="dig">100</span>)
+
     <span class="cmt">################</span>
     <span class="cmt"># Municipality #</span>
     <span class="cmt">################</span>
@@ -86,7 +88,7 @@ logging.info(<span class="str">"[info] Play Level 2..."</span>)
     <span class="kw">if</span> exists(<img src="1463040139645.png" />):
         <span class="kw">print</span><span class="str">"[info] Municipality will now perform actions in LVL2..."</span>
         logging.info(<span class="str">"[info] Municipality will now perform actions in LVL2..."</span>)
-
+        Region(<span class="dig">0</span>,<span class="dig">0</span>,<span class="dig">1680</span>,<span class="dig">1050</span>)
     <span class="cmt">##############</span>
     <span class="cmt"># Waterboard #</span>
     <span class="cmt">##############</span>
@@ -94,6 +96,7 @@ logging.info(<span class="str">"[info] Play Level 2..."</span>)
     <span class="kw">elif</span> exists(<img src="1463039840247.png" />):
         <span class="kw">print</span><span class="str">"[info] Waterboard will now perform actions in LVL2..."</span>
         logging.info(<span class="str">"[info] Waterboard will now perform actions in LVL2..."</span>)
+        Region(<span class="dig">0</span>,<span class="dig">0</span>,<span class="dig">1680</span>,<span class="dig">1050</span>)
 
     <span class="cmt">#######</span>
     <span class="cmt"># SSH #</span>
@@ -101,6 +104,7 @@ logging.info(<span class="str">"[info] Play Level 2..."</span>)
     <span class="kw">elif</span> exists(<img src="1463042633259.png" />):
         <span class="kw">print</span><span class="str">"[info] SSH will now perform actions in LVL2..."</span>
         logging.info(<span class="str">"[info] SSH will now perform actions in LVL2..."</span>)
+        Region(<span class="dig">0</span>,<span class="dig">0</span>,<span class="dig">1680</span>,<span class="dig">1050</span>)
 
         <span class="cmt"># Build student housing with green roof</span>
         <span class="skw">click</span>(<img src="1462964532757.png" />)
@@ -138,7 +142,7 @@ logging.info(<span class="str">"[info] Play Level 2..."</span>)
     <span class="kw">elif</span> exists(<img src="1463039752222.png" />):
         <span class="kw">print</span><span class="str">"[info] UNI Real Estate will now perform actions in LVL2..."</span>
         logging.info(<span class="str">"[info] UNI Real Estate will now perform actions in LVL2..."</span>)
-
+        Region(<span class="dig">0</span>,<span class="dig">0</span>,<span class="dig">1680</span>,<span class="dig">1050</span>)
         <span class="skw">click</span>(<img src="1463044784704.png" />)
         <span class="skw">click</span>(<img src="1463044826697.png" />)
         <span class="skw">dragDrop</span>(Pattern(<img src="1463044887584.png" />).similar(<span class="dig">0.91</span>).targetOffset(-<span class="dig">56</span>,-<span class="dig">41</span>), Pattern(<img src="1463044887584.png" />).similar(<span class="dig">0.92</span>).targetOffset(<span class="dig">69</span>,<span class="dig">36</span>))

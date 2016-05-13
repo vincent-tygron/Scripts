@@ -7,6 +7,8 @@ logging.info("[info] Play Level 2...")
 
 if Settings.isLinux() or Settings.isWindows():
 
+    Region(1,1,429,100)
+
     ################
     # Municipality #
     ################
@@ -14,7 +16,7 @@ if Settings.isLinux() or Settings.isWindows():
     if exists("1463040139645.png"):
         print"[info] Municipality will now perform actions in LVL2..."
         logging.info("[info] Municipality will now perform actions in LVL2...")
-
+        Region(0,0,1680,1050)
     ##############
     # Waterboard #
     ##############
@@ -22,13 +24,15 @@ if Settings.isLinux() or Settings.isWindows():
     elif exists("1463039840247.png"):
         print"[info] Waterboard will now perform actions in LVL2..."
         logging.info("[info] Waterboard will now perform actions in LVL2...")
+        Region(0,0,1680,1050)    
        
     #######
     # SSH #
     #######
     elif exists("1463042633259.png"):
         print"[info] SSH will now perform actions in LVL2..."
-        logging.info("[info] SSH will now perform actions in LVL2...")
+        logging.info("[info] SSH will now perform actions in LVL2...")    
+        Region(0,0,1680,1050)        
 
         # Build student housing with green roof
         click("1462964532757.png")
@@ -66,7 +70,7 @@ if Settings.isLinux() or Settings.isWindows():
     elif exists("1463039752222.png"):
         print"[info] UNI Real Estate will now perform actions in LVL2..."
         logging.info("[info] UNI Real Estate will now perform actions in LVL2...")
-
+        Region(0,0,1680,1050)
         click("1463044784704.png")
         click("1463044826697.png")
         dragDrop(Pattern("1463044887584.png").similar(0.91).targetOffset(-56,-41), Pattern("1463044887584.png").similar(0.92).targetOffset(69,36))
