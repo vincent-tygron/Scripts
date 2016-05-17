@@ -143,9 +143,23 @@ elif Settings.isMac():
 
     if exists(Pattern("1463039923773.png").similar(0.90)):
         print"[info] Municipality will now perform actions in LVL2..."
-        logging.info("[info] Municipality will now perform actions in LVL2...")        
+        logging.info("[info] Municipality will now perform actions in LVL2...")
 
-    # Confirming build permit requests
+        Region(1021,118,259,259)
+        click("1463488195411.png")
+        click()
+        wait("1463489286072.png", 1)
+        click("1463488240082.png")
+        wait("1463489385693.png")        
+        
+        loc = SCREEN.getCenter()
+        wheel(loc, WHEEL_UP, 2)
+        click("1463489034040.png")
+        click()
+        
+        #click()
+
+        # Confirming build permit requests
         wait(Pattern("Multiplayer-CG5-MAC-Municipality-LVL1-MiniMap-QMarkIcon-160428-VVD-0.1.png").similar(0.80), FOREVER)
         for x in range(0, 15):
             while exists(Pattern("Multiplayer-CG5-MAC-Municipality-LVL1-MiniMap-QMarkIcon-160428-VVD-0.1.png").similar(0.80), x):
