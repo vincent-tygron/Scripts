@@ -148,7 +148,8 @@ elif Settings.isMac():
         loc = SCREEN.getCenter()
         wheel(loc, WHEEL_UP, 2)
         click("1463489034040.png")
-        click()
+        click("Multiplayer-CG5-MAC-Municipality-LVL2-DecTrees-160517-VVD-0.1.png")
+        dragDrop(Pattern("Multiplayer-CG5-MAC-Municipality-LVL2-DecTrees-DragDrop-160517-VVD-0.1.png").targetOffset(-105,-139), Pattern("Multiplayer-CG5-MAC-Municipality-LVL2-DecTrees-DragDrop-160517-VVD-0.1.png").targetOffset(107,125))
         
         #click()
 
