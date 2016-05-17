@@ -77,6 +77,14 @@ logging.basicConfig(format=FORMAT, filename=<span class="str">"testLog.txt"</spa
 logging.info(<span class="str">"[info] Admin runs session LVL2..."</span>)
 
 <span class="kw">if</span> Settings.isLinux() <span class="kw">or</span> Settings.isWindows():
+    <span class="skw">click</span>(<img src="1463484752556.png" />)
+    <span class="kw">if</span> exists(Pattern(<img src="1463484849979.png" />).similar(<span class="dig">0.90</span>), FOREVER):
+        <span class="kw">print</span><span class="str">"[info] End score level 2 reached!"</span>
+        logging.info(<span class="str">"[info] End score level 2 reached!"</span>)
+        <span class="skw">click</span>(<img src="1463485096929.png" />)
+        <span class="skw">click</span>(Pattern(<img src="1463485135465.png" />).targetOffset(<span class="dig">72</span>,<span class="dig">12</span>))
+        <span class="kw">print</span><span class="str">"[info] Level 3 activated..."</span>
+        logging.info(<span class="str">"[info] Level 3 activated..."</span>)
 
 <span class="kw">elif</span> Settings.isMac():
     <span class="kw">print</span><span class="str">"WIP - MAC not scripted yet!"</span>
