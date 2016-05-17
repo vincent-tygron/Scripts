@@ -36,6 +36,7 @@ if Settings.isLinux() or Settings.isWindows():
         click()
         wait("1463145285817.png")
         click()
+        click()
         loc = SCREEN.getCenter()
         click(loc)
         click("1463143890923.png")
@@ -121,15 +122,7 @@ if Settings.isLinux() or Settings.isWindows():
         logging.info("[info] Construction started!")
         wait("1463143496863.png", FOREVER) # WIP!!!!
         print"[success] Construction completed!"
-        logging.info("[success] Construction completed!") 
-
-        #Approving water storage proposal from Waterboard
-        if exists("1463145041467.png", FOREVER):
-            click()
-            wait("1463145136747.png")
-            click()
-            print"[info] Waterstorage upgrade approved!"
-            logging.info("[info] Waterstorage upgrade approved!")
+        logging.info("[success] Construction completed!")        
                 
     else:        
         print"[error] Oops!"
