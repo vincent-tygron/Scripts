@@ -2,6 +2,7 @@ import logging;reload(logging)
 FORMAT="%(asctime)-8s %(message)s"
 logging.basicConfig(format=FORMAT, filename="test.log", level=logging.DEBUG)
 
+print"[info] Load previously saved project..."
 logging.info("[info] Load previously saved project...")
 
 click("1460629295497.png")
@@ -14,8 +15,8 @@ for x in range(0, 30):
         logging.info('[success] Found project in %d seconds' % (x*waittime))
         break
 click(Pattern("1459500817932.png").targetOffset(-16,-99))
-wait("1458823826086.png",60)
-if not exists("1458829978984.png"):
+#wait("1458823826086.png",60)
+if not exists("1458829978984.png", 60):
     print("[error] loading project failed!")
     logging.error("[error] Loading project failed!")
     exit(1)

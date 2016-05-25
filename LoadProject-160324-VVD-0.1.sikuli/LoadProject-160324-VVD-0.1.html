@@ -74,6 +74,7 @@
 FORMAT=<span class="str">"%(asctime)-8s %(message)s"</span>
 logging.basicConfig(format=FORMAT, filename=<span class="str">"test.log"</span>, level=logging.DEBUG)
 
+<span class="kw">print</span><span class="str">"[info] Load previously saved project..."</span>
 logging.info(<span class="str">"[info] Load previously saved project..."</span>)
 
 <span class="skw">click</span>(<img src="1460629295497.png" />)
@@ -86,8 +87,8 @@ waittime = <span class="dig">0.5</span>
         logging.info(<span class="str">'[success] Found project in %d seconds'</span> % (x*waittime))
         <span class="kw">break</span>
 <span class="skw">click</span>(Pattern(<img src="1459500817932.png" />).targetOffset(-<span class="dig">16</span>,-<span class="dig">99</span>))
-<span class="skw">wait</span>(<img src="1458823826086.png" />,<span class="dig">60</span>)
-<span class="kw">if</span> <span class="kw">not</span> exists(<img src="1458829978984.png" />):
+<span class="cmt">#wait("1458823826086.png",60)</span>
+<span class="kw">if</span> <span class="kw">not</span> exists(<img src="1458829978984.png" />, <span class="dig">60</span>):
     <span class="kw">print</span>(<span class="str">"[error] loading project failed!"</span>)
     logging.error(<span class="str">"[error] Loading project failed!"</span>)
     exit(<span class="dig">1</span>)

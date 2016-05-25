@@ -2,9 +2,13 @@ import logging;reload(logging)
 FORMAT="%(asctime)-8s %(message)s"
 logging.basicConfig(format=FORMAT, filename="test.log", level=logging.DEBUG)
 
+print"[info] Attempt to remove currently selected stakeholder and verify message flow..."
 logging.info("[info] Attempt to remove currently selected stakeholder and verify message flow...")
-click("1460555150006.png")
-click("1458823866614.png")
+
+exists("1460555150006.png", 5)
+click()
+exists("1458823866614.png", 5)
+click()
 click("1458825780294.png")
 wait(Pattern("1458823942061.png").similar(0.71).targetOffset(-17,-1),10)
 find(Pattern("1458823942061.png").similar(0.71).targetOffset(-17,-1))

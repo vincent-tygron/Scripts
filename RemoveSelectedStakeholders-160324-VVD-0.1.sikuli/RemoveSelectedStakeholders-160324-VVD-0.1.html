@@ -74,9 +74,13 @@
 FORMAT=<span class="str">"%(asctime)-8s %(message)s"</span>
 logging.basicConfig(format=FORMAT, filename=<span class="str">"test.log"</span>, level=logging.DEBUG)
 
+<span class="kw">print</span><span class="str">"[info] Attempt to remove currently selected stakeholder and verify message flow..."</span>
 logging.info(<span class="str">"[info] Attempt to remove currently selected stakeholder and verify message flow..."</span>)
-<span class="skw">click</span>(<img src="1460555150006.png" />)
-<span class="skw">click</span>(<img src="1458823866614.png" />)
+
+exists(<img src="1460555150006.png" />, <span class="dig">5</span>)
+<span class="skw">click</span>()
+exists(<img src="1458823866614.png" />, <span class="dig">5</span>)
+<span class="skw">click</span>()
 <span class="skw">click</span>(<img src="1458825780294.png" />)
 <span class="skw">wait</span>(Pattern(<img src="1458823942061.png" />).similar(<span class="dig">0.71</span>).targetOffset(-<span class="dig">17</span>,-<span class="dig">1</span>),<span class="dig">10</span>)
 <span class="skw">find</span>(Pattern(<img src="1458823942061.png" />).similar(<span class="dig">0.71</span>).targetOffset(-<span class="dig">17</span>,-<span class="dig">1</span>))
