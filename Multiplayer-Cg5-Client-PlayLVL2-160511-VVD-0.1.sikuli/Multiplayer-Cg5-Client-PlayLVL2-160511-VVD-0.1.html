@@ -218,12 +218,15 @@ logging.info(<span class="str">"[info] Play Level 2..."</span>)
         <span class="skw">wait</span>(<img src="1463489385693.png" />)
 
         loc = SCREEN.getCenter()
-        wheel(loc, WHEEL_UP, <span class="dig">2</span>)
+        wheel(loc, WHEEL_UP, <span class="dig">1</span>)
+        <span class="skw">sleep</span>(<span class="dig">1</span>)
+        wheel(loc, WHEEL_UP, <span class="dig">1</span>)
         <span class="skw">click</span>(<img src="1463489034040.png" />)
         <span class="skw">click</span>(<img src="Multiplayer-CG5-MAC-Municipality-LVL2-DecTrees-160517-VVD-0.1.png" />)
         <span class="skw">dragDrop</span>(Pattern(<img src="Multiplayer-CG5-MAC-Municipality-LVL2-DecTrees-DragDrop-160517-VVD-0.1.png" />).targetOffset(-<span class="dig">105</span>,-<span class="dig">139</span>), Pattern(<img src="Multiplayer-CG5-MAC-Municipality-LVL2-DecTrees-DragDrop-160517-VVD-0.1.png" />).targetOffset(<span class="dig">107</span>,<span class="dig">125</span>))
 
-        <span class="cmt">#click()</span>
+        <span class="skw">click</span>(<img src="Multiplayer-CG5-MAC-Municipality-LVL2-BuildBtn-160517-VVD-0.1.png" />)
+        <span class="skw">click</span>(<img src="Arrow-Minimap-160517-VVD-0.1.png" />)
 
         <span class="cmt"># Confirming build permit requests</span>
         <span class="skw">wait</span>(Pattern(<img src="Multiplayer-CG5-MAC-Municipality-LVL1-MiniMap-QMarkIcon-160428-VVD-0.1.png" />).similar(<span class="dig">0.80</span>), FOREVER)
