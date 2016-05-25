@@ -2,7 +2,8 @@ import logging;reload(logging)
 FORMAT="%(asctime)-8s %(message)s"
 logging.basicConfig(format=FORMAT, filename="test.log", level=logging.DEBUG)
 
-logging.info("=====[info] Start runScripts-160324-VVD-0.1=====")
+print"=====[info] Start Smoketest====="
+logging.info("=====[info] Start Smoketest=====")
 
 runScript("./OS_Independant_Engine_Independant_ ReStart-160524-VVD-0.1.sikuli")
 runScript("./OS_Independant_LogOn-160419-VVD-0.5.sikuli")
@@ -19,6 +20,7 @@ runScript("./OS_Independant_Engine_Independant_ ReStart-160524-VVD-0.1.sikuli")
 runScript("./OS_Independant_LogOn-160419-VVD-0.5.sikuli")
 runScript("./RemoveProject-160411-VVD-0.2.sikuli")
 runScript("./SignOutFromMainMenu-160324-VVD-0.1.sikuli")
-Sikulix.prefRemove()
+runScript("./RemoveStoredValue-160525-VVD-0.1.sikuli")
 
-logging.info("=====[info] End runScripts-160324-VVD-0.1=====")
+print"=====[info] End Smoketest====="
+logging.info("=====[info] End Smoketest=====")

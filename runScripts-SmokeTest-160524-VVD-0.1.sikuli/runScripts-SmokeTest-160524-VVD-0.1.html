@@ -74,7 +74,8 @@
 FORMAT=<span class="str">"%(asctime)-8s %(message)s"</span>
 logging.basicConfig(format=FORMAT, filename=<span class="str">"test.log"</span>, level=logging.DEBUG)
 
-logging.info(<span class="str">"=====[info] Start runScripts-160324-VVD-0.1====="</span>)
+<span class="kw">print</span><span class="str">"=====[info] Start Smoketest====="</span>
+logging.info(<span class="str">"=====[info] Start Smoketest====="</span>)
 
 runScript(<span class="str">"./OS_Independant_Engine_Independant_ ReStart-160524-VVD-0.1.sikuli"</span>)
 runScript(<span class="str">"./OS_Independant_LogOn-160419-VVD-0.5.sikuli"</span>)
@@ -91,9 +92,10 @@ runScript(<span class="str">"./OS_Independant_Engine_Independant_ ReStart-160524
 runScript(<span class="str">"./OS_Independant_LogOn-160419-VVD-0.5.sikuli"</span>)
 runScript(<span class="str">"./RemoveProject-160411-VVD-0.2.sikuli"</span>)
 runScript(<span class="str">"./SignOutFromMainMenu-160324-VVD-0.1.sikuli"</span>)
-Sikulix.prefRemove()
+runScript(<span class="str">"./RemoveStoredValue-160525-VVD-0.1.sikuli"</span>)
 
-logging.info(<span class="str">"=====[info] End runScripts-160324-VVD-0.1====="</span>)
+<span class="kw">print</span><span class="str">"=====[info] End Smoketest====="</span>
+logging.info(<span class="str">"=====[info] End Smoketest====="</span>)
 </pre>
 </body>
 </html>
