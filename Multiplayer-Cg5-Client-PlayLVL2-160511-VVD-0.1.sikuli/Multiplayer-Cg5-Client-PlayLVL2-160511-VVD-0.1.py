@@ -146,12 +146,15 @@ elif Settings.isMac():
         wait("1463489385693.png")        
         
         loc = SCREEN.getCenter()
-        wheel(loc, WHEEL_UP, 2)
+        wheel(loc, WHEEL_UP, 1)
+        sleep(1)
+        wheel(loc, WHEEL_UP, 1)
         click("1463489034040.png")
         click("Multiplayer-CG5-MAC-Municipality-LVL2-DecTrees-160517-VVD-0.1.png")
         dragDrop(Pattern("Multiplayer-CG5-MAC-Municipality-LVL2-DecTrees-DragDrop-160517-VVD-0.1.png").targetOffset(-105,-139), Pattern("Multiplayer-CG5-MAC-Municipality-LVL2-DecTrees-DragDrop-160517-VVD-0.1.png").targetOffset(107,125))
         
-        #click()
+        click("Multiplayer-CG5-MAC-Municipality-LVL2-BuildBtn-160517-VVD-0.1.png")
+        click("Arrow-Minimap-160517-VVD-0.1.png")
 
         # Confirming build permit requests
         wait(Pattern("Multiplayer-CG5-MAC-Municipality-LVL1-MiniMap-QMarkIcon-160428-VVD-0.1.png").similar(0.80), FOREVER)
