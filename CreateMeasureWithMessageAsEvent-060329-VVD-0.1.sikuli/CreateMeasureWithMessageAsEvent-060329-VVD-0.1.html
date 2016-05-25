@@ -1,0 +1,207 @@
+
+<html>
+   <head>
+      <style type="text/css">
+         .sikuli-code {
+            font-size: 20px;
+            font-family: "Osaka-mono", Monospace;
+            line-height: 1.5em;
+            display:table-cell;
+            white-space: pre-wrap;       /* css-3 */
+            white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* Internet Explorer 5.5+ */
+            width: 99%;   /* remove horizontal scroll-bar when viewing in IE7 */
+         }
+         .sikuli-code img {
+            vertical-align: middle;
+            margin: 2px;
+            border: 1px solid #ccc;
+            padding: 2px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-box-shadow: 1px 1px 1px gray;
+            -webkit-box-shadow: 1px 1px 2px gray;
+         }
+         .kw {
+            color: blue;
+         }
+         .skw {
+            color: rgb(63, 127, 127);
+         }
+
+         .str {
+            color: rgb(128, 0, 0);
+         }
+
+         .dig {
+            color: rgb(128, 64, 0);
+         }
+
+         .cmt {
+            color: rgb(200, 0, 200);
+         }
+
+         h2 {
+            display: inline;
+            font-weight: normal;
+         }
+
+         .info {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            display: none;
+         }
+
+         a {
+            color: #9D2900;
+         }
+
+         body {
+            font-family: "Trebuchet MS", Arial, Sans-Serif;
+         }
+
+      </style>
+   </head>
+<body>
+<div class="info">
+<h2>CreateMeasureWithMessageAsEvent-060329-VVD-0.1.sikuli</h2> <a href="CreateMeasureWithMessageAsEvent-060329-VVD-0.1.zip">(Download this script)</a>
+</div>
+<pre class="sikuli-code">
+<span class="kw">import</span> logging;reload(logging)
+FORMAT=<span class="str">"%(asctime)-8s %(message)s"</span>
+logging.basicConfig(format=FORMAT, filename=<span class="str">"test.log"</span>, level=logging.DEBUG)
+
+logging.info(<span class="str">"[info] Create measure with mesasge as event..."</span>)
+logging.info(<span class="str">"[info] Create a message first..."</span>)
+
+<span class="skw">click</span>(<img src="1460555283350.png" />)
+<span class="skw">click</span>(<img src="1459245066009.png" />)
+<span class="skw">click</span>(Pattern(<img src="1459245139622.png" />).targetOffset(-<span class="dig">792</span>,<span class="dig">455</span>))
+
+<span class="kw">if</span> <span class="kw">not</span> exists(<img src="1459245189675.png" />,<span class="dig">10</span>):
+    <span class="kw">print</span>(<span class="str">"[error]Unable to find newly created message!"</span>)
+    logging.error(<span class="str">"[error]Unable to find newly created message!"</span>)
+    exit(<span class="dig">1</span>)
+<span class="kw">else</span>:
+    <span class="kw">print</span>(<span class="str">"[success] Default message created!"</span>)
+    logging.info(<span class="str">"[success] Default message created!"</span>)
+logging.info(<span class="str">"[info] Fill in message details..."</span>)
+<span class="skw">click</span>(<img src="1459245189675.png" />)
+<span class="skw">wait</span>(<img src="1459245373316.png" />,<span class="dig">5</span>)
+<span class="skw">click</span>(Pattern(<img src="1459245373316.png" />).targetOffset(-<span class="dig">130</span>,-<span class="dig">241</span>))
+<span class="skw">dragDrop</span>(Pattern(<img src="1459245564572.png" />).targetOffset(-<span class="dig">25</span>,-<span class="dig">254</span>), Pattern(<img src="1459245564572.png" />).targetOffset(-<span class="dig">138</span>,-<span class="dig">254</span>))
+paste(<span class="str">"L Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui."</span>)
+<span class="skw">type</span>(Key.ENTER)
+<span class="skw">dragDrop</span>(Pattern(<img src="1459245807956.png" />).targetOffset(<span class="dig">13</span>,-<span class="dig">392</span>), Pattern(<img src="1459245807956.png" />).targetOffset(-<span class="dig">135</span>,-<span class="dig">392</span>))
+paste(<span class="str">"Test Message"</span>)
+<span class="skw">type</span>(Key.ENTER)
+logging.info(<span class="str">"[info] Create a default Measure..."</span>)
+<span class="skw">click</span>(<img src="1460555856951.png" />)
+<span class="skw">click</span>(<img src="1459247969569.png" />)
+<span class="skw">click</span>(Pattern(<img src="1459248105788.png" />).targetOffset(-<span class="dig">124</span>,<span class="dig">28</span>))
+<span class="kw">if</span> <span class="kw">not</span> exists(<img src="1459248136506.png" />,<span class="dig">5</span>):
+    <span class="kw">print</span>(<span class="str">"[error] Unable to find default Measure!"</span>)
+    logging.error(<span class="str">"[error] Unable to find default Measure!"</span>)
+    exit(<span class="dig">1</span>)
+<span class="kw">else</span>:
+    <span class="kw">print</span>(<span class="str">"[success] Default Measure created!"</span>)
+    logging.info(<span class="str">"[success] Default Measure created!"</span>)
+logging.info(<span class="str">"[info]Assign message to default measure..."</span>)
+<span class="skw">click</span>(<img src="1459248136506.png" />)
+<span class="skw">dragDrop</span>(Pattern(<img src="1459248998362.png" />).targetOffset(-<span class="dig">55</span>,-<span class="dig">90</span>), Pattern(<img src="1459248998362.png" />).targetOffset(-<span class="dig">135</span>,-<span class="dig">90</span>))
+paste(<span class="str">"Test Maatregel"</span>)
+<span class="skw">type</span>(Key.ENTER)
+<span class="skw">click</span>(Pattern(<img src="1459249087146.png" />).targetOffset(-<span class="dig">20</span>,-<span class="dig">1</span>))
+<span class="skw">wait</span>(<img src="1459248460442.png" />,<span class="dig">5</span>)
+<span class="skw">click</span>(Pattern(<img src="1459248460442.png" />).targetOffset(-<span class="dig">98</span>,<span class="dig">392</span>))
+<span class="skw">wait</span>(<img src="1459248524434.png" />,<span class="dig">5</span>)
+<span class="skw">click</span>(<img src="1459248524434.png" />)
+<span class="skw">wait</span>(<img src="1459248561651.png" />,<span class="dig">5</span>)
+<span class="skw">dragDrop</span>(Pattern(<img src="1459248583514.png" />).targetOffset(<span class="dig">95</span>,-<span class="dig">59</span>), Pattern(<img src="1459248583514.png" />).targetOffset(<span class="dig">97</span>,-<span class="dig">7</span>))
+<span class="cmt">#exists(Pattern("1459248630731.png").targetOffset(95,-14))</span>
+<span class="skw">wait</span>(<img src="1459248658234.png" />)
+<span class="skw">click</span>(<img src="1459248658234.png" />)
+<span class="skw">wait</span>(<img src="1459248709986.png" />,<span class="dig">5</span>)
+<span class="skw">click</span>(Pattern(<img src="1459248729130.png" />).targetOffset(<span class="dig">262</span>,<span class="dig">76</span>))
+<span class="kw">if</span> <span class="kw">not</span> exists(<img src="1459249421115.png" />):
+    <span class="kw">print</span>(<span class="str">"[error] Failed to attach message to measure!"</span>)
+    logging.error(<span class="str">"[error] Failed to attach message to measure!"</span>)
+    exit(<span class="dig">1</span>)
+<span class="kw">else</span>:
+    <span class="kw">print</span>(<span class="str">"[success] Succeeded to attach message to measure!"</span>)
+    logging.info(<span class="str">"[success] Succeeded to attach message to measure!"</span>)
+logging.info(<span class="str">"[info]Create default action menu..."</span>)
+<span class="skw">click</span>(<img src="1459249168163.png" />)
+<span class="skw">click</span>(Pattern(<img src="1459249202130.png" />).targetOffset(-<span class="dig">125</span>,<span class="dig">16</span>))
+<span class="skw">find</span>(<img src="1459324358998.png" />)
+paste(<img src="1459324358998.png" />, <span class="str">"New action menu"</span>)
+<span class="skw">type</span>(Key.ENTER)
+<span class="kw">if</span> <span class="kw">not</span> exists(<img src="1459325109149.png" />,<span class="dig">5</span>):
+    <span class="kw">print</span>(<span class="str">"[error] Unable to locate 'New action menu'!"</span>)
+    logging.error(<span class="str">"[error] Unable to locate 'New action menu'!"</span>)
+    exit(<span class="dig">1</span>)
+<span class="kw">else</span>:
+    <span class="kw">print</span>(<span class="str">"[success] 'New action menu'  has been created and verified!"</span>)
+    logging.info(<span class="str">"[success] 'New action menu'  has been created and verified!"</span>)
+<span class="skw">click</span>(<img src="1459325149781.png" />)
+<span class="cmt">#Region(12,209,137,49)</span>
+<span class="kw">if</span> <span class="kw">not</span> exists(<img src="1459325301101.png" />,<span class="dig">5</span>):
+    <span class="kw">print</span>(<span class="str">"[error] Unable to expand 'New action menu'!"</span>)
+    logging.error(<span class="str">"[error] Unable to expand 'New action menu'!"</span>)
+<span class="kw">else</span>:
+    <span class="kw">print</span>(<span class="str">"[success] 'New action menu' has been expanded to show 'Assigned actions'!"</span>)
+    logging.info(<span class="str">"[success] 'New action menu' has been expanded to show 'Assigned actions'!"</span>)
+<span class="skw">wait</span>(<img src="1459326125461.png" />)
+logging.info(<span class="str">"[info] Changing Action menu image..."</span>)
+<span class="skw">click</span>(<img src="1459249793282.png" />)
+<span class="skw">wait</span>(<img src="1459249847875.png" />)
+<span class="skw">click</span>(Pattern(<img src="1459249847875.png" />).targetOffset(<span class="dig">20</span>,-<span class="dig">127</span>))
+<span class="skw">click</span>(Pattern(<img src="1459249904435.png" />).targetOffset(<span class="dig">101</span>,<span class="dig">246</span>))
+<span class="kw">if</span> <span class="kw">not</span> exists(<img src="1459249959843.png" />):
+    <span class="kw">print</span>(<span class="str">"[error] Failed to change action menu image!"</span>)
+    logging.error(<span class="str">"[error] Failed to change action menu image!"</span>)
+<span class="kw">else</span>:
+    <span class="kw">print</span>(<span class="str">"[success] Succeeded to change action menu image!"</span>)
+    logging.info(<span class="str">"[success] Succeeded to change action menu image!"</span>)
+logging.info(<span class="str">"[info] Assigning Test Measure with Test Message to Test Action menu..."</span>)
+<span class="cmt">#Click somewhere on empty space to remove highlight of image</span>
+<span class="skw">click</span>(<img src="1459327011621.png" />)
+<span class="skw">dragDrop</span>(Pattern(<img src="1459326453454.png" />).targetOffset(-<span class="dig">27</span>,-<span class="dig">391</span>), Pattern(<img src="1459326453454.png" />).targetOffset(-<span class="dig">135</span>,-<span class="dig">394</span>))
+paste(<span class="str">"Test"</span>)
+<span class="skw">type</span>(Key.ENTER)
+<span class="skw">click</span>(<img src="1459325586053.png" />)
+<span class="skw">click</span>(<img src="1459325600949.png" />)
+<span class="skw">click</span>(<img src="1459250123595.png" />)
+<span class="skw">click</span>(<img src="1459250161362.png" />)
+<span class="skw">click</span>(<img src="1459250181746.png" />)
+<span class="kw">if</span> <span class="kw">not</span> exists(<img src="1459250372881.png" />,<span class="dig">5</span>):
+    <span class="kw">print</span>(<span class="str">"[error] Assigning measure to action menu failed!"</span>)
+    logging.error(<span class="str">"[error] Asasigning measure to action menu failed!"</span>)
+    exit(<span class="dig">1</span>)
+<span class="kw">else</span>:
+    <span class="kw">print</span>(<span class="str">"[success] Assigning measure to action menu successful!"</span>)
+    logging.info(<span class="str">"[success] Assigning measure to action menu successful!"</span>)
+<span class="skw">find</span>(<img src="1459250481658.png" />)
+<span class="skw">click</span>(<img src="1459250481658.png" />)
+<span class="skw">wait</span>(<img src="1459250523762.png" />,<span class="dig">5</span>)
+<span class="skw">click</span>(Pattern(<img src="1459250523762.png" />).targetOffset(<span class="dig">75</span>,<span class="dig">180</span>))
+<span class="skw">click</span>(Pattern(<img src="1459250604347.png" />).targetOffset(<span class="dig">77</span>,<span class="dig">179</span>))
+<span class="skw">click</span>(Pattern(<img src="1459250638827.png" />).targetOffset(<span class="dig">115</span>,-<span class="dig">186</span>))
+<span class="skw">click</span>(<img src="1459250742346.png" />)
+<span class="skw">click</span>(Pattern(<img src="1459250762299.png" />).targetOffset(-<span class="dig">10</span>,-<span class="dig">145</span>))
+<span class="kw">if</span> <span class="kw">not</span> exists(<img src="1459250815819.png" />):
+    <span class="kw">print</span>(<span class="str">"[error] Message as measure failed!"</span>)
+    logging.error(<span class="str">"[error] Message as measure failed!"</span>)
+    exit(<span class="dig">1</span>)
+<span class="kw">else</span>:
+    <span class="kw">print</span>(<span class="str">"[success] Message as measure successful!"</span>)
+    logging.info(<span class="str">"[success] Message as measure successful!"</span>)
+<span class="skw">click</span>(Pattern(<img src="1459250815819.png" />).targetOffset(<span class="dig">156</span>,<span class="dig">147</span>))
+<span class="skw">click</span>(Pattern(<img src="1459250974178.png" />).targetOffset(<span class="dig">116</span>,-<span class="dig">185</span>))
+<span class="skw">click</span>(<img src="1459251021978.png" />)
+</pre>
+</body>
+</html>
