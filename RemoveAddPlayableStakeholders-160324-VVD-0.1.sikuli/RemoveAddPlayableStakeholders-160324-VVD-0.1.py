@@ -2,6 +2,7 @@ import logging;reload(logging)
 FORMAT="%(asctime)-8s %(message)s"
 logging.basicConfig(format=FORMAT, filename="test.log", level=logging.DEBUG)
 
+print"[info] Remove and add a playable stakeholder..."
 logging.info("[info] Remove and add a playable stakeholder...")
 
 click("1460555150006.png")

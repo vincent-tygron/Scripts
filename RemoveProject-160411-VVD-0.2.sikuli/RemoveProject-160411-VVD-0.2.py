@@ -13,11 +13,21 @@ for x in range(0,120):
         wheel(loc,WHEEL_DOWN,5)
         wait(3)
         break
-click(Pattern("1459503134043.png").similar(0.89).targetOffset(430,-1))
-wait("1458830476198.png",5)
-click(Pattern("1458830476198.png").targetOffset(74,48))
-waitVanish(Pattern("1459503134043.png").similar(0.91),5)
-if exists(Pattern("1459503134043.png").similar(0.90)):
+
+delete = find("1464254840995.png").right().find(Pattern("1464182960063.png").exact())
+for x in range(0, 10):
+    while exists("1464179632293.png"):
+        click(delete)
+        wait("1458830476198.png")
+        click(Pattern("1458830476198.png").targetOffset(74,48))
+        print"[success] Instance %d of project was deleted!" % (x+1)
+        logging.info("[success] Instance %d of project was deleted!" % (x+1))
+        loc = SCREEN.getCenter()
+        wheel(loc, WHEEL_DOWN, 1)
+        wait(1)
+        break
+
+if exists("1464179632293.png"):
     print("[error] Project deletion failed!")
     logging.error("[error] Project deletion failed!")
     exit(1)

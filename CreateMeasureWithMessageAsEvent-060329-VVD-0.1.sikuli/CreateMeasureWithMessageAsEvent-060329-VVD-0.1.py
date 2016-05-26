@@ -1,8 +1,8 @@
 import logging;reload(logging)
 FORMAT="%(asctime)-8s %(message)s"
 logging.basicConfig(format=FORMAT, filename="test.log", level=logging.DEBUG)
-
-logging.info("[info] Create measure with mesasge as event...")
+print"[info] Create measure with message as event..."
+logging.info("[info] Create measure with message as event...")
 logging.info("[info] Create a message first...")
 
 click("1460555283350.png")
@@ -37,6 +37,8 @@ if not exists("1459248136506.png",5):
 else:
     print("[success] Default Measure created!")
     logging.info("[success] Default Measure created!")
+
+print"[info]Assign message to default measure..."
 logging.info("[info]Assign message to default measure...")
 click("1459248136506.png")
 dragDrop(Pattern("1459248998362.png").targetOffset(-55,-90), Pattern("1459248998362.png").targetOffset(-135,-90))
@@ -61,6 +63,8 @@ if not exists("1459249421115.png"):
 else:
     print("[success] Succeeded to attach message to measure!")
     logging.info("[success] Succeeded to attach message to measure!")
+
+print"[info]Create default action menu..."
 logging.info("[info]Create default action menu...")
 click("1459249168163.png")
 click(Pattern("1459249202130.png").targetOffset(-125,16))
@@ -83,6 +87,8 @@ else:
     print("[success] 'New action menu' has been expanded to show 'Assigned actions'!")
     logging.info("[success] 'New action menu' has been expanded to show 'Assigned actions'!")
 wait("1459326125461.png")
+
+print"[info] Changing Action menu image..."
 logging.info("[info] Changing Action menu image...")
 click("1459249793282.png")
 wait("1459249847875.png")
@@ -94,6 +100,8 @@ if not exists("1459249959843.png"):
 else:
     print("[success] Succeeded to change action menu image!")
     logging.info("[success] Succeeded to change action menu image!")
+
+print"[info] Assigning Test Measure with Test Message to Test Action menu..."
 logging.info("[info] Assigning Test Measure with Test Message to Test Action menu...")
 #Click somewhere on empty space to remove highlight of image
 click("1459327011621.png")

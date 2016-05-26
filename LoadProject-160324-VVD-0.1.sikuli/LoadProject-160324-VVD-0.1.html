@@ -80,7 +80,7 @@ logging.info(<span class="str">"[info] Load previously saved project..."</span>)
 <span class="skw">click</span>(<img src="1460629295497.png" />)
 <span class="skw">wait</span>(<img src="1458823588830.png" />,<span class="dig">10</span>)
 paste(<img src="1460535580366.png" />, <span class="str">"Sikulix-editor"</span>)
-waittime = <span class="dig">0.5</span>
+waittime = <span class="dig">1</span>
 <span class="kw">for</span> x <span class="kw">in</span> range(<span class="dig">0</span>, <span class="dig">30</span>):
     <span class="kw">if</span> exists(<img src="1459500798531.png" />, waittime):
         <span class="kw">print</span> <span class="str">'[success] Found project in %d seconds'</span> % (x*waittime)
@@ -88,13 +88,17 @@ waittime = <span class="dig">0.5</span>
         <span class="kw">break</span>
 <span class="skw">click</span>(Pattern(<img src="1459500817932.png" />).targetOffset(-<span class="dig">16</span>,-<span class="dig">99</span>))
 
-<span class="kw">if</span> <span class="kw">not</span> exists(<img src="1458829978984.png" />, <span class="dig">60</span>):
-    <span class="kw">print</span>(<span class="str">"[error] loading project failed!"</span>)
-    logging.error(<span class="str">"[error] Loading project failed!"</span>)
+<span class="cmt">#waittime = 1</span>
+<span class="kw">for</span> x <span class="kw">in</span> range(<span class="dig">0</span>, <span class="dig">120</span>):
+    <span class="kw">if</span> exists(<img src="1458829978984.png" />, x):
+        <span class="kw">print</span><span class="str">"[success] Loading project in %d seconds successful!"</span> % x
+        logging.info(<span class="str">"[success] Loading project in %d seconds successful!"</span> % x)
+        <span class="kw">break</span>
+
+<span class="kw">if</span> <span class="kw">not</span> exists(<img src="1458829978984.png" />):
+    <span class="kw">print</span>(<span class="str">"[error] Loading project failed after %d seconds!"</span>  % (x))
+    logging.error(<span class="str">"[error] Loading project failed after %d seconds!"</span>  % (x))
     exit(<span class="dig">1</span>)
-<span class="kw">else</span>:
-    <span class="kw">print</span>(<span class="str">"[success] loading project successful!"</span>)
-    logging.info(<span class="str">"[success] Loading project successful!"</span>)
 </pre>
 </body>
 </html>

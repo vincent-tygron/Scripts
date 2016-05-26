@@ -85,11 +85,21 @@ logging.info(<span class="str">"[info] Remove a project from the domain and veri
         wheel(loc,WHEEL_DOWN,<span class="dig">5</span>)
         <span class="skw">wait</span>(<span class="dig">3</span>)
         <span class="kw">break</span>
-<span class="skw">click</span>(Pattern(<img src="1459503134043.png" />).similar(<span class="dig">0.89</span>).targetOffset(<span class="dig">430</span>,-<span class="dig">1</span>))
-<span class="skw">wait</span>(<img src="1458830476198.png" />,<span class="dig">5</span>)
-<span class="skw">click</span>(Pattern(<img src="1458830476198.png" />).targetOffset(<span class="dig">74</span>,<span class="dig">48</span>))
-waitVanish(Pattern(<img src="1459503134043.png" />).similar(<span class="dig">0.91</span>),<span class="dig">5</span>)
-<span class="kw">if</span> exists(Pattern(<img src="1459503134043.png" />).similar(<span class="dig">0.90</span>)):
+
+delete = <span class="skw">find</span>(<img src="1464254840995.png" />).right().<span class="skw">find</span>(Pattern(<img src="1464182960063.png" />).exact())
+<span class="kw">for</span> x <span class="kw">in</span> range(<span class="dig">0</span>, <span class="dig">10</span>):
+    <span class="kw">while</span> exists(<img src="1464179632293.png" />):
+        <span class="skw">click</span>(delete)
+        <span class="skw">wait</span>(<img src="1458830476198.png" />)
+        <span class="skw">click</span>(Pattern(<img src="1458830476198.png" />).targetOffset(<span class="dig">74</span>,<span class="dig">48</span>))
+        <span class="kw">print</span><span class="str">"[success] Instance %d of project was deleted!"</span> % (x+<span class="dig">1</span>)
+        logging.info(<span class="str">"[success] Instance %d of project was deleted!"</span> % (x+<span class="dig">1</span>))
+        loc = SCREEN.getCenter()
+        wheel(loc, WHEEL_DOWN, <span class="dig">1</span>)
+        <span class="skw">wait</span>(<span class="dig">1</span>)
+        <span class="kw">break</span>
+
+<span class="kw">if</span> exists(<img src="1464179632293.png" />):
     <span class="kw">print</span>(<span class="str">"[error] Project deletion failed!"</span>)
     logging.error(<span class="str">"[error] Project deletion failed!"</span>)
     exit(<span class="dig">1</span>)

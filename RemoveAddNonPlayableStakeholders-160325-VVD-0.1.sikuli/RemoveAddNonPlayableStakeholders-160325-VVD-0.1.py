@@ -2,7 +2,8 @@ import logging;reload(logging)
 FORMAT="%(asctime)-8s %(message)s"
 logging.basicConfig(format=FORMAT, filename="test.log", level=logging.DEBUG)
 
-logging.info("[info] Remove and add a non-playable stakeholder...")
+print"[info] Remove,change and add a non-playable stakeholder..."
+logging.info("[info] Remove, change and add a non-playable stakeholder...")
 
 find("1458909532322.png")
 click(Pattern("1458909532322.png").targetOffset(-83,-15))
