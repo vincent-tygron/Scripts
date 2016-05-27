@@ -74,13 +74,13 @@
 FORMAT=<span class="str">"%(asctime)-8s %(message)s"</span>
 logging.basicConfig(format=FORMAT, filename=<span class="str">"test.log"</span>, level=logging.DEBUG)
 
-<span class="kw">print</span><span class="str">"=====[info] Removing stored value====="</span>
-logging.info(<span class="str">"=====[info] Removing stored value====="</span>)
+<span class="kw">print</span><span class="str">"[info]===== Removing stored value ====="</span>
+logging.info(<span class="str">"[info]===== Removing stored value ====="</span>)
 
 Sikulix.prefRemove()
 
-<span class="kw">print</span><span class="str">"Stored value removed!"</span>
-logging.info(<span class="str">"Stored value removed!"</span>)
+<span class="kw">print</span><span class="str">"[info]===== Stored value removed! ====="</span>
+logging.info(<span class="str">"[info]===== Stored value removed! ====="</span>)
 </pre>
 </body>
 </html>

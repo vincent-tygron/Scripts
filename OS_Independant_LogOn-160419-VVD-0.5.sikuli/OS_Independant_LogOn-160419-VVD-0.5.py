@@ -1,6 +1,9 @@
 import logging;reload(logging)
 FORMAT="%(asctime)-8s%(message)s"
-logging.basicConfig(format=FORMAT, filename="testlog.log", level=logging.DEBUG)
+logging.basicConfig(format=FORMAT, filename="test.log", level=logging.DEBUG)
+
+print"[info]===== Logging on to selected engine ====="
+logging.info("[info]===== Logging on to selected engine =====")
 
 ################################################
 # Log on to engine running on Windows or Linux #
@@ -52,3 +55,6 @@ else:
     print"[error] Log on failed!"
     logging.error("[error] Log on failed!")
     exit(1)
+
+print"[info]===== Finished logging on to selected engine ====="
+logging.info("[info]===== Finished logging on to selected engine =====")

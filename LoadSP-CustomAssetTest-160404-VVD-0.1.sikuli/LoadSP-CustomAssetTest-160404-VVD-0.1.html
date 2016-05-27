@@ -1,0 +1,169 @@
+
+<html>
+   <head>
+      <style type="text/css">
+         .sikuli-code {
+            font-size: 20px;
+            font-family: "Osaka-mono", Monospace;
+            line-height: 1.5em;
+            display:table-cell;
+            white-space: pre-wrap;       /* css-3 */
+            white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* Internet Explorer 5.5+ */
+            width: 99%;   /* remove horizontal scroll-bar when viewing in IE7 */
+         }
+         .sikuli-code img {
+            vertical-align: middle;
+            margin: 2px;
+            border: 1px solid #ccc;
+            padding: 2px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-box-shadow: 1px 1px 1px gray;
+            -webkit-box-shadow: 1px 1px 2px gray;
+         }
+         .kw {
+            color: blue;
+         }
+         .skw {
+            color: rgb(63, 127, 127);
+         }
+
+         .str {
+            color: rgb(128, 0, 0);
+         }
+
+         .dig {
+            color: rgb(128, 64, 0);
+         }
+
+         .cmt {
+            color: rgb(200, 0, 200);
+         }
+
+         h2 {
+            display: inline;
+            font-weight: normal;
+         }
+
+         .info {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            display: none;
+         }
+
+         a {
+            color: #9D2900;
+         }
+
+         body {
+            font-family: "Trebuchet MS", Arial, Sans-Serif;
+         }
+
+      </style>
+   </head>
+<body>
+<div class="info">
+<h2>LoadSP-CustomAssetTest-160404-VVD-0.1.sikuli</h2> <a href="LoadSP-CustomAssetTest-160404-VVD-0.1.zip">(Download this script)</a>
+</div>
+<pre class="sikuli-code">
+<span class="kw">import</span> logging;reload(logging)
+FORMAT=<span class="str">"%(asctime)-8s%(message)s"</span>
+logging.basicConfig(format=FORMAT, filename=<span class="str">"testlog.log"</span>, level=logging.DEBUG)
+
+logging.info(<span class="str">"=====Starting an SP session and check for original custom assets====="</span>)
+
+openApp(<span class="str">"C:\Users\Vincent\AppData\Local\Tygron Engine Test\Tygron Engine Test.exe"</span>)
+<span class="skw">wait</span>(<img src="1458739770583.png" />,<span class="dig">10</span>)
+<span class="skw">dragDrop</span>(Pattern(<img src="1459518307992.png" />).targetOffset(<span class="dig">261</span>,-<span class="dig">121</span>),Pattern(<img src="1459518307992.png" />).targetOffset(-<span class="dig">268</span>,-<span class="dig">122</span>))
+<span class="skw">type</span>(Key.BACKSPACE)
+paste(Pattern(<img src="1458739802503.png" />).targetOffset(-<span class="dig">3</span>,-<span class="dig">122</span>),<span class="str">"qaautotest1@tygron.com"</span>)
+paste(Pattern(<img src="1458739802503.png" />).targetOffset(-<span class="dig">4</span>,-<span class="dig">64</span>),<span class="str">"autotest1qa"</span>)
+<span class="skw">click</span>(Pattern(<img src="1458739802503.png" />).targetOffset(-<span class="dig">6</span>,<span class="dig">47</span>))
+<span class="skw">wait</span>(<img src="1460631537714.png" />,<span class="dig">10</span>)
+<span class="skw">click</span>()
+<span class="skw">click</span>(<img src="1460641111390.png" />)
+paste(<img src="1459843581563.png" />, <span class="str">"Sikulix-asset test"</span>)
+<span class="skw">click</span>(<img src="1460018241382.png" />)
+<span class="skw">wait</span>(<img src="1459843660197.png" />, <span class="dig">30</span>)
+<span class="skw">click</span>(Pattern(<img src="1459843660197.png" />).targetOffset(<span class="dig">510</span>,<span class="dig">444</span>))
+<span class="skw">wait</span>(<img src="1459843727619.png" />, <span class="dig">30</span>)
+<span class="skw">click</span>(Pattern(<img src="1459843727619.png" />).targetOffset(<span class="dig">497</span>,<span class="dig">447</span>))
+<span class="skw">wait</span>(<img src="1459843785573.png" />, <span class="dig">30</span>)
+paste(Pattern(<img src="1459843785573.png" />).targetOffset(-<span class="dig">414</span>,-<span class="dig">252</span>), <span class="str">"AssetTest"</span>)
+<span class="skw">click</span>(Pattern(<img src="1459843936726.png" />).targetOffset(<span class="dig">491</span>,<span class="dig">445</span>))
+<span class="skw">wait</span>(<img src="1459856734167.png" />, <span class="dig">5</span>)
+<span class="skw">click</span>(Pattern(<img src="1459856734167.png" />).targetOffset(-<span class="dig">679</span>,-<span class="dig">164</span>))
+<span class="skw">click</span>(Pattern(<img src="1459856791864.png" />).targetOffset(<span class="dig">477</span>,<span class="dig">421</span>))
+<span class="skw">wait</span>(<img src="1459856846963.png" />, <span class="dig">10</span>)
+<span class="skw">click</span>(Pattern(<img src="1459856846963.png" />).targetOffset(<span class="dig">482</span>,<span class="dig">428</span>))
+<span class="cmt">#wait("1459856895256.png", 10)</span>
+<span class="kw">if</span> exists(<img src="1459844937113.png" />, <span class="dig">30</span>):
+    <span class="kw">print</span><span class="str">"[success] Action menu icon is correct!"</span>
+    logging.info(<span class="str">"[success] Action menu icon is correct!"</span>)
+<span class="kw">else</span>:
+    <span class="kw">print</span><span class="str">"[error] Action menu icon is incorrect!"</span>
+    logging.error(<span class="str">"[error] Action menu icon is incorrect!"</span>)
+<span class="skw">click</span>()
+<span class="skw">wait</span>(<img src="1459857157300.png" />, <span class="dig">3</span>)
+<span class="skw">click</span>(Pattern(<img src="1459857157300.png" />).targetOffset(<span class="dig">82</span>,<span class="dig">280</span>))
+<span class="skw">wait</span>(<img src="1459857234202.png" />, <span class="dig">3</span>)
+<span class="skw">click</span>(Pattern(<img src="1459857234202.png" />).targetOffset(<span class="dig">82</span>,<span class="dig">284</span>))
+<span class="skw">wait</span>(<img src="1459857284019.png" />, <span class="dig">3</span>)
+<span class="skw">click</span>(Pattern(<img src="1459857284019.png" />).targetOffset(<span class="dig">137</span>,-<span class="dig">290</span>))
+<span class="skw">find</span>(<img src="1459857337210.png" />)
+<span class="skw">click</span>(Pattern(<img src="1459857337210.png" />).targetOffset(<span class="dig">13</span>,<span class="dig">0</span>))
+<span class="kw">if</span> <span class="kw">not</span> exists(<img src="1459857456018.png" />, <span class="dig">5</span>):
+    <span class="kw">print</span><span class="str">"[error] Custom function image not present!"</span>
+    logging.error(<span class="str">"[error] Custom function image not present!"</span>)
+    exit(<span class="dig">1</span>)
+<span class="kw">else</span>:
+    <span class="kw">print</span><span class="str">"[success] Custom function image is present!"</span>
+    logging.info(<span class="str">"[success] Custom function image is present!"</span>)
+<span class="skw">click</span>(Pattern(<img src="1459857545681.png" />).targetOffset(<span class="dig">447</span>,-<span class="dig">144</span>))
+waitVanish(<img src="1459857571744.png" />, <span class="dig">3</span>)
+<span class="skw">click</span>(<img src="1459856949620.png" />)
+<span class="kw">if</span> exists(<img src="1459845155856.png" />, <span class="dig">5</span>):
+    <span class="kw">print</span><span class="str">"[success] Stakeholder icon is correct!"</span>
+    logging.info(<span class="str">"[success] Stakeholder icon is correct!"</span>)
+<span class="kw">else</span>:
+    <span class="kw">print</span><span class="str">"[error] Stakeholder icon is incorrect!"</span>
+    logging.error(<span class="str">"[error] Stakeholder icon is incorrect!"</span>)
+<span class="skw">click</span>(Pattern(<img src="1459857000605.png" />).targetOffset(<span class="dig">235</span>,-<span class="dig">307</span>))
+<span class="kw">if</span> exists(<img src="1460460826086.png" />, <span class="dig">5</span>):
+    <span class="kw">print</span><span class="str">"[success] Indicator icon is correct!"</span>
+    logging.info(<span class="str">"[success] Indicator icon is correct!"</span>)
+<span class="kw">else</span>:
+    <span class="kw">print</span><span class="str">"[error] Indicator icon is incorrect!"</span>
+    logging.error(<span class="str">"[error] Indicator icon is incorrect!"</span>)
+<span class="skw">click</span>(Pattern(<img src="1460460826086.png" />).targetOffset(-<span class="dig">46</span>,<span class="dig">1</span>))
+<span class="kw">if</span> exists(<img src="1459845343814.png" />, <span class="dig">5</span>):
+    <span class="kw">print</span><span class="str">"[success] Excel indicator output is correct!"</span>
+    logging.info(<span class="str">"[success] Excel indicator output is correct!"</span>)
+<span class="kw">else</span>:
+    <span class="kw">print</span><span class="str">"[error] Excel indicator output is incorrect!"</span>
+    logging.error(<span class="str">"[error] Excel indicator output is incorrect!"</span>)
+<span class="skw">click</span>(Pattern(<img src="1460017398574.png" />).targetOffset(<span class="dig">450</span>,-<span class="dig">353</span>))
+<span class="skw">type</span>(Key.ESC)
+<span class="skw">wait</span>(<img src="1459929967952.png" />, <span class="dig">2</span>)
+<span class="skw">click</span>(Pattern(<img src="1459929967952.png" />).targetOffset(-<span class="dig">1</span>,-<span class="dig">32</span>))
+<span class="kw">if</span> exists(<img src="1459858035949.png" />, <span class="dig">2</span>):
+    <span class="kw">print</span><span class="str">"[success] Session saved!"</span>
+    logging.info(<span class="str">"[success] Session saved!"</span>)
+<span class="kw">else</span>:
+    <span class="kw">print</span><span class="str">"[error] Project did not save (in time)!"</span>
+    logging.error(<span class="str">"[error] Project did not save (in time)!"</span>)
+    exit(<span class="dig">1</span>)
+<span class="skw">click</span>(Pattern(<img src="1459858035949.png" />).targetOffset(<span class="dig">129</span>,<span class="dig">36</span>))
+<span class="skw">click</span>(Pattern(<img src="1459929967952.png" />).targetOffset(-<span class="dig">4</span>,-<span class="dig">84</span>))
+<span class="skw">wait</span>(<img src="1459930064559.png" />, <span class="dig">2</span>)
+<span class="skw">click</span>(Pattern(<img src="1459930064559.png" />).targetOffset(-<span class="dig">2</span>,<span class="dig">227</span>))
+waitVanish(Pattern(<img src="1459930064559.png" />).targetOffset(-<span class="dig">2</span>,<span class="dig">227</span>), <span class="dig">15</span>)
+
+logging.info(<span class="str">"=====Ending/ saving an SP session with original custom assets====="</span>)
+</pre>
+</body>
+</html>

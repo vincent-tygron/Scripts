@@ -72,7 +72,10 @@
 <pre class="sikuli-code">
 <span class="kw">import</span> logging;reload(logging)
 FORMAT=<span class="str">"%(asctime)-8s%(message)s"</span>
-logging.basicConfig(format=FORMAT, filename=<span class="str">"testlog.log"</span>, level=logging.DEBUG)
+logging.basicConfig(format=FORMAT, filename=<span class="str">"test.log"</span>, level=logging.DEBUG)
+
+<span class="kw">print</span><span class="str">"[info]===== Logging on to selected engine ====="</span>
+logging.info(<span class="str">"[info]===== Logging on to selected engine ====="</span>)
 
 <span class="cmt">################################################</span>
 <span class="cmt"># Log on to engine running on Windows or Linux #</span>
@@ -124,6 +127,9 @@ logging.basicConfig(format=FORMAT, filename=<span class="str">"testlog.log"</spa
     <span class="kw">print</span><span class="str">"[error] Log on failed!"</span>
     logging.error(<span class="str">"[error] Log on failed!"</span>)
     exit(<span class="dig">1</span>)
+
+<span class="kw">print</span><span class="str">"[info]===== Finished logging on to selected engine ====="</span>
+logging.info(<span class="str">"[info]===== Finished logging on to selected engine ====="</span>)
 </pre>
 </body>
 </html>

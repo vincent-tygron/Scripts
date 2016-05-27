@@ -74,8 +74,8 @@
 FORMAT=<span class="str">"%(asctime)-8s %(message)s"</span>
 logging.basicConfig(format=FORMAT, filename=<span class="str">"test.log"</span>, level=logging.DEBUG)
 
-<span class="kw">print</span><span class="str">"=====[info] (Re)Start selected engine====="</span>
-logging.info(<span class="str">"=====[info] (Re)Start selected engine====="</span>)
+<span class="kw">print</span><span class="str">"[info]===== (Re)Start selected engine ====="</span>
+logging.info(<span class="str">"[info]===== (Re)Start selected engine ====="</span>)
 
 engines = (<span class="str">"Tygron Engine Test"</span>, <span class="str">"Tygron Engine Preview"</span>, <span class="str">"Tygron Engine 2016"</span>)
 
@@ -186,8 +186,8 @@ myVer = Settings.getOSVersion()
     logging.error(<span class="str">"[error] Engine not started!"</span>)
     exit(<span class="dig">1</span>)
 
-<span class="kw">print</span><span class="str">"=====[info] Selected engine (re)started!====="</span>
-logging.info(<span class="str">"=====[info] Selected engine (re)started!====="</span>)
+<span class="kw">print</span><span class="str">"[info]===== Selected engine (re)started! ====="</span>
+logging.info(<span class="str">"[info]===== Selected engine (re)started! ====="</span>)
 </pre>
 </body>
 </html>

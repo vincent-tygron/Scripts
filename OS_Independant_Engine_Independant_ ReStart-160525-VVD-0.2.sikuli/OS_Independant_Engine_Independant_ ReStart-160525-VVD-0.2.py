@@ -2,8 +2,8 @@ import logging;reload(logging)
 FORMAT="%(asctime)-8s %(message)s"
 logging.basicConfig(format=FORMAT, filename="test.log", level=logging.DEBUG)
 
-print"=====[info] (Re)Start selected engine====="
-logging.info("=====[info] (Re)Start selected engine=====")
+print"[info]===== (Re)Start selected engine ====="
+logging.info("[info]===== (Re)Start selected engine =====")
 
 engines = ("Tygron Engine Test", "Tygron Engine Preview", "Tygron Engine 2016")
 
@@ -114,5 +114,5 @@ else:
     logging.error("[error] Engine not started!")
     exit(1)
 
-print"=====[info] Selected engine (re)started!====="
-logging.info("=====[info] Selected engine (re)started!=====")
+print"[info]===== Selected engine (re)started! ====="
+logging.info("[info]===== Selected engine (re)started! =====")

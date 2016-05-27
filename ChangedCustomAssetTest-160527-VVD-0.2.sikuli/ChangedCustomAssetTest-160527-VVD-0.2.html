@@ -1,0 +1,300 @@
+
+<html>
+   <head>
+      <style type="text/css">
+         .sikuli-code {
+            font-size: 20px;
+            font-family: "Osaka-mono", Monospace;
+            line-height: 1.5em;
+            display:table-cell;
+            white-space: pre-wrap;       /* css-3 */
+            white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* Internet Explorer 5.5+ */
+            width: 99%;   /* remove horizontal scroll-bar when viewing in IE7 */
+         }
+         .sikuli-code img {
+            vertical-align: middle;
+            margin: 2px;
+            border: 1px solid #ccc;
+            padding: 2px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-box-shadow: 1px 1px 1px gray;
+            -webkit-box-shadow: 1px 1px 2px gray;
+         }
+         .kw {
+            color: blue;
+         }
+         .skw {
+            color: rgb(63, 127, 127);
+         }
+
+         .str {
+            color: rgb(128, 0, 0);
+         }
+
+         .dig {
+            color: rgb(128, 64, 0);
+         }
+
+         .cmt {
+            color: rgb(200, 0, 200);
+         }
+
+         h2 {
+            display: inline;
+            font-weight: normal;
+         }
+
+         .info {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            display: none;
+         }
+
+         a {
+            color: #9D2900;
+         }
+
+         body {
+            font-family: "Trebuchet MS", Arial, Sans-Serif;
+         }
+
+      </style>
+   </head>
+<body>
+<div class="info">
+<h2>ChangedCustomAssetTest-160527-VVD-0.2.sikuli</h2> <a href="ChangedCustomAssetTest-160527-VVD-0.2.zip">(Download this script)</a>
+</div>
+<pre class="sikuli-code">
+<span class="kw">import</span> logging;reload(logging)
+FORMAT=<span class="str">"%(asctime)-8s%(message)s"</span>
+logging.basicConfig(format=FORMAT, filename=<span class="str">"test.log"</span>, level=logging.DEBUG)
+
+<span class="kw">print</span><span class="str">"[info]===== Uploading updated set of custom assets ====="</span>
+logging.info(<span class="str">"[info]===== Uploading updated set of custom assets ====="</span>)
+
+<span class="cmt">#openApp("C:\Users\Vincent\AppData\Local\Tygron Engine Test\Tygron Engine Test.exe")</span>
+<span class="cmt">#wait("1458739770583.png",10)</span>
+<span class="cmt">#dragDrop(Pattern("1459518307992.png").targetOffset(261,-121),Pattern("1459518307992.png").targetOffset(-268,-122))</span>
+<span class="cmt">#type(Key.BACKSPACE)</span>
+<span class="cmt">#paste(Pattern("1458739802503.png").targetOffset(-3,-122),"qaautotest1@tygron.com")</span>
+<span class="cmt">#paste(Pattern("1458739802503.png").targetOffset(-4,-64),"autotest1qa")</span>
+<span class="cmt">#click(Pattern("1458739802503.png").targetOffset(-6,47))</span>
+<span class="skw">wait</span>(<img src="1460631750673.png" />,<span class="dig">15</span>)
+<span class="skw">click</span>()
+paste(<img src="1459843581563.png" />, <span class="str">"Sikulix-asset test"</span>)
+<span class="skw">click</span>(<img src="1459844726323.png" />)
+<span class="kw">if</span> <span class="kw">not</span> exists(<img src="1459859232979.png" />, <span class="dig">30</span>):
+    <span class="kw">print</span><span class="str">"[error] Project not loaded!"</span>
+    logging.error(<span class="str">"[erroProject not loaded!"</span>)
+    exit(<span class="dig">1</span>)
+
+<span class="skw">click</span>(<img src="1460467075162.png" />)
+<span class="skw">click</span>(<img src="1459769534717.png" />)
+<span class="cmt">#click(Pattern("1459853297207.png").targetOffset(-52,-102))</span>
+<span class="skw">click</span>(<img src="1459851885184.png" />)
+<span class="skw">wait</span>(<img src="1459859377876.png" />, <span class="dig">10</span>)
+<span class="skw">click</span>(Pattern(<img src="1459859377876.png" />).targetOffset(<span class="dig">91</span>,-<span class="dig">453</span>))
+<span class="skw">wait</span>(<img src="1459859434827.png" />, <span class="dig">10</span>)
+<span class="skw">click</span>(Pattern(<img src="1459859377876.png" />).targetOffset(<span class="dig">5</span>,-<span class="dig">88</span>))
+<span class="skw">wait</span>(<img src="1459859713570.png" />, <span class="dig">15</span>)
+<span class="skw">click</span>(Pattern(<img src="1459859713570.png" />).targetOffset(-<span class="dig">179</span>,<span class="dig">206</span>))
+<span class="skw">wait</span>(Pattern(<img src="1459769876588.png" />).similar(<span class="dig">0.64</span>), <span class="dig">10</span>)
+<span class="skw">click</span>(Pattern(<img src="1459769876588.png" />).targetOffset(-<span class="dig">16</span>,-<span class="dig">216</span>))
+paste(<span class="str">"C:\Users\Vincent\Desktop\AssetTest-0331\Updated"</span>)
+<span class="skw">type</span>(Key.ENTER)
+<span class="skw">click</span>(<img src="1460461697120.png" />)
+<span class="skw">click</span>(Pattern(<img src="1459859829026.png" />).targetOffset(<span class="dig">247</span>,<span class="dig">200</span>))
+<span class="skw">wait</span>(<img src="1459859887424.png" />, <span class="dig">10</span>)
+<span class="skw">click</span>(Pattern(<img src="1459859887424.png" />).targetOffset(<span class="dig">19</span>,-<span class="dig">182</span>))
+<span class="skw">click</span>(Pattern(<img src="1459859887424.png" />).targetOffset(<span class="dig">98</span>,<span class="dig">252</span>))
+<span class="kw">if</span> <span class="kw">not</span> exists(Pattern(<img src="1459860203590.png" />).exact(), <span class="dig">5</span>):
+    <span class="kw">print</span>(<span class="str">"[error] The custom stakeholder image was not added as expected!"</span>)
+    logging.error(<span class="str">"[error] The custom stakeholder image was not added as expected!"</span>)
+<span class="kw">else</span>:
+    <span class="kw">print</span>(<span class="str">"[success] The custom stakeholder image was successfully added!"</span>)
+    logging.info(<span class="str">"[success] The custom stakeholder image was successfully added!"</span>)
+<span class="skw">click</span>(<img src="1459771132666.png" />)
+<span class="skw">wait</span>(<img src="1459863444950.png" />, <span class="dig">10</span>)
+<span class="skw">click</span>(Pattern(<img src="1459863444950.png" />).targetOffset(-<span class="dig">1</span>,-<span class="dig">23</span>))
+<span class="skw">wait</span>(<img src="1459863495454.png" />, <span class="dig">5</span>)
+<span class="skw">click</span>(<img src="1459863495454.png" />)
+<span class="skw">wait</span>(<img src="1459863584422.png" />, <span class="dig">5</span>)
+<span class="skw">click</span>(Pattern(<img src="1459863584422.png" />).targetOffset(-<span class="dig">178</span>,<span class="dig">205</span>))
+<span class="skw">wait</span>(<img src="1460461985990.png" />, <span class="dig">10</span>)
+<span class="skw">click</span>(<img src="1460461985990.png" />)
+<span class="cmt">#click(Pattern("1459863644086.png").similar(0.71).targetOffset(249,201))</span>
+<span class="skw">click</span>(<img src="1462197110063.png" />)
+<span class="skw">wait</span>(<img src="1459863727788.png" />)
+<span class="skw">click</span>(Pattern(<img src="1459863727788.png" />).targetOffset(<span class="dig">80</span>,-<span class="dig">184</span>))
+<span class="skw">click</span>(Pattern(<img src="1459868071078.png" />).targetOffset(<span class="dig">97</span>,<span class="dig">251</span>))
+<span class="kw">if</span> <span class="kw">not</span> exists(<img src="1459863782276.png" />, <span class="dig">5</span>):
+    <span class="kw">print</span>(<span class="str">"[error] The custom action menu image was not added as expected!"</span>)
+    logging.error(<span class="str">"[error] The custom action menu image was not added as expected!"</span>)
+    exit(<span class="dig">1</span>)
+<span class="kw">else</span>:
+    <span class="kw">print</span>(<span class="str">"[success] The custom action menu image was successfully added!"</span>)
+    logging.info(<span class="str">"[success] The custom action menu image was successfully added!"</span>)
+<span class="skw">click</span>(<img src="1459772458832.png" />)
+<span class="skw">click</span>(<img src="1459868458803.png" />)
+<span class="skw">click</span>(<img src="1459863854588.png" />)
+<span class="skw">wait</span>(<img src="1459863874844.png" />, <span class="dig">5</span>)
+<span class="skw">click</span>(Pattern(<img src="1459863874844.png" />).targetOffset(-<span class="dig">169</span>,<span class="dig">201</span>))
+<span class="skw">wait</span>(<img src="1460462099101.png" />, <span class="dig">10</span>)
+<span class="skw">click</span>(<img src="1460462099101.png" />)
+<span class="skw">click</span>(Pattern(<img src="1459863644086.png" />).targetOffset(<span class="dig">249</span>,<span class="dig">201</span>))
+<span class="skw">click</span>(Pattern(<img src="1459864011852.png" />).targetOffset(<span class="dig">51</span>,-<span class="dig">180</span>))
+<span class="skw">click</span>(Pattern(<img src="1459864011852.png" />).targetOffset(<span class="dig">101</span>,<span class="dig">250</span>))
+<span class="kw">if</span> <span class="kw">not</span> exists(<img src="1459864064978.png" />, <span class="dig">5</span>):
+    <span class="kw">print</span>(<span class="str">"[error] The custom measure image was not added as expected!"</span>)
+    logging.error(<span class="str">"[error] The custom measure image was not added as expected!"</span>)
+    exit(<span class="dig">1</span>)
+<span class="kw">else</span>:
+    <span class="kw">print</span>(<span class="str">"[success] The custom measure image was successfully added!"</span>)
+    logging.info(<span class="str">"[success] The custom measure image was successfully added!"</span>)
+<span class="skw">click</span>(<img src="1459773712671.png" />)
+<span class="skw">click</span>(<img src="1459773830726.png" />)
+<span class="kw">if</span> <span class="kw">not</span> exists(<img src="1459864142938.png" />, <span class="dig">5</span>):
+    <span class="kw">print</span>(<span class="str">"[error] The custom function value image was not added as expected!"</span>)
+    logging.error(<span class="str">"[error] The custom function value image was not added as expected!"</span>)
+    exit(<span class="dig">1</span>)
+<span class="kw">else</span>:
+    <span class="kw">print</span>(<span class="str">"[success] The custom function value image was successfully added!"</span>)
+    logging.info(<span class="str">"[success] The custom function value image was successfully added!"</span>)
+<span class="skw">click</span>(Pattern(<img src="1459864199274.png" />).targetOffset(<span class="dig">368</span>,-<span class="dig">291</span>))
+<span class="skw">click</span>(<img src="1460627692446.png" />)
+<span class="cmt">#click("1459931854338.png")</span>
+<span class="cmt">#click("1459869103934.png")</span>
+<span class="cmt">#click("1459849139235-1.png")</span>
+<span class="skw">click</span>(<img src="1459846801644-1.png" />)
+<span class="kw">if</span> <span class="kw">not</span> exists(<img src="1459864492439-1.png" />, <span class="dig">5</span>):
+    <span class="kw">print</span><span class="str">"[error] Can't find updated custom function image!"</span>
+    logging.error(<span class="str">"[error] Can't find updated custom function image!"</span>)
+    exit(<span class="dig">1</span>)
+<span class="skw">click</span>(Pattern(<img src="1459864591751-1.png" />).targetOffset(<span class="dig">0</span>,<span class="dig">110</span>))
+<span class="skw">wait</span>(<img src="1459847819158-1.png" />, <span class="dig">5</span>)
+<span class="skw">click</span>(<img src="1460626426078.png" />)
+<span class="skw">click</span>(<img src="1459847874509-1.png" />)
+<span class="skw">click</span>(Pattern(<img src="1459847894261-1.png" />).targetOffset(<span class="dig">86</span>,-<span class="dig">186</span>))
+<span class="skw">click</span>(<img src="1459854553718-1.png" />)
+<span class="kw">if</span> <span class="kw">not</span> exists(<img src="1459864636870-1.png" />, <span class="dig">5</span>):
+    <span class="kw">print</span><span class="str">"[error] Custom image for measure failed when executing measure!"</span>
+    logging.error(<span class="str">"[error] Custom image for measure failed when executing measure!"</span>)
+    exit(<span class="dig">1</span>)
+<span class="skw">click</span>(Pattern(<img src="1459864636870-1.png" />).targetOffset(<span class="dig">250</span>,<span class="dig">90</span>))
+<span class="skw">click</span>(<img src="1459847914820-1.png" />)
+<span class="skw">click</span>(<img src="1460632084998.png" />)
+<span class="skw">click</span>(<img src="1459775456044-1.png" />)
+<span class="skw">wait</span>(<img src="1459864729742-1.png" />)
+<span class="skw">click</span>(<img src="1459864729742-1.png" />)
+<span class="cmt">#wait("1459864767709-1.png",10)</span>
+<span class="skw">click</span>(<img src="1459864767709-1.png" />)
+<span class="skw">wait</span>(<img src="1459864792245-1.png" />, <span class="dig">5</span>)
+<span class="skw">click</span>(Pattern(<img src="1459864792245-1.png" />).targetOffset(-<span class="dig">177</span>,<span class="dig">203</span>))
+<span class="skw">wait</span>(<img src="1460462345891.png" />, <span class="dig">5</span>)
+<span class="skw">click</span>(<img src="1460462345891.png" />)
+<span class="skw">click</span>(<img src="1462197110063.png" />)
+<span class="kw">for</span> x <span class="kw">in</span> range(<span class="dig">0</span>, <span class="dig">10</span>):
+    <span class="kw">if</span> <span class="kw">not</span> exists(Pattern(<img src="1459864885686-1.png" />).targetOffset(<span class="dig">54</span>,-<span class="dig">164</span>), <span class="dig">1</span>):
+        <span class="kw">print</span>(<span class="str">"[error] The image was not uploaded as expected, trying again!"</span>)
+        logging.error(<span class="str">"[error] The image was not uploaded as expected, trying again!"</span>)
+        <span class="skw">click</span>(<img src="1460468051043.png" />)
+        <span class="skw">wait</span>(<img src="1460462345891.png" />, <span class="dig">5</span>)
+        <span class="skw">click</span>(<img src="1460462345891.png" />)
+        <span class="skw">click</span>(Pattern(<img src="1459863644086-1.png" />).targetOffset(<span class="dig">249</span>,<span class="dig">201</span>))
+        <span class="cmt">#wait(1)</span>
+        <span class="kw">break</span>
+
+
+<span class="kw">if</span> <span class="kw">not</span> exists(Pattern(<img src="1459864885686-1.png" />).targetOffset(<span class="dig">54</span>,-<span class="dig">164</span>)):
+    <span class="kw">print</span>(<span class="str">"[error] The image was still not uploaded as expected!"</span>)
+    logging.error(<span class="str">"[error] The image was still not uploaded as expected!"</span>)
+    exit(<span class="dig">1</span>)
+<span class="kw">else</span>:
+    <span class="kw">print</span>(<span class="str">"[success] The image was uploaded as expected!"</span>)
+    logging.error(<span class="str">"[success] The image was uploaded as expected!"</span>)
+    <span class="skw">click</span>(Pattern(<img src="1459864885686-1.png" />).targetOffset(<span class="dig">54</span>,-<span class="dig">164</span>))
+    <span class="skw">click</span>(Pattern(<img src="1459869173943.png" />).targetOffset(<span class="dig">96</span>,<span class="dig">248</span>))
+<span class="kw">if</span> <span class="kw">not</span> exists(Pattern(<img src="1459864961076-1.png" />).similar(<span class="dig">0.79</span>), <span class="dig">5</span>):
+    <span class="kw">print</span>(<span class="str">"[error] The custom overlay image was not added as expected!"</span>)
+    logging.error(<span class="str">"[error] The custom overlay image was not added as expected!"</span>)
+    <span class="cmt">#exit(1)</span>
+<span class="kw">else</span>:
+    <span class="kw">print</span>(<span class="str">"[success] The custom overlay image was successfully added!"</span>)
+    logging.info(<span class="str">"[success] The custom overlay image was successfully added!"</span>)
+<span class="skw">click</span>(<img src="1460472513836.png" />)
+
+<span class="skw">click</span>(<img src="1459778258791-1.png" />)
+<span class="skw">click</span>(<img src="1459778276391-1.png" />)
+hover(<img src="1459869453876.png" />)
+<span class="skw">click</span>(Pattern(<img src="1459865025876-1.png" />).targetOffset(-<span class="dig">34</span>,-<span class="dig">1</span>))
+<span class="skw">click</span>(<img src="1459778406855-1.png" />)
+<span class="skw">click</span>(<img src="1459865207842-1.png" />)
+<span class="skw">wait</span>(<img src="1459769876588-1.png" />, <span class="dig">10</span>)
+<span class="skw">click</span>(<img src="1459778481462-1.png" />)
+<span class="skw">click</span>(Pattern(<img src="1459778534814-1.png" />).targetOffset(<span class="dig">250</span>,<span class="dig">202</span>))
+<span class="skw">click</span>(Pattern(<img src="1460463814520.png" />).targetOffset(-<span class="dig">28</span>,-<span class="dig">2</span>))
+<span class="kw">if</span> <span class="kw">not</span> exists(<img src="1459865318545-1.png" />, <span class="dig">15</span>):
+    <span class="kw">print</span>(<span class="str">"[error] The excel indicator file output is not as expected!"</span>)
+    logging.error(<span class="str">"[error] The excel indicator file output is not as expected!"</span>)
+    <span class="cmt">#exit(1)</span>
+<span class="kw">else</span>:
+    <span class="kw">print</span>(<span class="str">"[success] The excel indicator file shows the correct output!"</span>)
+    logging.info(<span class="str">"[success] The excel indicator file shows the correct output!"</span>)
+
+<span class="skw">click</span>(Pattern(<img src="1460456062280.png" />).similar(<span class="dig">0.60</span>).targetOffset(<span class="dig">287</span>,-<span class="dig">224</span>))
+
+<span class="skw">click</span>(<img src="1460450493993.png" />)
+<span class="skw">sleep</span>(<span class="dig">1</span>)
+hover(<img src="1460467511343.png" />)
+<span class="skw">click</span>(Pattern(<img src="1460467527431.png" />).targetOffset(<span class="dig">0</span>,<span class="dig">8</span>))
+<span class="skw">wait</span>(<img src="1460450592130.png" />, <span class="dig">5</span>)
+<span class="skw">click</span>(Pattern(<img src="1460450592130.png" />).targetOffset(-<span class="dig">172</span>,<span class="dig">206</span>))
+<span class="skw">click</span>(<img src="1460461811415.png" />)
+<span class="skw">click</span>(<img src="1460450698288.png" />)
+<span class="kw">if</span> <span class="kw">not</span> exists(<img src="1460468525832.png" />, <span class="dig">15</span>):
+    <span class="kw">print</span>(<span class="str">"[error] The custom indicator image was not uploaded as expected!"</span>)
+    logging.error(<span class="str">"[error] The custom indicator image was not uploaded as expected!"</span>)
+    exit(<span class="dig">1</span>)
+<span class="kw">else</span>:
+    <span class="kw">print</span>(<span class="str">"[success] The custom indicator image was successfully uploaded!"</span>)
+    logging.info(<span class="str">"[success] The custom indicator image was successfully uploaded!"</span>)
+<span class="skw">click</span>(<img src="1460468525832.png" />)
+<span class="skw">click</span>(<img src="1460450830055.png" />)
+<span class="skw">click</span>(<img src="1460725813780.png" />)
+<span class="kw">if</span> <span class="kw">not</span> exists(<img src="1460468574080.png" />, <span class="dig">5</span>):
+    <span class="kw">print</span>(<span class="str">"[error] The custom indicator image was not added as expected!"</span>)
+    logging.error(<span class="str">"[error] The custom indicator image was not added as expected!"</span>)
+    <span class="cmt">#exit(1)</span>
+<span class="kw">else</span>:
+    <span class="kw">print</span>(<span class="str">"[success] The custom indicator image was successfully added!"</span>)
+    logging.info(<span class="str">"[success] The custom indicator image was successfully added!"</span>)
+<span class="kw">if</span> <span class="kw">not</span> exists(Pattern(<img src="1460468599751.png" />).similar(<span class="dig">0.96</span>), <span class="dig">5</span>):
+    <span class="kw">print</span>(<span class="str">"[error] The custom indicator image did not appear on the top bar as expected!"</span>)
+    logging.error(<span class="str">"[error] The custom indicator image did not appear on the top bar as expected!"</span>)
+    <span class="cmt">#exit(1)</span>
+<span class="kw">else</span>:
+    <span class="kw">print</span>(<span class="str">"[success] The custom indicator image appeared on the top bar as expected!"</span>)
+    logging.info(<span class="str">"[success] The custom indicator imappeared on the top bar as expected!"</span>)
+
+<span class="skw">click</span>(<img src="1459780227625-1.png" />)
+<span class="skw">click</span>(<img src="1459780248393-1.png" />)
+<span class="skw">wait</span>(Pattern(<img src="1458740876103-1.png" />).targetOffset(-<span class="dig">41</span>,<span class="dig">51</span>), <span class="dig">5</span>)
+<span class="skw">click</span>(Pattern(<img src="1458740876103-1.png" />).targetOffset(-<span class="dig">41</span>,<span class="dig">51</span>))
+<span class="kw">if</span> <span class="kw">not</span> exists(<img src="1459780227625-1.png" />, <span class="dig">5</span>):
+    <span class="kw">print</span>(<span class="str">"[success] The updated project was saved and closed"</span>)
+    logging.info(<span class="str">"[success] The updated project was saved and closed"</span>)
+<span class="kw">else</span>:
+    <span class="kw">print</span>(<span class="str">"[error] The updated project did not exit as expected!"</span>)
+    logging.info(<span class="str">"[error] The updated project did not exit as expected!"</span>)
+    exit(<span class="dig">1</span>)
+
+<span class="kw">print</span><span class="str">"[info]===== Finished uploading updated set of custom assets ====="</span>
+logging.info(<span class="str">"[info]===== Finished uploading updated set of custom assets ====="</span>)
+</pre>
+</body>
+</html>

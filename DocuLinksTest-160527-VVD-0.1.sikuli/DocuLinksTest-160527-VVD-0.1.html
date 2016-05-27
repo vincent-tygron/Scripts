@@ -1,0 +1,644 @@
+
+<html>
+   <head>
+      <style type="text/css">
+         .sikuli-code {
+            font-size: 20px;
+            font-family: "Osaka-mono", Monospace;
+            line-height: 1.5em;
+            display:table-cell;
+            white-space: pre-wrap;       /* css-3 */
+            white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* Internet Explorer 5.5+ */
+            width: 99%;   /* remove horizontal scroll-bar when viewing in IE7 */
+         }
+         .sikuli-code img {
+            vertical-align: middle;
+            margin: 2px;
+            border: 1px solid #ccc;
+            padding: 2px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-box-shadow: 1px 1px 1px gray;
+            -webkit-box-shadow: 1px 1px 2px gray;
+         }
+         .kw {
+            color: blue;
+         }
+         .skw {
+            color: rgb(63, 127, 127);
+         }
+
+         .str {
+            color: rgb(128, 0, 0);
+         }
+
+         .dig {
+            color: rgb(128, 64, 0);
+         }
+
+         .cmt {
+            color: rgb(200, 0, 200);
+         }
+
+         h2 {
+            display: inline;
+            font-weight: normal;
+         }
+
+         .info {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            display: none;
+         }
+
+         a {
+            color: #9D2900;
+         }
+
+         body {
+            font-family: "Trebuchet MS", Arial, Sans-Serif;
+         }
+
+      </style>
+   </head>
+<body>
+<div class="info">
+<h2>DocuLinksTest-160527-VVD-0.1.sikuli</h2> <a href="DocuLinksTest-160527-VVD-0.1.zip">(Download this script)</a>
+</div>
+<pre class="sikuli-code">
+<span class="kw">import</span> logging;reload(logging)
+FORMAT=<span class="str">"%(asctime)-8s %(message)s"</span>
+logging.basicConfig(format=FORMAT, filename=<span class="str">"test.log"</span>, level=logging.DEBUG)
+
+<span class="kw">print</span><span class="str">"[info]===== Start Documentation links test ====="</span>
+logging.info(<span class="str">"[info]===== Start Documentation links test ====="</span>)
+
+<span class="kw">if</span> Settings.isWindows():
+
+    <span class="skw">click</span>(<img src="1464352879963.png" />)
+    paste(<img src="1464352921564.png" />, <span class="str">"Sikulix-menus-nl"</span>)
+    <span class="skw">wait</span>(<img src="1464353709007.png" />, <span class="dig">1</span>)
+    <span class="skw">click</span>()
+
+    <span class="kw">for</span> x <span class="kw">in</span> range (<span class="dig">0</span>, <span class="dig">30</span>):
+        <span class="kw">if</span> exists(<img src="1464353173658.png" />, x):
+            <span class="kw">print</span><span class="str">"[success] Project SikuliX-menus-NL loaded in %d seconds!"</span> % x
+            logging.info(<span class="str">"[success] Project SikuliX-menus-NL loaded in %d seconds!"</span> % x)
+            <span class="kw">break</span>
+
+    <span class="kw">if</span> <span class="kw">not</span> exists(<img src="1464353173658.png" />):
+            <span class="kw">print</span><span class="str">"[error] Project SikuliX-menus-NL not loaded after %d seconds!"</span> % x
+            logging.error(<span class="str">"[error] Project SikuliX-menus-NL not loaded after %d seconds!"</span> % x)
+
+    <span class="cmt">#click("1464263378772.png")#GEO data</span>
+    <span class="kw">print</span><span class="str">"[info] Under Geo Data..."</span>
+    logging.info(<span class="str">"[info] Under Geo Data..."</span>)
+    hover(<img src="1464263441069.png" />)<span class="cmt">#Constructions</span>
+    <span class="kw">print</span><span class="str">"[info] For Constructions..."</span>
+    logging.info(<span class="str">"[info] For Constructions..."</span>)
+    <span class="skw">wait</span>(<img src="1464263651642.png" />, <span class="dig">1</span>)
+    <span class="skw">click</span>()
+    <span class="kw">if</span> exists(<img src="1464263853145.png" />):
+        <span class="kw">if</span> exists(<img src="1464263615554.png" />):
+            <span class="kw">print</span><span class="str">"[error] Documentation not written yet!"</span>
+            logging.error(<span class="str">"[error] Documentation not written yet!"</span>)
+        <span class="kw">else</span>:
+            <span class="kw">print</span><span class="str">"[success] Documentation is available!"</span>
+            logging.info(<span class="str">"[success] Documentation is available!"</span>)
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[error] Documentation not found!"</span>
+        logging.error(<span class="str">"[error] Documentation not found!"</span>)
+    <span class="skw">click</span>(<img src="1464263942032.png" />)
+
+    hover(<img src="1464264164382.png" />)<span class="cmt">#Terrain</span>
+    <span class="kw">print</span><span class="str">"[info] For Terrain..."</span>
+    logging.info(<span class="str">"[info] For Terrain..."</span>)
+    <span class="skw">wait</span>(<img src="1464264311397.png" />, <span class="dig">1</span>)
+    <span class="skw">click</span>()
+    <span class="kw">if</span> exists(<img src="1464264334964.png" />):
+        <span class="kw">if</span> exists(<img src="1464263615554.png" />):
+            <span class="kw">print</span><span class="str">"[error] Documentation not written yet!"</span>
+            logging.error(<span class="str">"[error] Documentation not written yet!"</span>)
+        <span class="kw">else</span>:
+            <span class="kw">print</span><span class="str">"[success] Documentation is available!"</span>
+            logging.info(<span class="str">"[success] Documentation is available!"</span>)
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[error] Documentation not found!"</span>
+        logging.error(<span class="str">"[error] Documentation not found!"</span>)
+    <span class="skw">click</span>(<img src="1464263942032.png" />)
+
+    hover(<img src="1464266059746.png" />)<span class="cmt">#Zoning</span>
+    <span class="kw">print</span><span class="str">"[info] For Zoning..."</span>
+    logging.info(<span class="str">"[info] For Zoning..."</span>)
+    <span class="skw">wait</span>(<img src="1464266098064.png" />, <span class="dig">1</span>)
+    <span class="skw">click</span>()
+    <span class="kw">if</span> exists(<img src="1464266143776.png" />):
+        <span class="kw">if</span> exists(<img src="1464263615554.png" />):
+            <span class="kw">print</span><span class="str">"[error] Documentation not written yet!"</span>
+            logging.error(<span class="str">"[error] Documentation not written yet!"</span>)
+        <span class="kw">else</span>:
+            <span class="kw">print</span><span class="str">"[success] Documentation is available!"</span>
+            logging.info(<span class="str">"[success] Documentation is available!"</span>)
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[error] Documentation not found!"</span>
+        logging.error(<span class="str">"[error] Documentation not found!"</span>)
+    <span class="skw">click</span>(<img src="1464263942032.png" />)
+
+    hover(<img src="1464269640800.png" />)<span class="cmt">#Plots</span>
+    <span class="kw">print</span><span class="str">"[info] For Plots..."</span>
+    logging.info(<span class="str">"[info] For Plots..."</span>)
+    <span class="skw">wait</span>(<img src="1464269666599.png" />, <span class="dig">1</span>)
+    <span class="skw">click</span>()
+    <span class="kw">if</span> exists(<img src="1464269686407.png" />):
+        <span class="kw">if</span> exists(<img src="1464263615554.png" />):
+            <span class="kw">print</span><span class="str">"[error] Documentation not written yet!"</span>
+            logging.error(<span class="str">"[error] Documentation not written yet!"</span>)
+        <span class="kw">else</span>:
+            <span class="kw">print</span><span class="str">"[success] Documentation is available!"</span>
+            logging.info(<span class="str">"[success] Documentation is available!"</span>)
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[error] Documentation not found!"</span>
+        logging.error(<span class="str">"[error] Documentation not found!"</span>)
+    <span class="skw">click</span>(<img src="1464263942032.png" />)
+
+    hover(<img src="1464266221040.png" />)<span class="cmt">#Areas</span>
+    <span class="kw">print</span><span class="str">"[info] For Areas..."</span>
+    logging.info(<span class="str">"[info] For Areas..."</span>)
+    <span class="skw">wait</span>(<img src="1464266257055.png" />, <span class="dig">1</span>)
+    <span class="skw">click</span>()
+    <span class="kw">if</span> exists(<img src="1464266280999.png" />):
+        <span class="kw">if</span> exists(<img src="1464263615554.png" />):
+            <span class="kw">print</span><span class="str">"[error] Documentation not written yet!"</span>
+            logging.error(<span class="str">"[error] Documentation not written yet!"</span>)
+        <span class="kw">else</span>:
+            <span class="kw">print</span><span class="str">"[success] Documentation is available!"</span>
+            logging.info(<span class="str">"[success] Documentation is available!"</span>)
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[error] Documentation not found!"</span>
+        logging.error(<span class="str">"[error] Documentation not found!"</span>)
+    <span class="skw">click</span>(<img src="1464263942032.png" />)
+
+    hover(<img src="1464266397798.png" />)<span class="cmt">#Overlays</span>
+    <span class="kw">print</span><span class="str">"[info] For Overlays..."</span>
+    logging.info(<span class="str">"[info] For Overlays..."</span>)
+    <span class="skw">wait</span>(<img src="1464266413126.png" />, <span class="dig">1</span>)
+    <span class="skw">click</span>()
+    <span class="kw">if</span> exists(<img src="1464266443158.png" />):
+        <span class="kw">if</span> exists(<img src="1464263615554.png" />):
+            <span class="kw">print</span><span class="str">"[error] Documentation not written yet!"</span>
+            logging.error(<span class="str">"[error] Documentation not written yet!"</span>)
+        <span class="kw">else</span>:
+            <span class="kw">print</span><span class="str">"[success] Documentation is available!"</span>
+            logging.info(<span class="str">"[success] Documentation is available!"</span>)
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[error] Documentation not found!"</span>
+        logging.error(<span class="str">"[error] Documentation not found!"</span>)
+    <span class="skw">click</span>(<img src="1464263942032.png" />)
+
+    <span class="skw">click</span>(<img src="1464266624445.png" />)<span class="cmt">#Stakeholders</span>
+    <span class="kw">print</span><span class="str">"[info] Under Stakeholders..."</span>
+    logging.info(<span class="str">"[info] Under Stakeholders..."</span>)
+
+    hover(<img src="1464266789211.png" />)<span class="cmt">#Stakeholders</span>
+    <span class="kw">print</span><span class="str">"[info] For Stakeholders..."</span>
+    logging.info(<span class="str">"[info] For Stakeholders..."</span>)
+    <span class="skw">wait</span>(<img src="1464266806451.png" />, <span class="dig">1</span>)
+    <span class="skw">click</span>()
+    <span class="kw">if</span> exists(<img src="1464266827931.png" />):
+        <span class="kw">if</span> exists(<img src="1464263615554.png" />):
+            <span class="kw">print</span><span class="str">"[error] Documentation not written yet!"</span>
+            logging.error(<span class="str">"[error] Documentation not written yet!"</span>)
+        <span class="kw">else</span>:
+            <span class="kw">print</span><span class="str">"[success] Documentation is available!"</span>
+            logging.info(<span class="str">"[success] Documentation is available!"</span>)
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[error] Documentation not found!"</span>
+        logging.error(<span class="str">"[error] Documentation not found!"</span>)
+    <span class="skw">click</span>(<img src="1464263942032.png" />)
+
+    hover(<img src="1464266866315.png" />)<span class="cmt">#Actions</span>
+    <span class="kw">print</span><span class="str">"[info] For Actions..."</span>
+    logging.info(<span class="str">"[info] For Actions..."</span>)
+    <span class="skw">wait</span>(<img src="1464266878923.png" />, <span class="dig">1</span>)
+    <span class="skw">click</span>()
+    <span class="kw">if</span> exists(<img src="1464266919906.png" />):
+        <span class="kw">if</span> exists(<img src="1464263615554.png" />):
+            <span class="kw">print</span><span class="str">"[error] Documentation not written yet!"</span>
+            logging.error(<span class="str">"[error] Documentation not written yet!"</span>)
+        <span class="kw">else</span>:
+            <span class="kw">print</span><span class="str">"[success] Documentation is available!"</span>
+            logging.info(<span class="str">"[success] Documentation is available!"</span>)
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[error] Documentation not found!"</span>
+        logging.error(<span class="str">"[error] Documentation not found!"</span>)
+    <span class="skw">click</span>(<img src="1464263942032.png" />)
+
+    hover(<img src="1464267038914.png" />)<span class="cmt">#Measures</span>
+    <span class="kw">print</span><span class="str">"[info] For Measures..."</span>
+    logging.info(<span class="str">"[info] For Measures..."</span>)
+    <span class="skw">wait</span>(<img src="1464267074441.png" />, <span class="dig">1</span>)
+    <span class="skw">click</span>()
+    <span class="kw">if</span> exists(<img src="1464267094562.png" />):
+        <span class="kw">if</span> exists(<img src="1464263615554.png" />):
+            <span class="kw">print</span><span class="str">"[error] Documentation not written yet!"</span>
+            logging.error(<span class="str">"[error] Documentation not written yet!"</span>)
+        <span class="kw">else</span>:
+            <span class="kw">print</span><span class="str">"[success] Documentation is available!"</span>
+            logging.info(<span class="str">"[success] Documentation is available!"</span>)
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[error] Documentation not found!"</span>
+        logging.error(<span class="str">"[error] Documentation not found!"</span>)
+    <span class="skw">click</span>(<img src="1464263942032.png" />)
+
+    hover(<img src="1464267161121.png" />)<span class="cmt">#Dike Types</span>
+    <span class="kw">print</span><span class="str">"[info] For Dike Types..."</span>
+    logging.info(<span class="str">"[info] For Dike Types..."</span>)
+    <span class="skw">wait</span>(<img src="1464267176577.png" />, <span class="dig">1</span>)
+    <span class="skw">click</span>()
+    <span class="kw">if</span> exists(<img src="1464267196617.png" />):
+        <span class="kw">if</span> exists(<img src="1464263615554.png" />):
+            <span class="kw">print</span><span class="str">"[error] Documentation not written yet!"</span>
+            logging.error(<span class="str">"[error] Documentation not written yet!"</span>)
+        <span class="kw">else</span>:
+            <span class="kw">print</span><span class="str">"[success] Documentation is available!"</span>
+            logging.info(<span class="str">"[success] Documentation is available!"</span>)
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[error] Documentation not found!"</span>
+        logging.error(<span class="str">"[error] Documentation not found!"</span>)
+    <span class="skw">click</span>(<img src="1464263942032.png" />)
+
+    hover(<img src="1464267378423.png" />)<span class="cmt">#Upgrade Types</span>
+    <span class="kw">print</span><span class="str">"[info] For Upgrade Types..."</span>
+    logging.info(<span class="str">"[info] For Upgrade Types..."</span>)
+    <span class="skw">wait</span>(<img src="1464267429055.png" />, <span class="dig">1</span>)
+    <span class="skw">click</span>()
+    <span class="kw">if</span> exists(<img src="1464267444430.png" />):
+        <span class="kw">if</span> exists(<img src="1464263615554.png" />):
+            <span class="kw">print</span><span class="str">"[error] Documentation not written yet!"</span>
+            logging.error(<span class="str">"[error] Documentation not written yet!"</span>)
+        <span class="kw">else</span>:
+            <span class="kw">print</span><span class="str">"[success] Documentation is available!"</span>
+            logging.info(<span class="str">"[success] Documentation is available!"</span>)
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[error] Documentation not found!"</span>
+        logging.error(<span class="str">"[error] Documentation not found!"</span>)
+    <span class="skw">click</span>(<img src="1464263942032.png" />)
+
+    hover(<img src="1464267483702.png" />)<span class="cmt">#Event Bundles</span>
+    <span class="kw">print</span><span class="str">"[info] For Event Bundles..."</span>
+    logging.info(<span class="str">"[info] For Event Bundles..."</span>)
+    <span class="skw">wait</span>(<img src="1464267504254.png" />, <span class="dig">1</span>)
+    <span class="skw">click</span>()
+    <span class="kw">if</span> exists(<img src="1464267533998.png" />):
+        <span class="kw">if</span> exists(<img src="1464263615554.png" />):
+            <span class="kw">print</span><span class="str">"[error] Documentation not written yet!"</span>
+            logging.error(<span class="str">"[error] Documentation not written yet!"</span>)
+        <span class="kw">else</span>:
+            <span class="kw">print</span><span class="str">"[success] Documentation is available!"</span>
+            logging.info(<span class="str">"[success] Documentation is available!"</span>)
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[error] Documentation not found!"</span>
+        logging.error(<span class="str">"[error] Documentation not found!"</span>)
+    <span class="skw">click</span>(<img src="1464263942032.png" />)
+
+    <span class="skw">click</span>(<img src="1464268527927.png" />)<span class="cmt">#Indicators</span>
+
+    hover(<img src="1464268562439.png" />)<span class="cmt">#Indicators</span>
+    <span class="kw">print</span><span class="str">"[info] For Indicators..."</span>
+    logging.info(<span class="str">"[info] For Indicators..."</span>)
+    <span class="skw">wait</span>(<img src="1464268590390.png" />, <span class="dig">1</span>)
+    <span class="skw">click</span>()
+    <span class="kw">if</span> exists(<img src="1464268613206.png" />):
+        <span class="kw">if</span> exists(<img src="1464263615554.png" />):
+            <span class="kw">print</span><span class="str">"[error] Documentation not written yet!"</span>
+            logging.error(<span class="str">"[error] Documentation not written yet!"</span>)
+        <span class="kw">else</span>:
+            <span class="kw">print</span><span class="str">"[success] Documentation is available!"</span>
+            logging.info(<span class="str">"[success] Documentation is available!"</span>)
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[error] Documentation not found!"</span>
+        logging.error(<span class="str">"[error] Documentation not found!"</span>)
+    <span class="skw">click</span>(<img src="1464263942032.png" />)
+
+    hover(<img src="1464268673862.png" />)<span class="cmt">#Function Values</span>
+    <span class="kw">print</span><span class="str">"[info] For Function Values..."</span>
+    logging.info(<span class="str">"[info] For Function Values..."</span>)
+    <span class="skw">wait</span>(<img src="1464268794341.png" />, <span class="dig">1</span>)
+    <span class="skw">click</span>()
+    <span class="kw">if</span> exists(<img src="1464268818092.png" />):
+        <span class="kw">if</span> exists(<img src="1464263615554.png" />):
+            <span class="kw">print</span><span class="str">"[error] Documentation not written yet!"</span>
+            logging.error(<span class="str">"[error] Documentation not written yet!"</span>)
+        <span class="kw">else</span>:
+            <span class="kw">print</span><span class="str">"[success] Documentation is available!"</span>
+            logging.info(<span class="str">"[success] Documentation is available!"</span>)
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[error] Documentation not found!"</span>
+        logging.error(<span class="str">"[error] Documentation not found!"</span>)
+    <span class="skw">click</span>(<img src="1464263942032.png" />)
+
+    hover(<img src="1464269741687.png" />)<span class="cmt">#Globals</span>
+    <span class="kw">print</span><span class="str">"[info] For Globals..."</span>
+    logging.info(<span class="str">"[info] For Globals..."</span>)
+    <span class="skw">wait</span>(<img src="1464269765199.png" />, <span class="dig">1</span>)
+    <span class="skw">click</span>()
+    <span class="kw">if</span> exists(<img src="1464269785903.png" />):
+        <span class="kw">if</span> exists(<img src="1464263615554.png" />):
+            <span class="kw">print</span><span class="str">"[error] Documentation not written yet!"</span>
+            logging.error(<span class="str">"[error] Documentation not written yet!"</span>)
+        <span class="kw">else</span>:
+            <span class="kw">print</span><span class="str">"[success] Documentation is available!"</span>
+            logging.info(<span class="str">"[success] Documentation is available!"</span>)
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[error] Documentation not found!"</span>
+        logging.error(<span class="str">"[error] Documentation not found!"</span>)
+    <span class="skw">click</span>(<img src="1464263942032.png" />)
+
+    hover(<img src="1464269827606.png" />)<span class="cmt">#Query Tool</span>
+    <span class="kw">print</span><span class="str">"[info] For Query Tool..."</span>
+    logging.info(<span class="str">"[info] For Query Tool..."</span>)
+    <span class="skw">wait</span>(<img src="1464269861654.png" />, <span class="dig">1</span>)
+    <span class="skw">click</span>()
+    <span class="kw">if</span> exists(<img src="1464269884013.png" />):
+        <span class="kw">if</span> exists(<img src="1464263615554.png" />):
+            <span class="kw">print</span><span class="str">"[error] Documentation not written yet!"</span>
+            logging.error(<span class="str">"[error] Documentation not written yet!"</span>)
+        <span class="kw">else</span>:
+            <span class="kw">print</span><span class="str">"[success] Documentation is available!"</span>
+            logging.info(<span class="str">"[success] Documentation is available!"</span>)
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[error] Documentation not found!"</span>
+        logging.error(<span class="str">"[error] Documentation not found!"</span>)
+    <span class="skw">click</span>(<img src="1464263942032.png" />)
+
+    <span class="skw">click</span>(<img src="1464270145779.png" />)<span class="cmt">#Animations</span>
+
+    hover(<img src="1464270204899.png" />)<span class="cmt">#Cinematics</span>
+    <span class="kw">print</span><span class="str">"[info] For Cinematics..."</span>
+    logging.info(<span class="str">"[info] For Cinematics..."</span>)
+    <span class="skw">wait</span>(<img src="1464270223307.png" />, <span class="dig">1</span>)
+    <span class="skw">click</span>()
+    <span class="kw">if</span> exists(<img src="1464270243827.png" />):
+        <span class="kw">if</span> exists(<img src="1464263615554.png" />):
+            <span class="kw">print</span><span class="str">"[error] Documentation not written yet!"</span>
+            logging.error(<span class="str">"[error] Documentation not written yet!"</span>)
+        <span class="kw">else</span>:
+            <span class="kw">print</span><span class="str">"[success] Documentation is available!"</span>
+            logging.info(<span class="str">"[success] Documentation is available!"</span>)
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[error] Documentation not found!"</span>
+        logging.error(<span class="str">"[error] Documentation not found!"</span>)
+    <span class="skw">click</span>(<img src="1464263942032.png" />)
+
+    hover(<img src="1464270344331.png" />)<span class="cmt">#Special Effects</span>
+    <span class="kw">print</span><span class="str">"[info] For Special Effects..."</span>
+    logging.info(<span class="str">"[info] For Special Effects..."</span>)
+    <span class="skw">wait</span>(<img src="1464270374210.png" />, <span class="dig">1</span>)
+    <span class="skw">click</span>()
+    <span class="kw">if</span> exists(<img src="1464270405945.png" />):
+        <span class="kw">if</span> exists(<img src="1464263615554.png" />):
+            <span class="kw">print</span><span class="str">"[error] Documentation not written yet!"</span>
+            logging.error(<span class="str">"[error] Documentation not written yet!"</span>)
+        <span class="kw">else</span>:
+            <span class="kw">print</span><span class="str">"[success] Documentation is available!"</span>
+            logging.info(<span class="str">"[success] Documentation is available!"</span>)
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[error] Documentation not found!"</span>
+        logging.error(<span class="str">"[error] Documentation not found!"</span>)
+    <span class="skw">click</span>(<img src="1464263942032.png" />)
+
+    hover(<img src="1464270439889.png" />)<span class="cmt">#Units</span>
+    <span class="kw">print</span><span class="str">"[info] For Units..."</span>
+    logging.info(<span class="str">"[info] For Units..."</span>)
+    <span class="skw">wait</span>(<img src="1464270448458.png" />, <span class="dig">1</span>)
+    <span class="skw">click</span>()
+    <span class="kw">if</span> exists(<img src="1464270491129.png" />):
+        <span class="kw">if</span> exists(<img src="1464263615554.png" />):
+            <span class="kw">print</span><span class="str">"[error] Documentation not written yet!"</span>
+            logging.error(<span class="str">"[error] Documentation not written yet!"</span>)
+        <span class="kw">else</span>:
+            <span class="kw">print</span><span class="str">"[success] Documentation is available!"</span>
+            logging.info(<span class="str">"[success] Documentation is available!"</span>)
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[error] Documentation not found!"</span>
+        logging.error(<span class="str">"[error] Documentation not found!"</span>)
+    <span class="skw">click</span>(<img src="1464263942032.png" />)
+
+    hover(<img src="1464270606409.png" />)<span class="cmt">#Weather</span>
+    <span class="kw">print</span><span class="str">"[info] For Weather..."</span>
+    logging.info(<span class="str">"[info] For Weather..."</span>)
+    <span class="skw">wait</span>(<img src="1464270618488.png" />, <span class="dig">1</span>)
+    <span class="skw">click</span>()
+    <span class="kw">if</span> exists(<img src="1464270661648.png" />):
+        <span class="kw">if</span> exists(<img src="1464263615554.png" />):
+            <span class="kw">print</span><span class="str">"[error] Documentation not written yet!"</span>
+            logging.error(<span class="str">"[error] Documentation not written yet!"</span>)
+        <span class="kw">else</span>:
+            <span class="kw">print</span><span class="str">"[success] Documentation is available!"</span>
+            logging.info(<span class="str">"[success] Documentation is available!"</span>)
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[error] Documentation not found!"</span>
+        logging.error(<span class="str">"[error] Documentation not found!"</span>)
+    <span class="skw">click</span>(<img src="1464263942032.png" />)
+
+    hover(<img src="1464270685320.png" />)<span class="cmt">#Environment</span>
+    <span class="kw">print</span><span class="str">"[info] For Environment..."</span>
+    logging.info(<span class="str">"[info] For Environment..."</span>)
+    <span class="skw">wait</span>(<img src="1464270696024.png" />, <span class="dig">1</span>)
+    <span class="skw">click</span>()
+    <span class="kw">if</span> exists(<img src="1464270710528.png" />):
+        <span class="kw">if</span> exists(<img src="1464263615554.png" />):
+            <span class="kw">print</span><span class="str">"[error] Documentation not written yet!"</span>
+            logging.error(<span class="str">"[error] Documentation not written yet!"</span>)
+        <span class="kw">else</span>:
+            <span class="kw">print</span><span class="str">"[success] Documentation is available!"</span>
+            logging.info(<span class="str">"[success] Documentation is available!"</span>)
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[error] Documentation not found!"</span>
+        logging.error(<span class="str">"[error] Documentation not found!"</span>)
+    <span class="skw">click</span>(<img src="1464263942032.png" />)
+
+    <span class="skw">click</span>(<img src="1464270833519.png" />)<span class="cmt">#Storyline</span>
+
+    hover(<img src="1464270922279.png" />)<span class="cmt">#Levels</span>
+    <span class="kw">print</span><span class="str">"[info] For Levels..."</span>
+    logging.info(<span class="str">"[info] For Levels..."</span>)
+    <span class="skw">wait</span>(<img src="1464270977478.png" />, <span class="dig">1</span>)
+    <span class="skw">click</span>()
+    <span class="kw">if</span> exists(<img src="1464271016029.png" />):
+        <span class="kw">if</span> exists(<img src="1464263615554.png" />):
+            <span class="kw">print</span><span class="str">"[error] Documentation not written yet!"</span>
+            logging.error(<span class="str">"[error] Documentation not written yet!"</span>)
+        <span class="kw">else</span>:
+            <span class="kw">print</span><span class="str">"[success] Documentation is available!"</span>
+            logging.info(<span class="str">"[success] Documentation is available!"</span>)
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[error] Documentation not found!"</span>
+        logging.error(<span class="str">"[error] Documentation not found!"</span>)
+    <span class="skw">click</span>(<img src="1464263942032.png" />)
+
+    hover(<img src="1464271092477.png" />)<span class="cmt">#Timeline</span>
+    <span class="kw">print</span><span class="str">"[info] For Timeline..."</span>
+    logging.info(<span class="str">"[info] For Timeline..."</span>)
+    <span class="skw">wait</span>(<img src="1464271131628.png" />, <span class="dig">1</span>)
+    <span class="skw">click</span>()
+    <span class="kw">if</span> exists(<img src="1464271146564.png" />):
+        <span class="kw">if</span> exists(<img src="1464263615554.png" />):
+            <span class="kw">print</span><span class="str">"[error] Documentation not written yet!"</span>
+            logging.error(<span class="str">"[error] Documentation not written yet!"</span>)
+        <span class="kw">else</span>:
+            <span class="kw">print</span><span class="str">"[success] Documentation is available!"</span>
+            logging.info(<span class="str">"[success] Documentation is available!"</span>)
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[error] Documentation not found!"</span>
+        logging.error(<span class="str">"[error] Documentation not found!"</span>)
+    <span class="skw">click</span>(<img src="1464263942032.png" />)
+
+    hover(<img src="1464271172180.png" />)<span class="cmt">#Messages</span>
+    <span class="kw">print</span><span class="str">"[info] For Messages..."</span>
+    logging.info(<span class="str">"[info] For Messages..."</span>)
+    <span class="skw">wait</span>(<img src="1464271185109.png" />, <span class="dig">1</span>)
+    <span class="skw">click</span>()
+    <span class="kw">if</span> exists(<img src="1464271203125.png" />):
+        <span class="kw">if</span> exists(<img src="1464263615554.png" />):
+            <span class="kw">print</span><span class="str">"[error] Documentation not written yet!"</span>
+            logging.error(<span class="str">"[error] Documentation not written yet!"</span>)
+        <span class="kw">else</span>:
+            <span class="kw">print</span><span class="str">"[success] Documentation is available!"</span>
+            logging.info(<span class="str">"[success] Documentation is available!"</span>)
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[error] Documentation not found!"</span>
+        logging.error(<span class="str">"[error] Documentation not found!"</span>)
+    <span class="skw">click</span>(<img src="1464263942032.png" />)
+
+    <span class="skw">click</span>(<img src="1464271323995.png" />)<span class="cmt">#Tools</span>
+
+    hover(<img src="1464271419051.png" />)<span class="cmt">#Panels</span>
+    <span class="kw">print</span><span class="str">"[info] For Panels..."</span>
+    logging.info(<span class="str">"[info] For Panels..."</span>)
+    <span class="skw">wait</span>(<img src="1464271519641.png" />, <span class="dig">1</span>)
+    <span class="skw">click</span>()
+    <span class="kw">if</span> exists(<img src="1464271540249.png" />):
+        <span class="kw">if</span> exists(<img src="1464263615554.png" />):
+            <span class="kw">print</span><span class="str">"[error] Documentation not written yet!"</span>
+            logging.error(<span class="str">"[error] Documentation not written yet!"</span>)
+        <span class="kw">else</span>:
+            <span class="kw">print</span><span class="str">"[success] Documentation is available!"</span>
+            logging.info(<span class="str">"[success] Documentation is available!"</span>)
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[error] Documentation not found!"</span>
+        logging.error(<span class="str">"[error] Documentation not found!"</span>)
+    <span class="skw">click</span>(<img src="1464263942032.png" />)
+
+    hover(<img src="1464271598273.png" />)<span class="cmt">#Screenshot</span>
+    <span class="kw">print</span><span class="str">"[info] For Screenshot..."</span>
+    logging.info(<span class="str">"[info] For Screenshot..."</span>)
+    <span class="skw">wait</span>(<img src="1464271689225.png" />, <span class="dig">1</span>)
+    <span class="skw">click</span>()
+    <span class="kw">if</span> exists(<img src="1464271702448.png" />):
+        <span class="kw">if</span> exists(<img src="1464263615554.png" />):
+            <span class="kw">print</span><span class="str">"[error] Documentation not written yet!"</span>
+            logging.error(<span class="str">"[error] Documentation not written yet!"</span>)
+        <span class="kw">else</span>:
+            <span class="kw">print</span><span class="str">"[success] Documentation is available!"</span>
+            logging.info(<span class="str">"[success] Documentation is available!"</span>)
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[error] Documentation not found!"</span>
+        logging.error(<span class="str">"[error] Documentation not found!"</span>)
+    <span class="skw">click</span>(<img src="1464263942032.png" />)
+
+    hover(<img src="1464271878096.png" />)<span class="cmt">#Video</span>
+    <span class="kw">print</span><span class="str">"[info] For Video..."</span>
+    logging.info(<span class="str">"[info] For Video..."</span>)
+    <span class="skw">wait</span>(<img src="1464271806103.png" />, <span class="dig">1</span>)
+    <span class="skw">click</span>()
+    <span class="kw">if</span> exists(<img src="1464271816711.png" />):
+        <span class="kw">if</span> exists(<img src="1464263615554.png" />):
+            <span class="kw">print</span><span class="str">"[error] Documentation not written yet!"</span>
+            logging.error(<span class="str">"[error] Documentation not written yet!"</span>)
+        <span class="kw">else</span>:
+            <span class="kw">print</span><span class="str">"[success] Documentation is available!"</span>
+            logging.info(<span class="str">"[success] Documentation is available!"</span>)
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[error] Documentation not found!"</span>
+        logging.error(<span class="str">"[error] Documentation not found!"</span>)
+    <span class="skw">click</span>(<img src="1464263942032.png" />)
+
+    hover(<img src="1464271940767.png" />)<span class="cmt">#Free Cam</span>
+    <span class="kw">print</span><span class="str">"[info] For Free Cam..."</span>
+    logging.info(<span class="str">"[info] For Free Cam..."</span>)
+    <span class="skw">wait</span>(<img src="1464272071286.png" />, <span class="dig">1</span>)
+    <span class="skw">click</span>()
+    <span class="kw">if</span> exists(<img src="1464272098206.png" />):
+        <span class="kw">if</span> exists(<img src="1464263615554.png" />):
+            <span class="kw">print</span><span class="str">"[error] Documentation not written yet!"</span>
+            logging.error(<span class="str">"[error] Documentation not written yet!"</span>)
+        <span class="kw">else</span>:
+            <span class="kw">print</span><span class="str">"[success] Documentation is available!"</span>
+            logging.info(<span class="str">"[success] Documentation is available!"</span>)
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[error] Documentation not found!"</span>
+        logging.error(<span class="str">"[error] Documentation not found!"</span>)
+    <span class="skw">click</span>(<img src="1464263942032.png" />)
+
+    hover(<img src="1464272140157.png" />)<span class="cmt">#Api Overview</span>
+    <span class="kw">print</span><span class="str">"[info] For Api Overview..."</span>
+    logging.info(<span class="str">"[info] For Api Overview..."</span>)
+    <span class="skw">wait</span>(<img src="1464272160349.png" />, <span class="dig">1</span>)
+    <span class="skw">click</span>()
+    <span class="kw">if</span> exists(<img src="1464272205996.png" />):
+        <span class="kw">if</span> exists(<img src="1464263615554.png" />):
+            <span class="kw">print</span><span class="str">"[error] Documentation not written yet!"</span>
+            logging.error(<span class="str">"[error] Documentation not written yet!"</span>)
+        <span class="kw">else</span>:
+            <span class="kw">print</span><span class="str">"[success] Documentation is available!"</span>
+            logging.info(<span class="str">"[success] Documentation is available!"</span>)
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[error] Documentation not found!"</span>
+        logging.error(<span class="str">"[error] Documentation not found!"</span>)
+    <span class="skw">click</span>(<img src="1464263942032.png" />)
+
+    <span class="skw">click</span>(<img src="1464272256844.png" />)<span class="cmt">#Help</span>
+
+    hover(<img src="1464272541210.png" />)<span class="cmt">#Wiki</span>
+    <span class="kw">print</span><span class="str">"[info] For Wiki..."</span>
+    logging.info(<span class="str">"[info] For Wiki..."</span>)
+    <span class="skw">wait</span>(<img src="1464272553914.png" />, <span class="dig">1</span>)
+    <span class="skw">click</span>()
+    <span class="kw">if</span> exists(<img src="1464272618755.png" />, <span class="dig">10</span>):
+        <span class="kw">if</span> exists(<img src="1464263615554.png" />):
+            <span class="kw">print</span><span class="str">"[error] Documentation not written yet!"</span>
+            logging.error(<span class="str">"[error] Documentation not written yet!"</span>)
+        <span class="kw">else</span>:
+            <span class="kw">print</span><span class="str">"[success] Documentation is available!"</span>
+            logging.info(<span class="str">"[success] Documentation is available!"</span>)
+    <span class="kw">else</span>:
+        <span class="kw">print</span><span class="str">"[error] Documentation not found!"</span>
+        logging.error(<span class="str">"[error] Documentation not found!"</span>)
+
+    <span class="skw">click</span>(Pattern(<img src="1464272686794.png" />).targetOffset(<span class="dig">477</span>,-<span class="dig">292</span>))
+    <span class="skw">wait</span>(<img src="1464263942032.png" />)
+    <span class="skw">click</span>()
+    <span class="skw">wait</span>(<img src="1464353520320.png" />)
+    <span class="skw">click</span>()
+
+<span class="kw">elif</span> Settings.isLinux():
+    <span class="kw">pass</span> <span class="cmt"># WIP</span>
+
+<span class="kw">elif</span> Settings.isMac():
+    <span class="kw">pass</span> <span class="cmt"># WIP</span>
+
+<span class="kw">else</span>:
+    <span class="kw">print</span><span class="str">"[error] OS error!"</span>
+    logging.error(<span class="str">"[error] OS error!"</span>)
+    exit(<span class="dig">1</span>)
+
+<span class="kw">print</span><span class="str">"[info]===== End Documentation links test ====="</span>
+logging.info(<span class="str">"[info]===== End Documentation links test ====="</span>)
+</pre>
+</body>
+</html>
