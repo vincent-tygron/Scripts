@@ -1,6 +1,6 @@
 import logging;reload(logging)
 FORMAT="%(asctime)-8s %(message)s"
-logging.basicConfig(format=FORMAT, filename="Wizard-Timings-test.log", level=logging.DEBUG)
+logging.basicConfig(format=FORMAT, filename="test.log", level=logging.DEBUG)
 
 print"[info] Create new project 'SikuliX-Editor', don't save and exit..."
 logging.info("[info] Create new project 'SikuliX-Editor', don't save and exit...")

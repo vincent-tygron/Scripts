@@ -11,14 +11,10 @@ engines = ("Tygron Engine Test", "Tygron Engine Preview", "Tygron Engine 2016")
 # Check if engine instance to use is already stored... #
 ########################################################
 
-#def instance(value=None):#Define default value
-#Sikulix.prefLoad("instance")#load.
 selected = Sikulix.prefLoad("instance")
 if selected == "":#if default       
     selected = select("Please select which engine to test", options = engines)#Select engine
     Sikulix.prefStore("instance", selected)#store
-
-#print selected
 
 #############################
 # Check which OS is used... #
@@ -26,7 +22,7 @@ if selected == "":#if default
 
 import subprocess
 myVer = Settings.getOSVersion()
-#exit(2)
+
 #####################
 # If OS is Linux... #
 #####################
@@ -36,32 +32,44 @@ if Settings.isLinux():
     logging.info("[info] Linux %s detected!" % (myVer))
     if selected == engines[0]:
         subprocess.Popen(["/home/tygron/Desktop/Tygron Engine Test/Tygron Engine Test.sh"])
+        print"[info] Tygron Engine Test selected..."
+        logging.info("[info] Tygron Engine Test selected...")
     elif selected == engines[1]:
         subprocess.Popen(["/home/tygron/Desktop/Tygron Engine Preview/Tygron Engine Preview.sh"])
+        print"[info] Tygron Engine Preview selected..."
+        logging.info("[info] Tygron Engine Preview selected...") 
     elif selected == engines[2]:
         subprocess.Popen(["/home/tygron/Desktop/Tygron Engine 2016/Tygron Engine 2016.sh"])
+        print"[info] Tygron Engine 2016 selected..."
+        logging.info("[info] Tygron Engine 2016 selected...")
 #    else:
-#        exit(1)
+#        print"[info] No engine selected..."
+#        logging.info("[info] No engine selected...")
 
 #######################
 # If OS is Windows... #
 #######################
-
 elif Settings.isWindows():
-    #exit(2)
     print"[info] Windows %s detected!" % (myVer)
     logging.info("[info] Windows %s detected!" % (myVer))
     if selected == engines[0]:
-        subprocess.Popen(["C:\Users\Vincent\AppData\Local\Tygron Engine Test\Tygron Engine Test.exe"])
-        #subprocess.Popen(["C:\Users\Tygron\AppData\Local\Tygron Engine Test\Tygron Engine Test.exe"])
+        #subprocess.Popen(["C:\Users\Vincent\AppData\Local\Tygron Engine Test\Tygron Engine Test.exe"])
+        subprocess.Popen(["C:\Users\Tygron\AppData\Local\Tygron Engine Test\Tygron Engine Test.exe"])
+        print"[info] Tygron Engine Test selected..."
+        logging.info("[info] Tygron Engine Test selected...")
     elif selected == engines[1]:
-        subprocess.Popen(["C:\Users\Vincent\AppData\Local\Tygron Engine Preview\Tygron Engine Preview.exe"])
-        #subprocess.Popen(["C:\Users\Tygron\AppData\Local\Tygron Engine Preview\Tygron Engine Preview.exe"])
+        #subprocess.Popen(["C:\Users\Vincent\AppData\Local\Tygron Engine Preview\Tygron Engine Preview.exe"])
+        subprocess.Popen(["C:\Users\Tygron\AppData\Local\Tygron Engine Preview\Tygron Engine Preview.exe"])
+        print"[info] Tygron Engine Preview selected..."
+        logging.info("[info] Tygron Engine Preview selected...") 
     elif selected == engines[2]:
-        subprocess.Popen(["C:\Users\Vincent\AppData\Local\Tygron Engine 2016\Tygron Engine 2016.exe"])
-        #subprocess.Popen(["C:\Users\Tygron\AppData\Local\Tygron Engine 2016\Tygron Engine 2016.exe"])
+        #subprocess.Popen(["C:\Users\Vincent\AppData\Local\Tygron Engine 2016\Tygron Engine 2016.exe"])
+        subprocess.Popen(["C:\Users\Tygron\AppData\Local\Tygron Engine 2016\Tygron Engine 2016.exe"])
+        print"[info] Tygron Engine 2016 selected..."
+        logging.info("[info] Tygron Engine 2016 selected...")
 #    else:
-#        exit(1)
+#        print"[info] No engine selected..."
+#        logging.info("[info] No engine selected...")
         
 ########################
 # If OS is MacOS(X)... #
@@ -77,6 +85,9 @@ elif Settings.isMac():
     
         if exists("1458652391503.png", 3):
             click(Pattern("1458652391503.png").targetOffset(145,62))
+
+        print"[info] Tygron Engine Test selected..."
+        logging.info("[info] Tygron Engine Test selected...")
             
     elif selected == engines[1]:
         App.open("Finder")
@@ -85,6 +96,10 @@ elif Settings.isMac():
     
         if exists("1458652391503.png", 3):
             click(Pattern("1458652391503.png").targetOffset(145,62))
+
+        print"[info] Tygron Engine Preview selected..."
+        logging.info("[info] Tygron Engine Preview selected...") 
+            
     elif selected == engines[2]:
         App.open("Finder")
         click("1461066980956.png")    
@@ -92,8 +107,13 @@ elif Settings.isMac():
     
         if exists("1458652391503.png", 3):
             click(Pattern("1458652391503.png").targetOffset(145,62))
+                    
+        print"[info] Tygron Engine 2016 selected..."
+        logging.info("[info] Tygron Engine 2016 selected...")
+                        
 #    else:
-#        exit(1)
+#        print"[info] No engine selected..."
+#        logging.info("[info] No engine selected...")
             
 else:
     print "Unsupported OS detected!"

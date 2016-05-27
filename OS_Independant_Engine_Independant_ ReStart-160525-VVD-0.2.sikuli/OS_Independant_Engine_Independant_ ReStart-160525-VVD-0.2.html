@@ -83,14 +83,10 @@ engines = (<span class="str">"Tygron Engine Test"</span>, <span class="str">"Tyg
 <span class="cmt"># Check if engine instance to use is already stored... #</span>
 <span class="cmt">########################################################</span>
 
-<span class="cmt">#def instance(value=None):#Define default value</span>
-<span class="cmt">#Sikulix.prefLoad("instance")#load.</span>
 selected = Sikulix.prefLoad(<span class="str">"instance"</span>)
 <span class="kw">if</span> selected == <span class="str">""</span>:<span class="cmt">#if default       </span>
     selected = select(<span class="str">"Please select which engine to test"</span>, options = engines)<span class="cmt">#Select engine</span>
     Sikulix.prefStore(<span class="str">"instance"</span>, selected)<span class="cmt">#store</span>
-
-<span class="cmt">#print selected</span>
 
 <span class="cmt">#############################</span>
 <span class="cmt"># Check which OS is used... #</span>
@@ -98,7 +94,7 @@ selected = Sikulix.prefLoad(<span class="str">"instance"</span>)
 
 <span class="kw">import</span> subprocess
 myVer = Settings.getOSVersion()
-<span class="cmt">#exit(2)</span>
+
 <span class="cmt">#####################</span>
 <span class="cmt"># If OS is Linux... #</span>
 <span class="cmt">#####################</span>
@@ -108,32 +104,44 @@ myVer = Settings.getOSVersion()
     logging.info(<span class="str">"[info] Linux %s detected!"</span> % (myVer))
     <span class="kw">if</span> selected == engines[<span class="dig">0</span>]:
         subprocess.Popen([<span class="str">"/home/tygron/Desktop/Tygron Engine Test/Tygron Engine Test.sh"</span>])
+        <span class="kw">print</span><span class="str">"[info] Tygron Engine Test selected..."</span>
+        logging.info(<span class="str">"[info] Tygron Engine Test selected..."</span>)
     <span class="kw">elif</span> selected == engines[<span class="dig">1</span>]:
         subprocess.Popen([<span class="str">"/home/tygron/Desktop/Tygron Engine Preview/Tygron Engine Preview.sh"</span>])
+        <span class="kw">print</span><span class="str">"[info] Tygron Engine Preview selected..."</span>
+        logging.info(<span class="str">"[info] Tygron Engine Preview selected..."</span>)
     <span class="kw">elif</span> selected == engines[<span class="dig">2</span>]:
         subprocess.Popen([<span class="str">"/home/tygron/Desktop/Tygron Engine 2016/Tygron Engine 2016.sh"</span>])
+        <span class="kw">print</span><span class="str">"[info] Tygron Engine 2016 selected..."</span>
+        logging.info(<span class="str">"[info] Tygron Engine 2016 selected..."</span>)
 <span class="cmt">#    else:</span>
-<span class="cmt">#        exit(1)</span>
+<span class="cmt">#        print"[info] No engine selected..."</span>
+<span class="cmt">#        logging.info("[info] No engine selected...")</span>
 
 <span class="cmt">#######################</span>
 <span class="cmt"># If OS is Windows... #</span>
 <span class="cmt">#######################</span>
-
 <span class="kw">elif</span> Settings.isWindows():
-    <span class="cmt">#exit(2)</span>
     <span class="kw">print</span><span class="str">"[info] Windows %s detected!"</span> % (myVer)
     logging.info(<span class="str">"[info] Windows %s detected!"</span> % (myVer))
     <span class="kw">if</span> selected == engines[<span class="dig">0</span>]:
-        subprocess.Popen([<span class="str">"C:\Users\Vincent\AppData\Local\Tygron Engine Test\Tygron Engine Test.exe"</span>])
-        <span class="cmt">#subprocess.Popen(["C:\Users\Tygron\AppData\Local\Tygron Engine Test\Tygron Engine Test.exe"])</span>
+        <span class="cmt">#subprocess.Popen(["C:\Users\Vincent\AppData\Local\Tygron Engine Test\Tygron Engine Test.exe"])</span>
+        subprocess.Popen([<span class="str">"C:\Users\Tygron\AppData\Local\Tygron Engine Test\Tygron Engine Test.exe"</span>])
+        <span class="kw">print</span><span class="str">"[info] Tygron Engine Test selected..."</span>
+        logging.info(<span class="str">"[info] Tygron Engine Test selected..."</span>)
     <span class="kw">elif</span> selected == engines[<span class="dig">1</span>]:
-        subprocess.Popen([<span class="str">"C:\Users\Vincent\AppData\Local\Tygron Engine Preview\Tygron Engine Preview.exe"</span>])
-        <span class="cmt">#subprocess.Popen(["C:\Users\Tygron\AppData\Local\Tygron Engine Preview\Tygron Engine Preview.exe"])</span>
+        <span class="cmt">#subprocess.Popen(["C:\Users\Vincent\AppData\Local\Tygron Engine Preview\Tygron Engine Preview.exe"])</span>
+        subprocess.Popen([<span class="str">"C:\Users\Tygron\AppData\Local\Tygron Engine Preview\Tygron Engine Preview.exe"</span>])
+        <span class="kw">print</span><span class="str">"[info] Tygron Engine Preview selected..."</span>
+        logging.info(<span class="str">"[info] Tygron Engine Preview selected..."</span>)
     <span class="kw">elif</span> selected == engines[<span class="dig">2</span>]:
-        subprocess.Popen([<span class="str">"C:\Users\Vincent\AppData\Local\Tygron Engine 2016\Tygron Engine 2016.exe"</span>])
-        <span class="cmt">#subprocess.Popen(["C:\Users\Tygron\AppData\Local\Tygron Engine 2016\Tygron Engine 2016.exe"])</span>
+        <span class="cmt">#subprocess.Popen(["C:\Users\Vincent\AppData\Local\Tygron Engine 2016\Tygron Engine 2016.exe"])</span>
+        subprocess.Popen([<span class="str">"C:\Users\Tygron\AppData\Local\Tygron Engine 2016\Tygron Engine 2016.exe"</span>])
+        <span class="kw">print</span><span class="str">"[info] Tygron Engine 2016 selected..."</span>
+        logging.info(<span class="str">"[info] Tygron Engine 2016 selected..."</span>)
 <span class="cmt">#    else:</span>
-<span class="cmt">#        exit(1)</span>
+<span class="cmt">#        print"[info] No engine selected..."</span>
+<span class="cmt">#        logging.info("[info] No engine selected...")</span>
 
 <span class="cmt">########################</span>
 <span class="cmt"># If OS is MacOS(X)... #</span>
@@ -150,6 +158,9 @@ myVer = Settings.getOSVersion()
         <span class="kw">if</span> exists(<img src="1458652391503.png" />, <span class="dig">3</span>):
             <span class="skw">click</span>(Pattern(<img src="1458652391503.png" />).targetOffset(<span class="dig">145</span>,<span class="dig">62</span>))
 
+        <span class="kw">print</span><span class="str">"[info] Tygron Engine Test selected..."</span>
+        logging.info(<span class="str">"[info] Tygron Engine Test selected..."</span>)
+
     <span class="kw">elif</span> selected == engines[<span class="dig">1</span>]:
         App.open(<span class="str">"Finder"</span>)
         <span class="skw">click</span>(<img src="1461066980956.png" />)
@@ -157,6 +168,10 @@ myVer = Settings.getOSVersion()
 
         <span class="kw">if</span> exists(<img src="1458652391503.png" />, <span class="dig">3</span>):
             <span class="skw">click</span>(Pattern(<img src="1458652391503.png" />).targetOffset(<span class="dig">145</span>,<span class="dig">62</span>))
+
+        <span class="kw">print</span><span class="str">"[info] Tygron Engine Preview selected..."</span>
+        logging.info(<span class="str">"[info] Tygron Engine Preview selected..."</span>)
+
     <span class="kw">elif</span> selected == engines[<span class="dig">2</span>]:
         App.open(<span class="str">"Finder"</span>)
         <span class="skw">click</span>(<img src="1461066980956.png" />)
@@ -164,8 +179,13 @@ myVer = Settings.getOSVersion()
 
         <span class="kw">if</span> exists(<img src="1458652391503.png" />, <span class="dig">3</span>):
             <span class="skw">click</span>(Pattern(<img src="1458652391503.png" />).targetOffset(<span class="dig">145</span>,<span class="dig">62</span>))
+
+        <span class="kw">print</span><span class="str">"[info] Tygron Engine 2016 selected..."</span>
+        logging.info(<span class="str">"[info] Tygron Engine 2016 selected..."</span>)
+
 <span class="cmt">#    else:</span>
-<span class="cmt">#        exit(1)</span>
+<span class="cmt">#        print"[info] No engine selected..."</span>
+<span class="cmt">#        logging.info("[info] No engine selected...")</span>
 
 <span class="kw">else</span>:
     <span class="kw">print</span> <span class="str">"Unsupported OS detected!"</span>
