@@ -53,18 +53,18 @@ elif Settings.isWindows():
     print"[info] Windows %s detected!" % (myVer)
     logging.info("[info] Windows %s detected!" % (myVer))
     if selected == engines[0]:
-        #subprocess.Popen(["C:\Users\Vincent\AppData\Local\Tygron Engine Test\Tygron Engine Test.exe"])
-        subprocess.Popen(["C:\Users\Tygron\AppData\Local\Tygron Engine Test\Tygron Engine Test.exe"])
+        subprocess.Popen(["C:\Users\Vincent\AppData\Local\Tygron Engine Test\Tygron Engine Test.exe"])
+        #subprocess.Popen(["C:\Users\Tygron\AppData\Local\Tygron Engine Test\Tygron Engine Test.exe"])
         print"[info] Tygron Engine Test selected..."
         logging.info("[info] Tygron Engine Test selected...")
     elif selected == engines[1]:
-        #subprocess.Popen(["C:\Users\Vincent\AppData\Local\Tygron Engine Preview\Tygron Engine Preview.exe"])
-        subprocess.Popen(["C:\Users\Tygron\AppData\Local\Tygron Engine Preview\Tygron Engine Preview.exe"])
+        subprocess.Popen(["C:\Users\Vincent\AppData\Local\Tygron Engine Preview\Tygron Engine Preview.exe"])
+        #subprocess.Popen(["C:\Users\Tygron\AppData\Local\Tygron Engine Preview\Tygron Engine Preview.exe"])
         print"[info] Tygron Engine Preview selected..."
         logging.info("[info] Tygron Engine Preview selected...") 
     elif selected == engines[2]:
-        #subprocess.Popen(["C:\Users\Vincent\AppData\Local\Tygron Engine 2016\Tygron Engine 2016.exe"])
-        subprocess.Popen(["C:\Users\Tygron\AppData\Local\Tygron Engine 2016\Tygron Engine 2016.exe"])
+        subprocess.Popen(["C:\Users\Vincent\AppData\Local\Tygron Engine 2016\Tygron Engine 2016.exe"])
+        #subprocess.Popen(["C:\Users\Tygron\AppData\Local\Tygron Engine 2016\Tygron Engine 2016.exe"])
         print"[info] Tygron Engine 2016 selected..."
         logging.info("[info] Tygron Engine 2016 selected...")
 #    else:

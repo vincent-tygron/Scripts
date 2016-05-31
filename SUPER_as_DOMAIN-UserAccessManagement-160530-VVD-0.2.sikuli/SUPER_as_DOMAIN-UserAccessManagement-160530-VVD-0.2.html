@@ -1,0 +1,135 @@
+
+<html>
+   <head>
+      <style type="text/css">
+         .sikuli-code {
+            font-size: 20px;
+            font-family: "Osaka-mono", Monospace;
+            line-height: 1.5em;
+            display:table-cell;
+            white-space: pre-wrap;       /* css-3 */
+            white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* Internet Explorer 5.5+ */
+            width: 99%;   /* remove horizontal scroll-bar when viewing in IE7 */
+         }
+         .sikuli-code img {
+            vertical-align: middle;
+            margin: 2px;
+            border: 1px solid #ccc;
+            padding: 2px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-box-shadow: 1px 1px 1px gray;
+            -webkit-box-shadow: 1px 1px 2px gray;
+         }
+         .kw {
+            color: blue;
+         }
+         .skw {
+            color: rgb(63, 127, 127);
+         }
+
+         .str {
+            color: rgb(128, 0, 0);
+         }
+
+         .dig {
+            color: rgb(128, 64, 0);
+         }
+
+         .cmt {
+            color: rgb(200, 0, 200);
+         }
+
+         h2 {
+            display: inline;
+            font-weight: normal;
+         }
+
+         .info {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            display: none;
+         }
+
+         a {
+            color: #9D2900;
+         }
+
+         body {
+            font-family: "Trebuchet MS", Arial, Sans-Serif;
+         }
+
+      </style>
+   </head>
+<body>
+<div class="info">
+<h2>SUPER_as_DOMAIN-UserAccessManagement-160530-VVD-0.2.sikuli</h2> <a href="SUPER_as_DOMAIN-UserAccessManagement-160530-VVD-0.2.zip">(Download this script)</a>
+</div>
+<pre class="sikuli-code">
+<span class="kw">import</span> logging;reload(logging)
+FORMAT=<span class="str">"%(asctime)-8s%(message)s"</span>
+logging.basicConfig(format=FORMAT, filename=<span class="str">"test.log"</span>, level=logging.DEBUG)
+
+<span class="kw">print</span><span class="str">"[info] &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Start DOMAIN_ADMIN User Rights Test &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;"</span>
+logging.info(<span class="str">"[info] &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Start DOMAIN_ADMIN User Rights Test &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;"</span>)
+
+<span class="cmt">#App.open("C:\Users\Vincent\AppData\Local\Tygron Engine Test\Tygron Engine Test.exe")</span>
+<span class="skw">wait</span>(<img src="1458739770583.png" />,<span class="dig">10</span>)
+<span class="cmt">#dragDrop(Pattern("1459518307992.png").targetOffset(261,-121),Pattern("1459518307992.png").targetOffset(-268,-122))</span>
+<span class="cmt">#type(Key.BACKSPACE)</span>
+paste(Pattern(<img src="1458739802503.png" />).targetOffset(-<span class="dig">3</span>,-<span class="dig">122</span>),<span class="str">"qaautotest1@tygron.com"</span>)
+<span class="skw">type</span>(Key.TAB)
+paste(<span class="str">"autotest1qa"</span>)
+<span class="skw">click</span>(Pattern(<img src="1458739802503.png" />).targetOffset(-<span class="dig">6</span>,<span class="dig">47</span>))
+<span class="skw">wait</span>(<img src="1460643987762.png" />,<span class="dig">10</span>)
+<span class="skw">click</span>()
+<span class="skw">click</span>(Pattern(<img src="1460644168289.png" />).targetOffset(<span class="dig">70</span>,<span class="dig">80</span>))
+<span class="skw">wait</span>(<img src="1460033347283.png" />)
+<span class="skw">dragDrop</span>(<img src="1460033362763.png" />, <img src="1460033366795.png" />)
+<span class="skw">click</span>(Pattern(<img src="1460033410387.png" />).similar(<span class="dig">0.79</span>))
+<span class="skw">click</span>(<img src="1460037819219-1.png" />)
+<span class="skw">click</span>(Pattern(<img src="1460033535050-1.png" />).targetOffset(-<span class="dig">44</span>,<span class="dig">57</span>))
+<span class="kw">if</span> exists(<img src="1460039580760.png" />):
+    <span class="kw">print</span>(<span class="str">"[success] User can not be changed to SUPER_USER by DOMAIN_ADMIN!"</span>)
+    logging.info(<span class="str">"[success] User can not be changed to SUPER_USER by DOMAIN_ADMIN!"</span>)
+<span class="kw">else</span>:
+    <span class="kw">print</span>(<span class="str">"[error] SECURITY BREACH!!! User was incorrectly changed to SUPER_USER by DOMAIN_ADMIN!"</span>)
+    logging.error(<span class="str">"[error] SECURITY BREACH!!! User was incorrectly changed to SUPER_USER by DOMAIN_ADMIN!"</span>)
+    exit(<span class="dig">1</span>)
+<span class="skw">click</span>(Pattern(<img src="1460039580760.png" />).targetOffset(<span class="dig">216</span>,<span class="dig">47</span>)) <span class="cmt"># A bug freezes the application here, sign out does not work!</span>
+<span class="cmt">#click(Pattern("1460040784833.png").targetOffset(808,-498))</span>
+
+<span class="cmt">#sleep(10)</span>
+<span class="skw">click</span>(<img src="1460033748728-1.png" />)
+<span class="skw">wait</span>(<img src="1460036378215.png" />, <span class="dig">3</span>)
+paste(Pattern(<img src="1458739802503-1.png" />).targetOffset(-<span class="dig">3</span>,-<span class="dig">122</span>),<span class="str">"qaautotest2@tygron.com"</span>)
+<span class="skw">type</span>(Key.TAB)
+paste(<span class="str">"autotest2qa"</span>)
+<span class="skw">click</span>(Pattern(<img src="1458739802503.png" />).targetOffset(-<span class="dig">6</span>,<span class="dig">47</span>))
+<span class="skw">sleep</span>(<span class="dig">1</span>)
+<span class="skw">wait</span>(<img src="1464613497271.png" />, <span class="dig">5</span>)
+<span class="skw">sleep</span>(<span class="dig">1</span>)
+<span class="skw">click</span>()
+<span class="cmt">#exists(Pattern("1460038317345.png").similar(0.90), 2)</span>
+<span class="kw">if</span> exists(<img src="1464613574238.png" />):
+    <span class="kw">print</span>(<span class="str">"[success] DOMAIN_ADMIN access is correct!"</span>)
+    logging.info(<span class="str">"[success] DOMAIN_ADMIN access is correct!"</span>)
+    <span class="cmt">#exit(1)</span>
+<span class="kw">else</span>:
+    <span class="kw">print</span>(<span class="str">"[error] DOMAIN_ADMIN access is not as expected!"</span>)
+    logging.error(<span class="str">"[error] DOMAIN_ADMIN access is not as expected!"</span>)
+    exit(<span class="dig">1</span>)
+<span class="skw">click</span>(<img src="1460033748728.png" />)
+<span class="skw">wait</span>(<img src="1460036378215-1.png" />, <span class="dig">3</span>)
+<span class="skw">click</span>(Pattern(<img src="1460034167361.png" />).targetOffset(<span class="dig">807</span>,-<span class="dig">495</span>))
+waitVanish(Pattern(<img src="1460034167361.png" />).targetOffset(<span class="dig">807</span>,-<span class="dig">495</span>))
+
+<span class="kw">print</span><span class="str">"[info] &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; End DOMAIN_ADMIN User Rights Test &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;"</span>
+logging.info(<span class="str">"[info] &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; End DOMAIN_ADMIN User Rights Test &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;"</span>)
+</pre>
+</body>
+</html>

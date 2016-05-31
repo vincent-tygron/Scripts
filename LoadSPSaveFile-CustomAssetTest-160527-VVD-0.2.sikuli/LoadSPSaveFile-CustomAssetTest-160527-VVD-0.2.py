@@ -72,7 +72,7 @@ else:
     logging.error("[error] Excel indicator output is incorrect!")
 click(Pattern("1460018917955.png").targetOffset(451,-351))
 type(Key.ESC)
-wait("1459929967952.png", 2)
+wait("1459929967952.png", 5)
 click(Pattern("1459929967952-1.png").targetOffset(-4,-84))
 wait("1459930064559.png", 2)
 click(Pattern("1459930064559.png").targetOffset(-2,227))
